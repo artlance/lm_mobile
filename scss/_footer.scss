@@ -1,0 +1,154 @@
+/* footer */
+.footer {
+    &-global {}
+    &-contacts {
+        text-align: center;
+        padding: 24px 0 20px;
+        border-bottom: 1px solid #E3E3E3;
+        &-note {
+            padding-top: 7px;
+            font-size: 11px;
+            color: rgba($text, 0.5);
+        }
+    }
+    &-title {
+        font-size: 15px;
+        line-height: 1.4;
+        font-weight: 500;
+        color: $b;
+        margin-bottom: 19px;
+    }
+    &-phone {
+        margin-bottom: 17px;
+        p {
+            font-size: 16px;
+            line-height: 1.5625;
+            color: $b;
+            margin-bottom: 0;
+        }
+        a {
+            color: $b;
+        }
+    }
+    &-address {
+        margin-bottom: 18px;
+        font-size: 13px;
+        line-height: 1.54;
+        p {
+            margin-bottom: 0;
+        }
+        a {
+            color: $text;
+        }
+    }
+    &-menu {
+        text-align: center;
+        border-bottom: 1px solid #E3E3E3;
+        &.active {
+            .footer-menu-toggle {
+                &:after {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+        &-toggle {
+            display: block;
+            padding: 17px 40px 18px;
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: $b;
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -4px;
+                right: 24px;
+                width: 12px;
+                height: 8px;
+                background: $tr url('../upload/arrow-down.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                transition: transform $d $f;
+                will-change: transform;
+            }
+        }
+        &-block {
+            display: none;
+        }
+        &-list {
+            display: block;
+            margin: 0;
+            padding: 0 0 25px;
+            list-style: none;
+            text-align: center;
+            li {
+                a {
+                    display: block;
+                    padding: 6px 16px;
+                    color: $text;
+                }
+            }
+        }
+    }
+    &-info {
+        text-align: center;
+        padding: 20px 0 16px;
+    }
+    &-logo {
+        a {
+            display: block;
+            padding: 10px;
+            max-width: 128px;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &-social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 0 6px;
+        padding: 0;
+        list-style: none;
+        li {
+            padding: 4px;
+            a {
+                display: block;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                background: #E1E1E1;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-version {
+        font-weight: 500;
+        margin-bottom: 18px;
+        a {
+            display: block;
+            padding: 5px 0;
+        }
+    }
+    &-reference {
+        font-size: 11px;
+        line-height: 1.64;
+        color: $gray;
+        margin-bottom: 10px;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+.copyright {
+    padding-top: 2px;
+    font-size: 11px;
+    color: $gray;
+    margin-bottom: 12px;
+}
