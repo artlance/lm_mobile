@@ -100,4 +100,68 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //filter
+    $(document).on('click', '.catalog-nav-filter', function(event) {
+        event.preventDefault();
+        $('html').addClass('filter-show');
+    });
+
+    $(document).on('click', '.filter-close, .filter-mask', function(event) {
+        event.preventDefault();
+        $('.filter-panel').each(function(index, el) {
+            $(el).removeClass('show');
+        });
+        $('html').removeClass('filter-show');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //filter panel
+    $(document).on('click', '.filter-panel-toggle', function(event) {
+        event.preventDefault();
+        var thisId = $(this).attr('href');
+        thisId = thisId.substr(1);
+        $('[data-filter="'+thisId+'"]').addClass('show');
+
+        if ( $('[data-filter="'+thisId+'"]').find('.filter-range-slider').length ) {
+            $('.filter-range-slider').each(function(index, el) {
+                $(el).nstSlider('refresh');
+            });
+        }
+    });
+
+    $(document).on('click', '.filter-panel-back', function(event) {
+        event.preventDefault();
+        $(this).parents('.filter-panel').removeClass('show');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //filter toggle active
+    $(document).on('click', '.filter-category-link, .filter-delivery-link', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //filter range
+    if ( $('.filter-range-slider').length ) {
+        $('.filter-range-slider').nstSlider({
+            "rounding": {
+                "10": "1"
+            },
+            "crossable_handles": false,
+            "left_grip_selector": ".filter-range-handle-min",
+            "right_grip_selector": ".filter-range-handle-max",
+            "value_bar_selector": ".filter-range-bar",
+            "value_changed_callback": function(cause, leftValue, rightValue) {
+                $(this).parent().find('.filter-range-input-min').val(accounting.formatNumber(leftValue, 0, " "));
+                $(this).parent().find('.filter-range-input-max').val(accounting.formatNumber(rightValue, 0, " "));
+            }
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready

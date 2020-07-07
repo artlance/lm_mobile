@@ -115,6 +115,21 @@
         list-style: none;
         li {
             padding: 4px;
+            &.footer-social-dot {
+                position: relative;
+                width: 16px;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin: -2px 0 0 -2px;
+                    width: 4px;
+                    height: 4px;
+                    background: $gray;
+                    border-radius: 50%;
+                }
+            }
             a {
                 display: block;
                 width: 24px;

@@ -775,6 +775,432 @@
             <!-- /.container -->
         </div>
         <!-- /.catalog -->
+        <div class="filter-mask"></div>
+        <div class="filter">
+            <div class="filter-content">
+                <div class="filter-title">Фильтр <a href="#" class="filter-close"></a></div>
+                <div class="filter-categories">
+                    <div class="filter-categories-title">Популярные категории <span class="filter-categories-number">1</span></div>
+                    <div class="filter-category">
+                        <a href="#" class="filter-category-link active">
+                            <span class="filter-category-img"><img src="upload/images/filter-category1.jpg" alt=""></span>
+                            <span class="filter-category-title">Мягкое изголовье</span>
+                        </a>
+                    </div>
+                    <!-- /.filter-category -->
+                    <div class="filter-category">
+                        <a href="#" class="filter-category-link">
+                            <span class="filter-category-img"><img src="upload/images/filter-category2.jpg" alt=""></span>
+                            <span class="filter-category-title">Тканевые</span>
+                        </a>
+                    </div>
+                    <!-- /.filter-category -->
+                    <div class="filter-category">
+                        <a href="#" class="filter-category-link">
+                            <span class="filter-category-img"><img src="upload/images/filter-category3.jpg" alt=""></span>
+                            <span class="filter-category-title">Кожаные</span>
+                        </a>
+                    </div>
+                    <!-- /.filter-category -->
+                    <div class="filter-categories-all">
+                        <a href="#" class="button secondary">Все популярные категории</a>
+                    </div>
+                </div>
+                <!-- /.filter-categories -->
+                <ul class="filter-list">
+                    <li><a href="#filter-sorting" class="filter-panel-toggle">Сортировать</a></li>
+                    <li><a href="#filter-price" class="filter-panel-toggle">Цена <span class="filter-list-number">1</span></a></li>
+                    <li><a href="#" class="filter-panel-toggle">Вид кровати</a></li>
+                    <li><a href="#filter-sizes" class="filter-panel-toggle">Размеры <span class="filter-list-number">3</span></a></li>
+                    <li><a href="#filter-material" class="filter-panel-toggle">Материал <span class="filter-list-number">4</span></a></li>
+                    <li><a href="#" class="filter-panel-toggle">Спальное место</a></li>
+                    <li><a href="#" class="filter-panel-toggle">Изголовье</a></li>
+                    <li><a href="#" class="filter-panel-toggle">Подъемный механизм</a></li>
+                    <li><a href="#" class="filter-panel-toggle">Цвет</a></li>
+                    <li><a href="#" class="filter-panel-toggle">Стиль</a></li>
+                    <li><a href="#" class="filter-panel-toggle">Страна</a></li>
+                    <li><a href="#" class="filter-panel-toggle">Особенности</a></li>
+                    <li><a href="#" class="filter-panel-toggle">Скидки</a></li>
+                </ul>
+                <!-- /.filter-list -->
+                <div class="filter-delivery">
+                    <a href="#" class="filter-delivery-link active">
+                        <img src="upload/delivery-icon.svg" alt="">
+                        Доставим завтра
+                    </a>
+                </div>
+                <!-- /.filter-delivery -->
+                <div class="filter-options">
+                    <div class="filter-option">
+                        <a href="#" class="button secondary">Очистить</a>
+                    </div>
+                    <div class="filter-option">
+                        <a href="#" class="button">Применить</a>
+                    </div>
+                </div>
+                <!-- /.filter-options -->
+            </div>
+            <!-- /.filter-content -->
+            <div class="filter-panel" data-filter="filter-sorting">
+                <div class="filter-panel-content">
+                    <div class="filter-panel-block">
+                        <div class="filter-panel-inner">
+                            <a href="#" class="filter-panel-back">Сортировать</a>
+                            <ul class="filter-list">
+                                <li>
+                                    <span class="filter-checkbox">
+                                        <input type="checkbox" id="filter-sorting-checkbox" name="filter-sorting-checkbox" checked>
+                                        <label for="filter-sorting-checkbox">По популярности</label>
+                                    </span>
+                                </li>
+                                <li><a href="#filter-price" class="filter-panel-toggle">По цене</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.filter-panel-inner -->
+                        <div class="filter-panel-options">
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <a href="#" class="button secondary">Очистить</a>
+                                </div>
+                                <div class="filter-option">
+                                    <a href="#" class="button">Применить</a>
+                                </div>
+                            </div>
+                            <!-- /.filter-options -->
+                        </div>
+                        <!-- /.filter-panel-options -->
+                    </div>
+                    <!-- /.filter-panel-block -->
+                </div>
+                <!-- /.filter-panel-content -->
+            </div>
+            <!-- /.filter-panel -->
+            <div class="filter-panel filter-panel-inside" data-filter="filter-price">
+                <div class="filter-panel-content">
+                    <div class="filter-panel-block">
+                        <div class="filter-panel-inner">
+                            <a href="#" class="filter-panel-back">Цена</a>
+                            <div class="filter-range-list">
+                                <div class="filter-range">
+                                    <div class="filter-range-title">Цена, руб.</div>
+                                    <div class="filter-range-wrapper">
+                                        <div class="filter-range-from">От</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-min" readonly>
+                                        </div>
+                                        <div class="filter-range-to">До</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-max" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="filter-range-slider" data-range_min="0" data-range_max="25000" data-cur_min="5000" data-cur_max="10000">
+                                        <div class="filter-range-bar"></div>
+                                        <div class="filter-range-handle-min"></div>
+                                        <div class="filter-range-handle-max"></div>
+                                    </div>
+                                </div>
+                                <!-- /.filter-range -->
+                            </div>
+                            <!-- /.filter-range-list -->
+                        </div>
+                        <!-- /.filter-panel-inner -->
+                        <div class="filter-panel-options">
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <a href="#" class="button secondary">Очистить</a>
+                                </div>
+                                <div class="filter-option">
+                                    <a href="#" class="button">Применить</a>
+                                </div>
+                            </div>
+                            <!-- /.filter-options -->
+                        </div>
+                        <!-- /.filter-panel-options -->
+                    </div>
+                    <!-- /.filter-panel-block -->
+                </div>
+                <!-- /.filter-panel-content -->
+            </div>
+            <!-- /.filter-panel -->
+            <div class="filter-panel" data-filter="filter-sizes">
+                <div class="filter-panel-content">
+                    <div class="filter-panel-block">
+                        <div class="filter-panel-inner">
+                            <a href="#" class="filter-panel-back">Размеры</a>
+                            <div class="filter-range-list">
+                                <div class="filter-range">
+                                    <div class="filter-range-title">Ширина, см</div>
+                                    <div class="filter-range-wrapper">
+                                        <div class="filter-range-from">От</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-min" readonly>
+                                        </div>
+                                        <div class="filter-range-to">До</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-max" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="filter-range-slider" data-range_min="0" data-range_max="250" data-cur_min="50" data-cur_max="100">
+                                        <div class="filter-range-bar"></div>
+                                        <div class="filter-range-handle-min"></div>
+                                        <div class="filter-range-handle-max"></div>
+                                    </div>
+                                </div>
+                                <!-- /.filter-range -->
+                                <div class="filter-range">
+                                    <div class="filter-range-title">Длина, см</div>
+                                    <div class="filter-range-wrapper">
+                                        <div class="filter-range-from">От</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-min" readonly>
+                                        </div>
+                                        <div class="filter-range-to">До</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-max" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="filter-range-slider" data-range_min="0" data-range_max="750" data-cur_min="50" data-cur_max="500">
+                                        <div class="filter-range-bar"></div>
+                                        <div class="filter-range-handle-min"></div>
+                                        <div class="filter-range-handle-max"></div>
+                                    </div>
+                                </div>
+                                <!-- /.filter-range -->
+                                <div class="filter-range">
+                                    <div class="filter-range-title">Спинка, см</div>
+                                    <div class="filter-range-wrapper">
+                                        <div class="filter-range-from">От</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-min" readonly>
+                                        </div>
+                                        <div class="filter-range-to">До</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-max" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="filter-range-slider" data-range_min="0" data-range_max="250" data-cur_min="50" data-cur_max="100">
+                                        <div class="filter-range-bar"></div>
+                                        <div class="filter-range-handle-min"></div>
+                                        <div class="filter-range-handle-max"></div>
+                                    </div>
+                                </div>
+                                <!-- /.filter-range -->
+                                <div class="filter-range">
+                                    <div class="filter-range-title">Изножье, см</div>
+                                    <div class="filter-range-wrapper">
+                                        <div class="filter-range-from">От</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-min" readonly>
+                                        </div>
+                                        <div class="filter-range-to">До</div>
+                                        <div class="filter-range-input">
+                                            <input type="text" class="filter-range-input-max" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="filter-range-slider" data-range_min="0" data-range_max="2000" data-cur_min="50" data-cur_max="500">
+                                        <div class="filter-range-bar"></div>
+                                        <div class="filter-range-handle-min"></div>
+                                        <div class="filter-range-handle-max"></div>
+                                    </div>
+                                </div>
+                                <!-- /.filter-range -->
+                            </div>
+                            <!-- /.filter-range-list -->
+                        </div>
+                        <!-- /.filter-panel-inner -->
+                        <div class="filter-panel-options">
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <a href="#" class="button secondary">Очистить</a>
+                                </div>
+                                <div class="filter-option">
+                                    <a href="#" class="button">Применить</a>
+                                </div>
+                            </div>
+                            <!-- /.filter-options -->
+                        </div>
+                        <!-- /.filter-panel-options -->
+                    </div>
+                    <!-- /.filter-panel-block -->
+                </div>
+                <!-- /.filter-panel-content -->
+            </div>
+            <!-- /.filter-panel -->
+            <div class="filter-panel" data-filter="filter-material">
+                <div class="filter-panel-content">
+                    <div class="filter-panel-block">
+                        <div class="filter-panel-inner">
+                            <a href="#" class="filter-panel-back">Материал</a>
+                            <ul class="filter-list-categories">
+                                <li>
+                                    <span class="filter-list-categories-title">Обивка</span>
+                                    <ul>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-1" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-1">Без обивки</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-2" name="filter-material-checkbox" checked>
+                                                <label for="filter-material-checkbox-2">Велюр</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-3" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-3">Экокожа</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-4" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-4">Искуственная кожа</label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="filter-list-categories-title">Основание</span>
+                                    <ul>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-5" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-5">Металлическое</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-6" name="filter-material-checkbox" checked>
+                                                <label for="filter-material-checkbox-6">Настил</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-7" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-7">С деревянными лагами</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-8" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-8">Без основания</label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="filter-list-categories-title">Каркас</span>
+                                    <ul>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-9" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-9">Искусственная кожа</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-10" name="filter-material-checkbox" checked>
+                                                <label for="filter-material-checkbox-10">Ткань</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-11" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-11">ЛДСП</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-12" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-12">МДФ</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-13" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-13">Дерево</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-14" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-14">Металл</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-15" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-15">Массив сосны</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-16" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-16">Массив дерева</label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <span class="filter-list-categories-title">Ножки</span>
+                                    <ul>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-17" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-17">ЛДСП</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-18" name="filter-material-checkbox" checked>
+                                                <label for="filter-material-checkbox-18">МДФ</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-19" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-19">Металл</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-20" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-20">Без ножек</label>
+                                            </span>
+                                        </li>
+                                        <li>
+                                            <span class="filter-checkbox">
+                                                <input type="checkbox" id="filter-material-checkbox-21" name="filter-material-checkbox">
+                                                <label for="filter-material-checkbox-21">Пластик</label>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.filter-panel-inner -->
+                        <div class="filter-panel-options">
+                            <div class="filter-options">
+                                <div class="filter-option">
+                                    <a href="#" class="button secondary">Очистить</a>
+                                </div>
+                                <div class="filter-option">
+                                    <a href="#" class="button">Применить</a>
+                                </div>
+                            </div>
+                            <!-- /.filter-options -->
+                        </div>
+                        <!-- /.filter-panel-options -->
+                    </div>
+                    <!-- /.filter-panel-block -->
+                </div>
+                <!-- /.filter-panel-content -->
+            </div>
+            <!-- /.filter-panel -->
+        </div>
+        <!-- /.filter -->
         <div class="banner-delivery">
             <a href="#" class="banner-delivery-link" style="background-image: url('upload/images/delivery.jpg');">
                 <span class="banner-delivery-content">
@@ -866,6 +1292,10 @@
                         <li><a href="#"><img src="upload/youtube.svg" alt=""></a></li>
                         <li><a href="#"><img src="upload/vk.svg" alt=""></a></li>
                         <li><a href="#"><img src="upload/instagram.svg" alt=""></a></li>
+                        <li class="footer-social-dot"></li>
+                        <li><a href="#"><img src="upload/whatsapp.svg" alt=""></a></li>
+                        <li><a href="#"><img src="upload/viber.svg" alt=""></a></li>
+                        <li><a href="#"><img src="upload/telegram.svg" alt=""></a></li>
                     </ul>
                     <div class="footer-version"><a href="#">Полная версия сайта</a></div>
                     <div class="footer-reference">
@@ -880,7 +1310,8 @@
     <!-- /.main-global -->
     <script src="js/jquery.js"></script>
     <script src="js/migrate.js"></script>
-    <script src="js/swiper.js"></script>
+    <script src="js/nstslider.js"></script>
+    <script src="js/accounting.js"></script>
     <script src="js/core.js"></script>
 </body>
 </html>
