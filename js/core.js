@@ -92,8 +92,8 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
-    //catalog favorite
-    $(document).on('click', '.catalog-product-favorite', function(event) {
+    //favorite
+    $(document).on('click', '.catalog-product-favorite, .product-favorite', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');
     });
@@ -159,6 +159,149 @@ $(document).ready(function(){
                 $(this).parent().find('.filter-range-input-min').val(accounting.formatNumber(leftValue, 0, " "));
                 $(this).parent().find('.filter-range-input-max').val(accounting.formatNumber(rightValue, 0, " "));
             }
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //product gallery
+    var productGallery,
+        productGalleryLength = $('.product-gallery').length;
+    if ( productGalleryLength ) {
+        productGallery = new Swiper ('.product-gallery', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            speed: 500,
+            loop: true
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //countdown
+    $('.countdown').downCount({
+        date: '09/16/2020 24:00:00',
+        offset: +3
+    }, function () {
+        //callback
+    });
+
+    //------------------------------------------------------------------------//
+
+    //drop
+    activePop = null;
+    dropClass = $('.drop-wrap');
+    function closeInactivePop() {
+        dropClass.each(function(index) {
+            if ($(this).hasClass('drop-opened') && index!=activePop) {
+                $(this).removeClass('drop-opened');
+            }
+        });
+        return false;
+    }
+    $(document).on('mouseover', '.drop-wrap', function() {
+        activePop = dropClass.index(this);
+    });
+    $(document).on('mouseout', '.drop-wrap', function() {
+        activePop = null;
+    });
+    $(document.body).on('click', function(event) {
+        closeInactivePop();
+    });
+    $(document).on('click', '.drop-toggle', function(event) {
+        event.preventDefault();
+        $(this).parent(dropClass).toggleClass('drop-opened');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //product select
+    $(document).on('click', '.product-select-link', function(event) {
+        event.preventDefault();
+        var thisElement = $(this),
+            thisElementHtml = thisElement.html(),
+            thisParent = thisElement.parents('.product-select-block');
+        thisElement.addClass('active').siblings().removeClass('active');
+        thisParent.find('.product-select-toggle').html(thisElementHtml);
+        activePop = null;
+        closeInactivePop();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //popover
+    if ( $('.popover-target').length ) {
+        $('.popover-target').popover({
+            trigger: 'hover',
+            html: true
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //product specs
+    $(document).on('click', '.product-specs-more-button', function(event) {
+        event.preventDefault();
+        $(this).parent('.product-specs-more').addClass('hidden');
+        $(this).parents('.product-specs').find('.product-specs-list tr').removeClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //product features
+    var productFeatures,
+        productFeaturesLength = $('.product-features-list').length;
+    if ( productFeaturesLength ) {
+        productFeatures = new Swiper ('.product-features-list', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            speed: 500,
+            spaceBetween: 2,
+            slidesPerView: 'auto'
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //similar products
+    var similarProducts,
+        similarProductsLength = $('.similar-products-list').length;
+    if ( similarProductsLength ) {
+        similarProducts = new Swiper ('.similar-products-list', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 'auto'
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //recently viewed
+    var recentlyViewed,
+        recentlyViewedLength = $('.recently-viewed-products').length;
+    if ( recentlyViewedLength ) {
+        recentlyViewed = new Swiper ('.recently-viewed-products', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 'auto'
         });
     }
 

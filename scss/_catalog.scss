@@ -1,0 +1,168 @@
+.catalog {
+    &-nav {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -4px;
+        padding: 0;
+        list-style: none;
+        li {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 4px 8px;
+            a {
+                display: block;
+                padding: 12px 8px;
+                font-size: 11px;
+                line-height: 1.455;
+                font-weight: bold;
+                color: $b;
+                text-align: center;
+                background: $s;
+            }
+        }
+        &-filter {}
+        &-number {
+            display: inline-block;
+            vertical-align: top;
+            min-width: 16px;
+            height: 16px;
+            white-space: nowrap;
+            padding: 4px 3px 3px;
+            font-size: 9px;
+            line-height: 1;
+            font-weight: 500;
+            color: #ffffff;
+            text-align: center;
+            background: $p;
+            border-radius: 50%;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -4px;
+    }
+    &-product {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 4px 16px;
+        position: relative;
+        &-link {
+            display: block;
+            text-align: center;
+        }
+        &-img {
+            display: block;
+            margin-bottom: 8px;
+            img {
+                width: 100%;
+            }
+        }
+        &-title {
+            display: block;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $text;
+            margin-bottom: 6px;
+        }
+        &-price {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+            &-old {
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                font-size: 11px;
+                line-height: 1.455;
+                color: $t;
+                text-decoration: line-through;
+            }
+            &-new {
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                color: $red;
+            }
+        }
+        &-favorite {
+            display: block;
+            position: absolute;
+            z-index: 2;
+            top: 8px;
+            right: 12px;
+            width: 24px;
+            height: 24px;
+            background: $w;
+            border-radius: 50%;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 13px;
+                height: 12px;
+                margin-top: -5px;
+                margin-left: -6px;
+                background: $tr url('../upload/favorite.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                transition: opacity $d $f;
+                will-change: opacity;
+            }
+            &:after {
+                opacity: 0;
+                background-image: url('../upload/favorite-active.svg');
+            }
+            &.active {
+                &:before {
+                    opacity: 0;
+                }
+                &:after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-more {
+        margin-bottom: 16px;
+        .button {
+            width: 100%;
+        }
+    }
+    &-pagination {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        &-total {
+            flex-grow: 1;
+            text-align: center;
+        }
+        &-next,
+        &-prev {
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $tr url('../upload/arrow-down.svg') 50% 50% no-repeat;
+                background-size: 12px 8px;
+                transform: rotate(-90deg);
+            }
+        }
+        &-prev {
+            &:before {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
