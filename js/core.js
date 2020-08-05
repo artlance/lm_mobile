@@ -181,12 +181,14 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //countdown
-    $('.countdown').downCount({
-        date: '09/16/2020 24:00:00',
-        offset: +3
-    }, function () {
-        //callback
-    });
+    if ( $('.countdown').length ) {
+        $('.countdown').downCount({
+            date: '09/16/2020 24:00:00',
+            offset: +3
+        }, function () {
+            //callback
+        });
+    }
 
     //------------------------------------------------------------------------//
 
@@ -302,6 +304,30 @@ $(document).ready(function(){
             speed: 500,
             spaceBetween: 8,
             slidesPerView: 'auto'
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //product reviews
+    $(document).on('click', '.product-reviews-more-button', function(event) {
+        event.preventDefault();
+        $(this).parent('.product-reviews-more').addClass('hidden');
+        $(this).parents('.product-reviews').find('.product-review').removeClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //fancybox
+    if ( $('[data-fancybox]').length ) {
+        $('[data-fancybox]').fancybox({
+            gutter: 0,
+            loop: true,
+            arrows: false,
+            infobar: false,
+            smallBtn: true,
+            wheel: false,
+            animationEffect: "fade"
         });
     }
 
