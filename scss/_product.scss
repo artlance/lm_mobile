@@ -832,12 +832,19 @@
     height: 107px;
     background: $s;
     padding: 16px 0;
+    &-v2 {
+        height: 120px;
+    }
     &-push {
         height: 107px;
+    }
+    &-push-v2 {
+        height: 120px;
     }
     &-cart {
         display: flex;
         margin-bottom: 5px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
         &-add {
             flex-grow: 1;
             max-width: calc(100% - 93px);
@@ -847,6 +854,13 @@
             }
             .button {
                 border-radius: 3px 0 0 3px;
+            }
+        }
+        &-add-full {
+            flex: 0 0 100%;
+            max-width: 100%;
+            .button {
+                width: 100%;
             }
         }
         &-icon {
@@ -890,6 +904,38 @@
             font-weight: 500;
             letter-spacing: -0.24px;
             text-decoration: underline;
+        }
+    }
+    &-not-available {
+        padding-bottom: 14px;
+        text-align: center;
+        color: $t;
+        font-weight: 500;
+    }
+    &-order {
+        padding-top: 11px;
+        border-top: 1px solid #e1e1e1;
+        text-align: center;
+        a {
+            display: block;
+            padding: 6px 0;
+            color: $text;
+        }
+        strong {
+            font-weight: 500;
+        }
+    }
+    &-sale {
+        padding-top: 3px;
+        .button {
+            width: 100%;
+            white-space: nowrap;
+            box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+        }
+        &-icon {
+            display: inline-block;
+            vertical-align: top;
+            margin: -4px 8px -5px 0;
         }
     }
 }

@@ -93,7 +93,7 @@ $(document).ready(function(){
     //------------------------------------------------------------------------//
 
     //favorite
-    $(document).on('click', '.catalog-product-favorite, .product-favorite', function(event) {
+    $(document).on('click', '.catalog-product-favorite, .product-favorite, .modal-favorite-product-toggle', function(event) {
         event.preventDefault();
         $(this).toggleClass('active');
     });
@@ -328,6 +328,49 @@ $(document).ready(function(){
             smallBtn: true,
             wheel: false,
             animationEffect: "fade"
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //modal
+    if ( $('[data-fancymodal]').length ) {
+        $('[data-fancymodal]').fancybox({
+            gutter: 0,
+            arrows: false,
+            infobar: false,
+            smallBtn: true,
+            wheel: false,
+            keyboard: false,
+            animationEffect: "fade",
+            touch: false,
+            afterShow: function() {
+                var modalCertificate,
+                    modalCertificateLength = $('.modal-certificate').length;
+                if ( modalCertificateLength ) {
+                    modalCertificate = new Swiper ('.modal-certificate', {
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true
+                        },
+                        speed: 500,
+                        loop: true
+                    });
+                }
+                var modalFavorite,
+                    modalFavoriteLength = $('.modal-favorite').length;
+                if ( modalFavoriteLength ) {
+                    modalFavorite = new Swiper ('.modal-favorite', {
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true
+                        },
+                        speed: 500,
+                        spaceBetween: 8,
+                        slidesPerView: 'auto'
+                    });
+                }
+            }
         });
     }
 

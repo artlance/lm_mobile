@@ -13,16 +13,33 @@
     cursor: default !important;
     pointer-events: none;
 }
+.input-wrapper {
+    margin-bottom: 18px;
+    & > label {
+        display: block;
+        margin: 0 0 8px;
+    }
+}
 input.input-text {
     display: block;
     width: 100%;
-    border-radius: 0;
+    height: 40px;
+    font-size: 13px;
+    line-height: normal;
+    color: $text;
+    padding: 11px 14px;
+    border: 1px solid $t;
+    border-radius: 2px;
+    background: $w;
+    &::placeholder {
+        color: $t;
+    }
 }
 textarea.textarea {
     @extend input.input-text;
     font-family: $fontFamily;
-    overflow: auto;
-    height: auto;
+    height: 130px;
+    resize: none;
 }
 select.select {
     appearance: none;
@@ -62,6 +79,13 @@ button.button {
     &.secondary {
         color: $b;
         background: $s;
+    }
+    &.orange {
+        background: #ffa22a;
+    }
+    &.white {
+        color: $p;
+        background: $w;
     }
 }
 button.button {
@@ -163,4 +187,12 @@ button.button {
 }
 .popover-body {
     padding: 12px 15px 13px;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
