@@ -330,7 +330,12 @@ button.swiper-pagination-bullet {
   top: 0;
 }
 .swiper-pagination-white {
-  --swiper-pagination-color: #ffffff;
+  .swiper-pagination-bullet {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #ffffff;
+  }
 }
 .swiper-pagination-black {
   --swiper-pagination-color: #000000;

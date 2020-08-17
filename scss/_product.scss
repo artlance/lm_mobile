@@ -296,10 +296,12 @@
                 vertical-align: middle;
                 text-align: right;
                 color: $b;
+                width: 40%;
                 &:first-child {
                     text-align: left;
                     padding-left: 16px;
                     color: $text;
+                    width: 60%;
                 }
             }
             tr {
@@ -738,6 +740,398 @@
             }
         }
     }
+    &-discount {
+        padding-bottom: 12px;
+        &-list {
+            &.swiper-container {
+                overflow: visible;
+                padding-bottom: 22px;
+            }
+            .swiper-slide {
+                width: 288px;
+            }
+        }
+        &-item {
+            text-align: center;
+            margin-bottom: 16px;
+            background: rgba(#f3b800, 0.1);
+        }
+        &-img {
+            img {
+                width: 100%;
+            }
+        }
+        &-content {
+            padding: 0 16px 16px;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            margin: -20px auto 7px;
+            background: #f3b800;
+            border-radius: 50%;
+            position: relative;
+        }
+        &-title {
+            font-weight: 500;
+            color: $b;
+            padding-top: 9px;
+            margin-bottom: 8px;
+        }
+        &-info {
+            padding: 0 12px;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gray;
+            margin-bottom: 16px;
+        }
+        &-price {
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 5px;
+            strong {
+                font-weight: 500;
+                color: $red;
+            }
+        }
+        &-saving {
+            line-height: 1.231;
+            margin-bottom: 6px;
+            strong {
+                display: block;
+                font-weight: 500;
+                color: $red;
+            }
+        }
+        &-button {
+            padding-top: 10px;
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &-set {
+        margin-bottom: 16px;
+        .caption {
+            margin-bottom: 20px;
+        }
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -4px;
+        }
+        &-col {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 4px;
+        }
+        &-tabs {
+            display: flex;
+            margin: -12px -16px 16px;
+            padding: 0 1px;
+            list-style: none;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-scrollbar-track {
+                background: $tr;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $tr;
+                outline: none;
+            }
+            &::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+            &::-webkit-scrollbar-corner {
+                background: $tr;
+            }
+            li {
+                padding: 0 15px;
+                a {
+                    display: block;
+                    padding: 7px 0 5px;
+                    line-height: 1.154;
+                    color: $gr;
+                    white-space: nowrap;
+                    border-bottom: 2px solid $tr;
+                    transition: color $d $f, border-color $d $f;
+                    will-change: color, border-color;
+                }
+                &.active {
+                    a {
+                        color: $b;
+                        font-weight: 500;
+                        border-bottom-color: $p;
+                    }
+                }
+            }
+        }
+        &-buy {
+            margin-bottom: 30px;
+            &-button {
+                .button {
+                    width: 100%;
+                }
+            }
+        }
+        &-slider {
+            margin-bottom: 8px;
+            &.swiper-container {
+                overflow: visible;
+                padding-bottom: 6px;
+            }
+            .swiper-slide {
+                width: 140px;
+                &:first-child {
+                    .product-set-plus {
+                        display: none;
+                    }
+                }
+            }
+            .product-set-item {
+                margin-bottom: 16px;
+            }
+        }
+        &-plus {
+            position: absolute;
+            z-index: 5;
+            left: -24px;
+            top: 32px;
+            width: 40px;
+            height: 40px;
+            background: $w;
+            border-radius: 50%;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 19px;
+                left: 13px;
+                width: 14px;
+                height: 2px;
+                background: $t;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 13px;
+                left: 19px;
+                width: 2px;
+                height: 14px;
+                background: $t;
+            }
+        }
+        &-total {
+            padding: 25px 30px 28px;
+            margin-bottom: 8px;
+            background: $s;
+            &-title {
+                font-weight: 500;
+                color: $b;
+                margin-bottom: 14px;
+            }
+            &-price {
+                margin-bottom: 17px;
+                font-size: 30px;
+                line-height: 1.14;
+                font-weight: 500;
+                color: $b;
+                letter-spacing: -0.52px;
+                &-old {
+                    font-size: 16px;
+                    line-height: 1.25;
+                    font-weight: normal;
+                    color: $t;
+                    letter-spacing: 0;
+                    white-space: nowrap;
+                    text-decoration: line-through;
+                }
+                &-new {
+                    white-space: nowrap;
+                }
+            }
+            &-saving {
+                line-height: 1.31;
+                strong {
+                    display: block;
+                    font-weight: 500;
+                    color: $red;
+                    white-space: nowrap;
+                }
+            }
+        }
+        &-item {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        &-checkbox {
+            margin-bottom: 8px;
+            input {
+                appearance: none;
+                position: absolute;
+                left: -9999px;
+                &:checked + label {
+                    &:before {
+                        background-color: $p;
+                        border-color: $p;
+                    }
+                    &:after {
+                        opacity: 1;
+                    }
+                    .product-set-img {
+                        opacity: 1;
+                    }
+                }
+                &:disabled + label {
+                    cursor: default;
+                    pointer-events: none;
+                    opacity: 0.3;
+                }
+            }
+            label {
+                cursor: pointer;
+                display: block;
+                margin: 0;
+                background: $s;
+                position: relative;
+                user-select: none;
+                &:before,
+                &:after {
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    left: 8px;
+                    bottom: 8px;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 2px;
+                }
+                &:before {
+                    background: $w;
+                    border: 1px solid $t;
+                    transition: background-color $d $f, border-color $d $f;
+                    will-change: background-color, border-color;
+                }
+                &:after {
+                    opacity: 0;
+                    background: $tr url('../upload/check.svg') 50% 50% no-repeat;
+                    background-size: 8px 6px;
+                    transition: opacity $d $f;
+                    will-change: opacity;
+                }
+            }
+        }
+        &-img {
+            display: block;
+            opacity: 0.3;
+            transition: opacity $d $f;
+            will-change: opacity;
+            img {
+                width: 100%;
+            }
+        }
+        &-title {
+            font-size: 11px;
+            line-height: 1.455;
+            margin-bottom: 6px;
+            a {
+                display: block;
+                color: $text;
+            }
+        }
+        &-price {
+            margin-bottom: 12px;
+            font-size: 13px;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $b;
+            &-old {
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                font-size: 11px;
+                line-height: 1.455;
+                color: $t;
+                text-decoration: line-through;
+            }
+            &-new {
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+                color: $red;
+            }
+        }
+        &-number {
+            display: flex;
+            justify-content: center;
+        }
+        &-number-minus,
+        &-number-plus {
+            display: block;
+            width: 28px;
+            height: 28px;
+            border-radius: 3px;
+            background: $s;
+            position: relative;
+            transition: background-color $d $f;
+            will-change: background-color;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 13px;
+                left: 9px;
+                width: 10px;
+                height: 2px;
+                background: $t;
+                transition: background-color $d $f;
+                will-change: background-color;
+            }
+            &:hover {
+                background-color: $p;
+                &:before,
+                &:after {
+                    background-color: $w;
+                }
+            }
+        }
+        &-number-plus {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 9px;
+                left: 13px;
+                width: 2px;
+                height: 10px;
+                background: $t;
+                transition: background-color $d $f;
+                will-change: background-color;
+            }
+        }
+        &-number-text {
+            display: block;
+            width: 38px;
+            height: 28px;
+            font-size: 15px;
+            line-height: normal;
+            color: $b;
+            font-weight: 500;
+            text-align: center;
+            padding: 4px;
+            background: $tr;
+            border: 0;
+            border-radius: 0;
+        }
+    }
 }
 .similar {
     &-products {
@@ -752,6 +1146,55 @@
             }
             .swiper-slide {
                 width: 250px;
+            }
+        }
+        &-tabs {
+            display: flex;
+            margin: -10px -16px 16px;
+            padding: 0 1px;
+            list-style: none;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-scrollbar-track {
+                background: $tr;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $tr;
+                outline: none;
+            }
+            &::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+            &::-webkit-scrollbar-corner {
+                background: $tr;
+            }
+            li {
+                padding: 0 15px;
+                a {
+                    display: block;
+                    padding: 7px 0 5px;
+                    line-height: 1.154;
+                    color: $gr;
+                    white-space: nowrap;
+                    border-bottom: 2px solid $tr;
+                    transition: color $d $f, border-color $d $f;
+                    will-change: color, border-color;
+                }
+                &.active {
+                    a {
+                        color: $b;
+                        font-weight: 500;
+                        border-bottom-color: $p;
+                    }
+                }
             }
         }
     }
@@ -835,11 +1278,17 @@
     &-v2 {
         height: 120px;
     }
+    &-v3 {
+        height: 192px;
+    }
     &-push {
         height: 107px;
     }
     &-push-v2 {
         height: 120px;
+    }
+    &-push-v3 {
+        height: 192px;
     }
     &-cart {
         display: flex;
@@ -936,6 +1385,36 @@
             display: inline-block;
             vertical-align: top;
             margin: -4px 8px -5px 0;
+        }
+    }
+    &-total {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        line-height: normal;
+        margin-bottom: 15px;
+        &-number {
+            max-width: 50%;
+            font-weight: 500;
+            color: $b;
+            padding-right: 16px;
+        }
+        &-sum {
+            max-width: 50%;
+            text-align: right;
+            font-weight: 500;
+            color: $b;
+        }
+        &-saving {
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: right;
+            padding-top: 5px;
+            strong {
+                white-space: nowrap;
+                font-weight: 500;
+                color: $red;
+            }
         }
     }
 }

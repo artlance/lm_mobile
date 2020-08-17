@@ -362,7 +362,6 @@
             appearance: none;
             position: absolute;
             left: -9999px;
-            top: -9999px;
             &:checked + label {
                 &:before {
                     background-color: $p;
@@ -421,7 +420,6 @@
             appearance: none;
             position: absolute;
             left: -9999px;
-            top: -9999px;
             &:checked + label {
                 &:after {
                     opacity: 1;
