@@ -17,15 +17,12 @@ $(document).ready(function(){
     //tab
     $('.tabs').delegate('li:not(.active)', 'click', function() {
         $(this).addClass('active').siblings().removeClass('active').parents('.tab').find('.box').hide().eq($(this).index()).fadeIn(250);
-        if ( productsListLength ) {
-            for ( var i = 0; i < productsListLength; i++ ) {
-                productsList[i].update();
-            }
+        var thisIndex = $(this).index();
+        if ( $('.box:visible').find('.products-list').length ) {
+            productsList[thisIndex].update();
         }
-        if ( similarProductsLength ) {
-            for ( var i = 0; i < similarProductsLength; i++ ) {
-                similarProducts[i].update();
-            }
+        if ( $('.box:visible').find('.similar-products-list').length ) {
+            similarProducts[thisIndex].update();
         }
     });
 
@@ -91,7 +88,8 @@ $(document).ready(function(){
             },
             speed: 500,
             spaceBetween: 8,
-            slidesPerView: 'auto'
+            slidesPerView: 'auto',
+            watchOverflow: true,
         });
     }
 
@@ -179,7 +177,7 @@ $(document).ready(function(){
                 clickable: true
             },
             speed: 500,
-            loop: true
+            watchOverflow: true,
         });
     }
 
@@ -188,7 +186,7 @@ $(document).ready(function(){
     //countdown
     if ( $('.countdown').length ) {
         $('.countdown').downCount({
-            date: '09/16/2020 24:00:00',
+            date: '11/16/2020 24:00:00',
             offset: +3
         }, function () {
             //callback
@@ -270,7 +268,9 @@ $(document).ready(function(){
             },
             speed: 500,
             spaceBetween: 2,
-            slidesPerView: 'auto'
+            slidesPerView: 'auto',
+            watchOverflow: true,
+            centerInsufficientSlides: true,
         });
     }
 
@@ -289,7 +289,8 @@ $(document).ready(function(){
             },
             speed: 500,
             spaceBetween: 8,
-            slidesPerView: 'auto'
+            slidesPerView: 'auto',
+            watchOverflow: true,
         });
     }
 
@@ -308,7 +309,9 @@ $(document).ready(function(){
             },
             speed: 500,
             spaceBetween: 8,
-            slidesPerView: 'auto'
+            slidesPerView: 'auto',
+            watchOverflow: true,
+            centerInsufficientSlides: true,
         });
     }
 
@@ -359,7 +362,7 @@ $(document).ready(function(){
                             clickable: true
                         },
                         speed: 500,
-                        loop: true
+                        watchOverflow: true,
                     });
                 }
                 var modalFavorite,
@@ -372,7 +375,9 @@ $(document).ready(function(){
                         },
                         speed: 500,
                         spaceBetween: 8,
-                        slidesPerView: 'auto'
+                        slidesPerView: 'auto',
+                        watchOverflow: true,
+                        centerInsufficientSlides: true,
                     });
                 }
             }
@@ -392,7 +397,9 @@ $(document).ready(function(){
             },
             speed: 500,
             spaceBetween: 10,
-            slidesPerView: 'auto'
+            slidesPerView: 'auto',
+            watchOverflow: true,
+            centerInsufficientSlides: true,
         });
     }
 
@@ -460,7 +467,29 @@ $(document).ready(function(){
             },
             speed: 500,
             spaceBetween: 8,
-            slidesPerView: 'auto'
+            slidesPerView: 'auto',
+            watchOverflow: true,
+            centerInsufficientSlides: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //product customer photo
+    var productCustomerPhoto,
+        productCustomerPhotoLength = $('.product-customer-photo').length;
+    if ( productCustomerPhotoLength ) {
+        productCustomerPhoto = new Swiper ('.product-customer-photo', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 'auto',
+            watchOverflow: true,
         });
     }
 

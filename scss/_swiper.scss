@@ -183,7 +183,7 @@
   --swiper-navigation-color: #000000;
 }
 .swiper-button-lock {
-  display: none;
+  display: none !important;
 }
 :root {
   /*
@@ -341,7 +341,7 @@ button.swiper-pagination-bullet {
   --swiper-pagination-color: #000000;
 }
 .swiper-pagination-lock {
-  display: none;
+  display: none !important;
 }
 /* Scrollbar */
 .swiper-scrollbar {
@@ -379,7 +379,7 @@ button.swiper-pagination-bullet {
   cursor: move;
 }
 .swiper-scrollbar-lock {
-  display: none;
+  display: none !important;
 }
 .swiper-zoom-container {
   width: 100%;

@@ -3,10 +3,19 @@
     background: $s;
     &-gallery {
         &-img {
+            position: relative;
             img {
                 width: 100%;
             }
         }
+    }
+    &-mask-gray {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba($b, 0.04);
     }
     &-favorite {
         display: block;
@@ -553,193 +562,6 @@
             color: $b;
         }
     }
-    &-reviews {
-        padding-bottom: 14px;
-        &-add {
-            padding: 0 16px 16px;
-            .button {
-                width: 100%;
-            }
-        }
-        &-more {
-            padding: 0 16px 16px;
-            &-button {
-                display: block;
-                text-align: center;
-                font-weight: 500;
-                padding: 10px 0 12px;
-            }
-        }
-    }
-    &-review {
-        margin-bottom: 16px;
-        background: $s;
-        &-info {
-            margin: 0 -16px;
-            padding: 18px 16px 26px;
-            background: #f9fafa;
-            font-size: 11px;
-            line-height: 1.455;
-        }
-        &-date {
-            color: $gr;
-            margin-bottom: 6px;
-        }
-        &-customer {
-            font-size: 15px;
-            line-height: 1.2;
-            color: $b;
-            font-weight: bold;
-        }
-        &-customer-city {
-            color: $gr;
-            margin-bottom: 3px;
-        }
-        &-customer-status {
-            font-weight: 500;
-            letter-spacing: -0.17px;
-            margin-bottom: 2px;
-        }
-        &-rating {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 0;
-            margin: 0 0 0 -4px;
-            list-style: none;
-            li {
-                padding: 4px 0 0 4px;
-            }
-        }
-        &-content {
-            padding-top: 16px;
-            padding-bottom: 8px;
-        }
-        &-text {
-            line-height: 1.54;
-            p {
-                margin-bottom: 15px;
-            }
-            strong {
-                font-weight: 500;
-                color: $b;
-            }
-        }
-        &-ratio {
-            display: flex;
-            flex-wrap: wrap;
-            margin-right: -16px;
-        }
-        &-ratio-item {
-            padding: 0 16px 16px 0;
-        }
-        &-ratio-link {
-            display: flex;
-            align-items: center;
-            &.disabled {
-                opacity: 0.3;
-            }
-        }
-        &-ratio-icon {
-            flex: 0 0 50px;
-            max-width: 50px;
-            padding-right: 10px;
-            span {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 40px;
-                height: 40px;
-                background: $w;
-                border-radius: 50%;
-            }
-        }
-        &-ratio-number {
-            flex-grow: 1;
-            font-weight: 500;
-            color: $gr;
-        }
-        &-features {
-            line-height: 1.54;
-            p {
-                margin-bottom: 7px;
-            }
-            strong {
-                font-weight: 500;
-                color: $b;
-            }
-        }
-        &-photos {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -16px;
-            padding: 16px 8px 4px 16px;
-            border-top: 1px solid #e3e3e3;
-        }
-        &-photo {
-            flex: 0 0 58px;
-            max-width: 58px;
-            padding: 0 8px 8px 0;
-            img {
-                width: 100%;
-            }
-        }
-        &-feedback {
-            padding-bottom: 16px;
-        }
-        &-feedback-title {
-            font-size: 11px;
-            line-height: 1.455;
-            color: $gr;
-            margin-bottom: 6px;
-        }
-        &-feedback-block {
-            padding: 24px 24px 8px;
-            background: #E9EBED;
-            border-radius: 5px;
-        }
-        &-feedback-caption {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 26px;
-        }
-        &-feedback-icon {
-            flex: 0 0 56px;
-            max-width: 56px;
-            padding-right: 16px;
-            span {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 40px;
-                height: 40px;
-                padding-top: 2px;
-                background: $w;
-                border-radius: 50%;
-            }
-        }
-        &-feedback-info {
-            flex-grow: 1;
-            font-size: 11px;
-            line-height: 1.455;
-            color: $gr;
-        }
-        &-feedback-date {
-            margin-bottom: 5px;
-        }
-        &-feedback-person {
-            font-size: 13px;
-            line-height: 1.385;
-            font-weight: 500;
-            color: $b;
-        }
-        &-feedback-person-post {}
-        &-feedback-text {
-            line-height: 1.54;
-            p {
-                margin-bottom: 15px;
-            }
-        }
-    }
     &-discount {
         padding-bottom: 12px;
         &-list {
@@ -1130,6 +952,53 @@
             background: $tr;
             border: 0;
             border-radius: 0;
+        }
+    }
+    &-customer {
+        padding: 8px 0 15px;
+        &-title {
+            font-size: 13px;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 16px;
+            strong {
+                font-weight: 500;
+                color: $p;
+            }
+            h3, h4, h5, h6 {
+                font-size: 100%;
+                font-weight: 500;
+                margin: 0;
+            }
+        }
+        &-photo {
+            margin-bottom: 16px;
+            &.swiper-container {
+                overflow: visible;
+                padding-bottom: 8px;
+                .swiper-scrollbar {
+                    height: 8px;
+                }
+            }
+            .swiper-slide {
+                width: 128px;
+            }
+        }
+        &-photo-item {
+            display: block;
+            margin-bottom: 16px;
+            img {
+                width: 100%;
+            }
+        }
+        &-info {
+            color: $b;
+            p {
+                margin-bottom: 18px;
+            }
+            strong {
+                font-weight: 500;
+            }
         }
     }
 }
