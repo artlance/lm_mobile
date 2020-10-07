@@ -20,6 +20,12 @@
         margin: 0 0 8px;
     }
 }
+.input-note {
+    font-size: 11px;
+    line-height: 1.273;
+    color: $gr;
+    padding-top: 8px;
+}
 input.input-text {
     display: block;
     width: 100%;
@@ -42,8 +48,18 @@ textarea.textarea {
     resize: none;
 }
 select.select {
+    display: block;
+    width: 100%;
+    height: 40px;
+    font-size: 13px;
+    line-height: 1.54;
+    color: $b;
+    padding: 0 30px 0 15px;
+    border: 1px solid $t;
+    border-radius: 2px;
+    background: $w url('../upload/select.svg') 100% 50% no-repeat;
+    background-size: 25px 38px;
     appearance: none;
-    border-radius: 0;
 }
 select.select::-ms-expand {
     display: none;
@@ -52,16 +68,70 @@ select.select::-ms-expand {
 .radio {
     display: block;
     input {
-        display: none;
+        appearance: none;
+        position: absolute;
+        left: -9999px;
         &:checked + label {
+            border-color: $t;
+            background-color: $w;
+            box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+            &:before {
+                border-color: $p;
+                background-color: $p;
+            }
+            &:after {
+                opacity: 1;
+            }
         }
         &:disabled + label {
+            cursor: default;
+            pointer-events: none;
+            opacity: 0.3;
         }
     }
     label {
+        cursor: pointer;
+        display: block;
+        margin: 0;
+        padding: 14px 14px 12px 40px;
+        position: relative;
         user-select: none;
+        border: 2px solid $tr;
+        border-radius: 5px;
+        background: $s;
+        transition: border-color $d $f, background-color $d $f, box-shadow $d $f;
+        will-change: border-color, background-color, box-shadow;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -8px;
+            left: 14px;
+            width: 16px;
+            height: 16px;
+            border: 1px solid $t;
+            background: $w;
+            border-radius: 50%;
+            transition: border-color $d $f, background-color $d $f;
+            will-change: border-color, background-color;
+        }
+        &:after {
+            opacity: 0;
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: -3px;
+            left: 19px;
+            width: 6px;
+            height: 6px;
+            background: $w;
+            border-radius: 50%;
+            transition: opacity $d $f;
+            will-change: opacity;
+        }
     }
 }
+.checkbox {}
 a.button,
 input.button,
 button.button {

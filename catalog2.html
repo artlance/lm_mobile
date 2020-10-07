@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/catalog.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-512x512.png" sizes="512x512">
@@ -499,17 +500,18 @@
                         <a href="#" class="catalog-product-favorite"></a>
                     </div>
                     <!-- /.catalog-product -->
-                    <div class="catalog-product">
-                        <a href="#" class="catalog-product-link">
-                            <span class="catalog-product-img"><img src="upload/images/catalog10.jpg" alt=""></span>
-                            <span class="catalog-product-title">Кровать 2x-спальная Davin</span>
-                            <span class="catalog-product-price">
-                                <span class="nowrap">229 990 ₽</span>
+                    <div class="catalog-banner">
+                        <a class="catalog-banner-link" data-fancybox data-width="560" data-height="315" href="https://www.youtube.com/embed/Oc6MZhm7ZjU">
+                            <img src="upload/images/catalog-banner.jpg" alt="">
+                            <span class="catalog-banner-caption">
+                                <span class="catalog-banner-play">
+                                    <span class="catalog-banner-play-icon"></span>
+                                </span>
+                                <span class="catalog-banner-title">Как выбрать компьютерное кресло?</span>
                             </span>
                         </a>
-                        <a href="#" class="catalog-product-favorite active"></a>
                     </div>
-                    <!-- /.catalog-product -->
+                    <!-- /.catalog-banner -->
                     <div class="catalog-product">
                         <a href="#" class="catalog-product-link">
                             <span class="catalog-product-img"><img src="upload/images/catalog11.jpg" alt=""></span>
@@ -1315,6 +1317,7 @@
     <script src="js/migrate.js"></script>
     <script src="js/nstslider.js"></script>
     <script src="js/accounting.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/core.min.js"></script>
 </body>
 </html>

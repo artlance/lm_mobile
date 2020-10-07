@@ -186,7 +186,7 @@ $(document).ready(function(){
     //countdown
     if ( $('.countdown').length ) {
         $('.countdown').downCount({
-            date: '11/16/2020 24:00:00',
+            date: '11/16/2020 12:00:00',
             offset: +3
         }, function () {
             //callback
@@ -491,6 +491,13 @@ $(document).ready(function(){
             slidesPerView: 'auto',
             watchOverflow: true,
         });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //phone mask
+    if ( $('.phone-mask').length ) {
+        $('.phone-mask').mask('+7 (999) 999-99-99');
     }
 
     //------------------------------------------------------------------------//

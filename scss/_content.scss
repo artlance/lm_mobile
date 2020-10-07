@@ -322,3 +322,26 @@
         }
     }
 }
+.showroom-video {
+    margin: 0 -16px;
+    &-link {
+        display: block;
+        position: relative;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -20px;
+            margin-left: -20px;
+            width: 40px;
+            height: 40px;
+            background: $w url('../upload/play.svg') calc(50% + 1px) 50% no-repeat;
+            background-size: 12px 14px;
+            border-radius: 50%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
