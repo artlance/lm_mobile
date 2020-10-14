@@ -17,8 +17,28 @@
     margin-bottom: 18px;
     & > label {
         display: block;
+        color: $text;
         margin: 0 0 8px;
     }
+    &.error {
+        .input-error {
+            display: block;
+        }
+        input.input-text,
+        select.select {
+            color: $red;
+            border-color: rgba(243, 0, 0, 0.5);
+        }
+    }
+}
+.input-error {
+    display: none;
+    font-size: 11px;
+    line-height: 1.273;
+    font-weight: 500;
+    color: $red;
+    padding-top: 5px;
+    margin-bottom: -1px;
 }
 .input-note {
     font-size: 11px;
@@ -32,8 +52,8 @@ input.input-text {
     height: 40px;
     font-size: 13px;
     line-height: normal;
-    color: $text;
-    padding: 11px 14px;
+    color: $b;
+    padding: 11px 15px;
     border: 1px solid $t;
     border-radius: 2px;
     background: $w;

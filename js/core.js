@@ -502,4 +502,101 @@ $(document).ready(function(){
 
     //------------------------------------------------------------------------//
 
+    //cart product
+    var cartProduct,
+        cartProductLength = $('.cart-product-wrapper').length;
+    if ( cartProductLength ) {
+        cartProduct = new Swiper ('.cart-product-wrapper', {
+            speed: 500,
+            slidesPerView: 'auto',
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //cart product delete
+    $(document).on('click', '.cart-product-delete', function(event) {
+        event.preventDefault();
+        $(this).parents('.cart-product-wrapper').remove();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //cart product number
+    $(document).on('keypress', '.cart-product-number-text', function(event) {
+        event = event || window.event;
+        if (event.charCode && event.charCode!=0 && event.charCode!=46 && (event.charCode < 48 || event.charCode > 57) ) return false;
+    });
+
+    $(document).on('click', '.cart-product-number-minus', function(event) {
+        event.preventDefault();
+        var quantityInput = $(this).parent('.cart-product-number').find('.cart-product-number-text');
+        var quantityValue = quantityInput.val();
+        quantityValue = --quantityValue;
+        if ( quantityValue < 0 ) { quantityValue = 0; }
+        quantityInput.val(quantityValue);
+    });
+
+    $(document).on('click', '.cart-product-number-plus', function(event) {
+        event.preventDefault();
+        var quantityInput = $(this).parent('.cart-product-number').find('.cart-product-number-text');
+        var quantityValue = quantityInput.val();
+        quantityInput.val(++quantityValue);
+    });
+
+    //------------------------------------------------------------------------//
+
+    //cart delivery
+    $(document).on('click', '.cart-button-delivery', function(event) {
+        event.preventDefault();
+        $(this).addClass('hidden').parents('.cart').find('.cart-delivery, .cart-terms').removeClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //cart map
+    $(document).on('click', '.cart-map-show', function(event) {
+        event.preventDefault();
+        $(this).addClass('hidden').parents('.cart-map-block').find('.cart-map-wrapper').removeClass('hidden');
+    });
+
+    $(document).on('click', '.cart-map-hide', function(event) {
+        event.preventDefault();
+        $(this).parents('.cart-map-wrapper').addClass('hidden').parents('.cart-map-block').find('.cart-map-show').removeClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //datepicker
+    if ( $('.datepicker').length ) {
+        $.datepicker.regional['ru'] = {
+            closeText: 'Закрыть',
+            prevText: 'Предыдущий',
+            nextText: 'Следующий',
+            currentText: 'Сегодня',
+            monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь',
+            'Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+            monthNamesShort: ['янв','фев','мар','апр','мая','июн',
+            'июл','авг','сен','окт','ноя','дек'],
+            dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+            dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+            dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+            weekHeader: 'Не',
+            dateFormat: 'dd M yy г.',
+            firstDay: 1,
+            isRTL: false,
+            showMonthAfterYear: false,
+            yearSuffix: ' г.'
+        };
+        $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+        $('.datepicker').datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            minDate: 0
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready

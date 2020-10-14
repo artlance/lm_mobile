@@ -3,6 +3,10 @@
     &-global {
         border-bottom: 1px solid #E3E3E3;
     }
+    &-shadow {
+        border-bottom: 0;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    }
     &-content {
         padding: 8px 0;
         margin: 0 -8px;
@@ -55,6 +59,11 @@
             background: $tr url('../upload/cart.svg') 50% 50% no-repeat;
             background-size: 25px 24px;
         }
+    }
+    &-fix {
+        flex: 0 0 40px;
+        max-width: 40px;
+        min-height: 1px;
     }
 }
 .logo {

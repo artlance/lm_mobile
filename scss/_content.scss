@@ -345,3 +345,28 @@
         }
     }
 }
+.recently-viewed {
+    .caption {
+        margin-bottom: 13px;
+    }
+    &-products {
+        margin-bottom: 30px;
+        &.swiper-container {
+            overflow: visible;
+            padding-bottom: 6px;
+        }
+        .swiper-slide {
+            width: 168px;
+        }
+    }
+    &-product {
+        display: block;
+    }
+    &-product-img {
+        display: block;
+        margin-bottom: 16px;
+        img {
+            width: 100%;
+        }
+    }
+}
