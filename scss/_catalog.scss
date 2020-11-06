@@ -231,3 +231,56 @@
         }
     }
 }
+.brand {
+    margin: 8px -16px 16px;
+    padding: 30px 16px 21px;
+    text-align: center;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    &-logo {
+        margin-bottom: 22px;
+        a {
+            display: inline-block;
+            vertical-align: top;
+        }
+    }
+    &-info {
+        padding-bottom: 16px;
+        line-height: 1.54;
+        strong {
+            color: $b;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    &-feature {
+        line-height: 1.85;
+        font-weight: 500;
+        color: $b;
+        a {
+            display: inline-block;
+            vertical-align: top;
+            color: $b;
+        }
+        p {
+            margin-bottom: 25px;
+        }
+    }
+    &-number {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 4px;
+        min-width: 24px;
+        height: 24px;
+        padding: 4px 4px 2px;
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: bold;
+        color: $w;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        background: $p;
+        border-radius: 50%;
+    }
+}
