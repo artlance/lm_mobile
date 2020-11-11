@@ -612,4 +612,25 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //section menu
+    $(document).on('click', '.section-menu-link', function (event) {
+        event.preventDefault();
+        $('html').addClass('section-menu-show');
+    });
+
+    $(document).on('click', '.section-menu-back, .section-menu-close, .section-menu-mask', function (event) {
+        event.preventDefault();
+        $('html').removeClass('section-menu-show');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //section menu category
+    $(document).on('click', '.section-menu-category-toggle', function (event) {
+        event.preventDefault();
+        $(this).parent('li').toggleClass('open');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
