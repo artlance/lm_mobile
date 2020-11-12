@@ -781,6 +781,76 @@
             display: none;
         }
     }
+    &-type {
+        padding: 16px 16px 8px;
+        border-bottom: 1px solid #e3e3e3;
+        &-link {
+            display: flex;
+            align-items: center;
+            min-height: 82px;
+            padding: 5px 15px;
+            margin-bottom: 8px;
+            border-radius: 3px;
+            border: 1px solid #e1e1e1;
+            transition: border-color $d $f, box-shadow $d $f;
+            will-change: border-color, box-shadow;
+            &.active {
+                border-color: #a1a1a1;
+                box-shadow: inset 0 0 0 1px #a1a1a1, 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+            }
+        }
+        &-img {
+            flex: 0 0 94px;
+            max-width: 94px;
+            padding-right: 24px;
+            img {
+                width: 100%;
+            }
+        }
+        &-title {
+            flex-grow: 1;
+            font-size: 13px;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $text;
+        }
+    }
+    &-country {
+        padding: 16px 16px 8px;
+        border-bottom: 1px solid #e3e3e3;
+        &-link {
+            display: flex;
+            align-items: center;
+            min-height: 40px;
+            padding: 9px 15px 9px 12px;
+            margin-bottom: 8px;
+            border-radius: 3px;
+            border: 1px solid #e1e1e1;
+            transition: border-color $d $f, box-shadow $d $f;
+            will-change: border-color, box-shadow;
+            &.active {
+                border-color: #a1a1a1;
+                box-shadow: inset 0 0 0 1px #a1a1a1, 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+            }
+        }
+        &-img {
+            flex: 0 0 30px;
+            max-width: 30px;
+            padding-right: 10px;
+            img {
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+        &-title {
+            flex-grow: 1;
+            font-size: 13px;
+            line-height: 1.231;
+            font-weight: 500;
+            color: $text;
+            padding-bottom: 2px;
+        }
+    }
 }
 .section-menu-show {
     body {

@@ -207,6 +207,17 @@
             background: $p;
             border-radius: 50%;
         }
+        &-other {
+            li {
+                a {
+                    &.filter-panel-toggle {
+                        &:after {
+                            transform: rotate(-90deg);
+                        }
+                    }
+                }
+            }
+        }
     }
     &-delivery {
         border-bottom: 1px solid #e3e3e3;
@@ -570,6 +581,20 @@
         }
         &-handle-max {
             margin-left: 1px;
+        }
+    }
+    &-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        min-height: 100%;
+        &-content {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+        &-options {
+            flex: 0 0 100%;
+            max-width: 100%;
         }
     }
 }

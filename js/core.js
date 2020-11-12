@@ -633,4 +633,12 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //section menu type
+    $(document).on('click', '.section-menu-type-link, .section-menu-country-link', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
