@@ -483,7 +483,10 @@
             <div class="product-gallery swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="product-gallery-img"><img src="upload/images/product1.jpg" alt=""></div>
+                        <div class="product-gallery-img">
+                            <img src="upload/images/product1.jpg" alt="">
+                            <div class="product-mask-gray"></div>
+                        </div>
                     </div>
                     <!-- /.swiper-slide -->
                     <div class="swiper-slide">
@@ -509,6 +512,7 @@
                     <div class="product-caption">
                         <div class="product-articul">Арт: 146389</div>
                         <div class="product-status"><span class="product-status-icon"><img src="upload/available.svg" alt=""></span>В наличии</div>
+                        <div class="product-rating"><img src="upload/star-active2.svg" alt="">3.2</div>
                     </div>
                     <div class="product-title">
                         <h1>Стул Calipso Light Grey</h1>
@@ -611,32 +615,25 @@
         <!-- /.product-customer -->
         <div class="product-tab tab">
             <ul class="product-tabs tabs">
-                <li class="active"><a href="#">3D</a></li>
                 <li><a href="#">Видео</a></li>
                 <li><a href="#">Описание</a></li>
                 <li><a href="#">Характеристики</a></li>
-                <li><a href="#">Отзывы <strong>25</strong></a></li>
+                <li>
+                    <a href="#">Отзывы <strong>25</strong>
+                        <span class="product-tabs-rating">
+                            <img src="upload/star-active2.svg" alt="">
+                            <img src="upload/star-active2.svg" alt="">
+                            <img src="upload/star-active2.svg" alt="">
+                            <img src="upload/star.svg" alt="">
+                            <img src="upload/star.svg" alt="">
+                        </span>
+                        <span class="product-tabs-rating-text">3.2</span>
+                    </a>
+                </li>
                 <li><a href="#">Производитель</a></li>
+                <li class="active"><a href="#">Доставка</a></li>
             </ul>
             <!-- /.product-tabs -->
-            <div class="box visible">
-                <div class="product-three-d-wrapper">
-                    <div class="product-three-d">
-                        <div class="product-three-d-block"></div>
-                        <div class="product-three-d-range" data-range_min="0" data-range_max="0" data-cur_min="0" data-cur_max="0">
-                            <div class="product-three-d-range-bar"></div>
-                            <div class="product-three-d-range-handle-min"></div>
-                            <div class="product-three-d-range-handle-max"></div>
-                        </div>
-                    </div>
-                    <!-- /.product-three-d -->
-                    <div class="product-three-d-note">Тяните бегунок влево-вправо <br>для вращения объекта</div>
-                    <div class="product-three-d-icon"></div>
-                    <a href="#" class="product-three-d-play"></a>
-                </div>
-                <!-- /.product-three-d-wrapper -->
-            </div>
-            <!-- /.box -->
             <div class="box">
                 <div class="product-video">
                     <div class="product-video-block">
@@ -965,6 +962,284 @@
                 <!-- /.product-brand -->
             </div>
             <!-- /.box -->
+            <div class="box visible">
+                <div class="product-delivery-info">
+                    <div class="product-delivery-specs-wrapper">
+                        <div class="product-delivery-specs swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="product-delivery-specs-item">
+                                        <div class="product-delivery-specs-icon"><img src="upload/weight.svg" alt=""></div>
+                                        <div class="product-delivery-specs-title">Вес: 7,5 кг</div>
+                                    </div>
+                                </div>
+                                <!-- /.swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="product-delivery-specs-item">
+                                        <div class="product-delivery-specs-icon"><img src="upload/weight.svg" alt=""></div>
+                                        <div class="product-delivery-specs-title">Вес: 7,5 кг</div>
+                                    </div>
+                                </div>
+                                <!-- /.swiper-slide -->
+                                <div class="swiper-slide">
+                                    <div class="product-delivery-specs-item">
+                                        <div class="product-delivery-specs-icon"><img src="upload/weight.svg" alt=""></div>
+                                        <div class="product-delivery-specs-title">Вес: 7,5 кг</div>
+                                    </div>
+                                </div>
+                                <!-- /.swiper-slide -->
+                            </div>
+                            <!-- /.swiper-wrapper -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                        <!-- /.product-delivery-specs -->
+                    </div>
+                    <!-- /.product-delivery-specs-wrapper -->
+                    <div class="container">
+                        <div class="product-delivery-type">
+                            <div class="product-delivery-type-img"><img src="upload/images/delivery-type1.png" alt=""></div>
+                            <div class="product-delivery-type-title">Курьерская доставка</div>
+                            <div class="product-delivery-type-text">
+                                <p>Благодаря металлическим направляющим и синхронной раскладке, стол плавно <br>раздвигается одним человеком.</p>
+                            </div>
+                            <div class="product-delivery-type-info">
+                                <div class="product-delivery-type-price"><strong class="nowrap">590 руб.</strong></div>
+                                <p>
+                                    Доставка 05 октября <br>
+                                    Сборка при доставке <br>
+                                    Подъем – <strong>бесплатно</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-delivery-type -->
+                        <div class="product-delivery-type">
+                            <div class="product-delivery-type-img"><img src="upload/images/delivery-type2.png" alt=""></div>
+                            <div class="product-delivery-type-title">Доставка до терминала <br>любой ТК в г. Москва</div>
+                            <div class="product-delivery-type-text">
+                                <p>Благодаря металлическим направляющим и синхронной раскладке, стол плавно <br>раздвигается одним человеком.</p>
+                            </div>
+                            <div class="product-delivery-type-info">
+                                <div class="product-delivery-type-price"><strong class="nowrap">1000 руб.</strong> до терминала</div>
+                                <p>Доставка - 25 ноября 2020г.</p>
+                                <p><strong>Доставку до вашего города сообщит выбранная вами ТК</strong></p>
+                            </div>
+                        </div>
+                        <!-- /.product-delivery-type -->
+                        <div class="product-delivery-type">
+                            <div class="product-delivery-type-img"><img src="upload/images/delivery-type3.png" alt=""></div>
+                            <div class="product-delivery-type-title">Экспресс-доставка</div>
+                            <div class="product-delivery-type-text">
+                                <p>Благодаря металлическим направляющим и синхронной раскладке, стол плавно <br>раздвигается одним человеком.</p>
+                            </div>
+                            <div class="product-delivery-type-info">
+                                <div class="product-delivery-type-price"><strong class="nowrap">1 590 руб.</strong></div>
+                                <p>
+                                    Доставка сегодня (с 16:00 до 21:00) <br>
+                                    Сборка на следующий день <br>
+                                    Подъем – <strong>бесплатно</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-delivery-type -->
+                        <div class="product-delivery-type">
+                            <div class="product-delivery-type-img"><img src="upload/images/delivery-type4.png" alt=""></div>
+                            <div class="product-delivery-type-title">Доставка ЯндексТакси <span class="product-delivery-type-yandex"><img src="upload/images/delivery-yandex.png" alt=""></span></div>
+                            <div class="product-delivery-type-text">
+                                <p>Благодаря металлическим направляющим и синхронной раскладке, стол плавно <br>раздвигается одним человеком.</p>
+                            </div>
+                            <div class="product-delivery-type-info">
+                                <div class="product-delivery-type-price"><strong class="nowrap">от 3000 руб.</strong></div>
+                                <p>
+                                    Доставка через 3-4 часа <br>
+                                    Сборка на следующий день <br>
+                                    Подъем – <strong>бесплатно</strong>
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-delivery-type -->
+                        <div class="product-delivery-type">
+                            <div class="product-delivery-type-icon"><img src="upload/pickup.svg" alt=""></div>
+                            <div class="product-delivery-type-title">Самовывоз</div>
+                            <div class="product-delivery-type-text">
+                                <p>
+                                    <a href="#">Шоурум Metromall</a> <br>
+                                    (Дмитровское шоссе, д. 73, стр. 1) <br>
+                                    <strong>3 шт. в наличии</strong>
+                                </p>
+                               <p>
+                                   <a href="#">Шоурум Shokolad</a> <br>
+                                   (МКАД, 2й километр, Реутов) <br>
+                                   <strong>2 шт. в наличии</strong>
+                               </p>
+                            </div>
+                            <div class="product-delivery-type-info">
+                                <div class="product-delivery-type-price"><strong class="nowrap">Бесплатно</strong></div>
+                                <div class="product-delivery-type-buttons">
+                                    <a href="#" class="button">Позвонить</a>
+                                    <a href="#" class="button">Зарезервировать</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.product-delivery-type -->
+                        <div class="product-delivery-type">
+                            <div class="product-delivery-type-img"><img src="upload/images/delivery-type5.png" alt=""></div>
+                            <div class="product-delivery-type-title">Доставка через ТК ПЭК</div>
+                            <div class="product-delivery-type-text">
+                                <p>Благодаря металлическим направляющим и синхронной раскладке, стол плавно <br>раздвигается одним человеком.</p>
+                            </div>
+                            <div class="product-delivery-type-info">
+                                <div class="product-delivery-type-prices">
+                                    <p><strong>3000 руб. до терминала</strong> <br>Доставка - 25 ноября</p>
+                                    <p><strong>4000 руб. до квартиры</strong> <br>Доставка - 27 ноября</p>
+                                </div>
+                            </div>
+                            <div class="product-delivery-filials tab-inner">
+                                <div class="product-delivery-filials-title">Отделения ТК ПЭК</div>
+                                <ul class="product-delivery-filials-tabs tabs-inner">
+                                    <li class="active"><a href="#">Списком</a></li>
+                                    <li><a href="#">На карте</a></li>
+                                </ul>
+                                <div class="box-inner visible">
+                                    <div class="product-delivery-filials-list">
+                                        <div class="product-delivery-filials-item">
+                                            <a href="#" class="product-delivery-filials-caption"><strong>Отделение №1</strong> г. Москва, Дмитровское шоссе, <br>д. 73, стр. 2 (ТЦ Метромолл)</a>
+                                            <div class="product-delivery-filials-info">
+                                                <div class="product-delivery-filials-info-title">График работы</div>
+                                                <p>Пн-Пт: <br><strong>8:30 – 19:00</strong></p>
+                                                <p>Сб: <br><strong>10:00 – 18:00</strong></p>
+                                                <p>Вс: <br><strong class="red">Выходной</strong></p>
+                                                <div class="product-delivery-filials-info-title">Телефон</div>
+                                                <p><a href="tel:84955405517" class="product-delivery-filials-phone">8 (495) 540 55 17</a></p>
+                                                <div class="product-delivery-filials-info-title">Email</div>
+                                                <p><a href="mailto:info@lifemebel.ru">info@lifemebel.ru</a></p>
+                                            </div>
+                                            <!-- /.product-delivery-filials-info -->
+                                        </div>
+                                        <!-- /.product-delivery-filials-item -->
+                                        <div class="product-delivery-filials-item">
+                                            <a href="#" class="product-delivery-filials-caption"><strong>Отделение №2</strong> г. Москва, Дмитровское шоссе, <br>д. 73, стр. 2 (ТЦ Метромолл)</a>
+                                            <div class="product-delivery-filials-info">
+                                                <div class="product-delivery-filials-info-title">График работы</div>
+                                                <p>Пн-Пт: <br><strong>8:30 – 19:00</strong></p>
+                                                <p>Сб: <br><strong>10:00 – 18:00</strong></p>
+                                                <p>Вс: <br><strong class="red">Выходной</strong></p>
+                                                <div class="product-delivery-filials-info-title">Телефон</div>
+                                                <p><a href="tel:84955405517" class="product-delivery-filials-phone">8 (495) 540 55 17</a></p>
+                                                <div class="product-delivery-filials-info-title">Email</div>
+                                                <p><a href="mailto:info@lifemebel.ru">info@lifemebel.ru</a></p>
+                                            </div>
+                                            <!-- /.product-delivery-filials-info -->
+                                        </div>
+                                        <!-- /.product-delivery-filials-item -->
+                                        <div class="product-delivery-filials-item">
+                                            <a href="#" class="product-delivery-filials-caption"><strong>Отделение №3</strong> г. Москва, Дмитровское шоссе, <br>д. 73, стр. 2 (ТЦ Метромолл)</a>
+                                            <div class="product-delivery-filials-info">
+                                                <div class="product-delivery-filials-info-title">График работы</div>
+                                                <p>Пн-Пт: <br><strong>8:30 – 19:00</strong></p>
+                                                <p>Сб: <br><strong>10:00 – 18:00</strong></p>
+                                                <p>Вс: <br><strong class="red">Выходной</strong></p>
+                                                <div class="product-delivery-filials-info-title">Телефон</div>
+                                                <p><a href="tel:84955405517" class="product-delivery-filials-phone">8 (495) 540 55 17</a></p>
+                                                <div class="product-delivery-filials-info-title">Email</div>
+                                                <p><a href="mailto:info@lifemebel.ru">info@lifemebel.ru</a></p>
+                                            </div>
+                                            <!-- /.product-delivery-filials-info -->
+                                        </div>
+                                        <!-- /.product-delivery-filials-item -->
+                                        <div class="product-delivery-filials-item hidden">
+                                            <a href="#" class="product-delivery-filials-caption"><strong>Отделение №4</strong> г. Москва, Дмитровское шоссе, <br>д. 73, стр. 2 (ТЦ Метромолл)</a>
+                                            <div class="product-delivery-filials-info">
+                                                <div class="product-delivery-filials-info-title">График работы</div>
+                                                <p>Пн-Пт: <br><strong>8:30 – 19:00</strong></p>
+                                                <p>Сб: <br><strong>10:00 – 18:00</strong></p>
+                                                <p>Вс: <br><strong class="red">Выходной</strong></p>
+                                                <div class="product-delivery-filials-info-title">Телефон</div>
+                                                <p><a href="tel:84955405517" class="product-delivery-filials-phone">8 (495) 540 55 17</a></p>
+                                                <div class="product-delivery-filials-info-title">Email</div>
+                                                <p><a href="mailto:info@lifemebel.ru">info@lifemebel.ru</a></p>
+                                            </div>
+                                            <!-- /.product-delivery-filials-info -->
+                                        </div>
+                                        <!-- /.product-delivery-filials-item -->
+                                        <div class="product-delivery-filials-item hidden">
+                                            <a href="#" class="product-delivery-filials-caption"><strong>Отделение №5</strong> г. Москва, Дмитровское шоссе, <br>д. 73, стр. 2 (ТЦ Метромолл)</a>
+                                            <div class="product-delivery-filials-info">
+                                                <div class="product-delivery-filials-info-title">График работы</div>
+                                                <p>Пн-Пт: <br><strong>8:30 – 19:00</strong></p>
+                                                <p>Сб: <br><strong>10:00 – 18:00</strong></p>
+                                                <p>Вс: <br><strong class="red">Выходной</strong></p>
+                                                <div class="product-delivery-filials-info-title">Телефон</div>
+                                                <p><a href="tel:84955405517" class="product-delivery-filials-phone">8 (495) 540 55 17</a></p>
+                                                <div class="product-delivery-filials-info-title">Email</div>
+                                                <p><a href="mailto:info@lifemebel.ru">info@lifemebel.ru</a></p>
+                                            </div>
+                                            <!-- /.product-delivery-filials-info -->
+                                        </div>
+                                        <!-- /.product-delivery-filials-item -->
+                                        <div class="product-delivery-filials-more">
+                                            <a href="#" class="product-delivery-filials-more-button">Показать еще</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.product-delivery-filials-list -->
+                                </div>
+                                <!-- /.box-inner -->
+                                <div class="box-inner">
+                                    <div class="product-delivery-filials-map">
+                                        <div id="product-delivery-map" class="product-delivery-map"></div>
+                                        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+                                        <script>
+                                            ymaps.ready(function () {
+                                                var myMap = new ymaps.Map('product-delivery-map', {
+                                                        center: [55.751131, 37.637388],
+                                                        zoom: 16,
+                                                        controls: []
+                                                    }, {
+                                                        searchControlProvider: 'yandex#search'
+                                                    }),
+
+                                                    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+                                                        '<div class="product-delivery-map-number">$[properties.iconContent]</div>'
+                                                    ),
+
+                                                    myPlacemark = new ymaps.Placemark([55.752131, 37.636388], {
+                                                        iconContent: '1'
+                                                    }, {
+                                                        iconLayout: 'default#imageWithContent',
+                                                        iconImageHref: 'upload/pin2.svg',
+                                                        iconImageSize: [64, 64],
+                                                        iconImageOffset: [-32, -28],
+                                                        iconContentOffset: [20, 20],
+                                                        iconContentLayout: MyIconContentLayout,
+                                                    });
+
+                                                    myPlacemark2 = new ymaps.Placemark(myMap.getCenter(), {
+                                                        iconContent: '2'
+                                                    }, {
+                                                        iconLayout: 'default#imageWithContent',
+                                                        iconImageHref: 'upload/pin2.svg',
+                                                        iconImageSize: [64, 64],
+                                                        iconImageOffset: [-32, -28],
+                                                        iconContentOffset: [20, 20],
+                                                        iconContentLayout: MyIconContentLayout,
+                                                    });
+
+                                                myMap.geoObjects.add(myPlacemark).add(myPlacemark2);
+                                            });
+                                        </script>
+                                    </div>
+                                    <!-- /.product-delivery-filials-map -->
+                                </div>
+                                <!-- /.box-inner -->
+                            </div>
+                            <!-- /.product-delivery-filials -->
+                        </div>
+                        <!-- /.product-delivery-type -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /.product-delivery-info -->
+            </div>
+            <!-- /.box -->
         </div>
         <!-- /.product-tab -->
         <div class="product-features">
@@ -1225,8 +1500,11 @@
         <div class="product-cta">
             <div class="container">
                 <div class="product-cta-cart">
-                    <div class="product-cta-cart-add-full">
-                        <a href="#" class="button product-cta-cart-add-button"><span class="product-cta-cart-icon"></span>Добавить в корзину</a>
+                    <div class="product-cta-cart-add">
+                        <a href="#" class="button product-cta-cart-add-button"><span class="product-cta-cart-icon"></span>В корзину</a>
+                    </div>
+                    <div class="product-cta-cart-more">
+                        <a href="#" class="product-cta-cart-more-button"><span class="product-cta-cart-plus"></span>1 шт.</a>
                     </div>
                 </div>
                 <!-- /.product-cta-cart -->
@@ -1246,8 +1524,6 @@
     <script src="js/popper.js"></script>
     <script src="js/tooltip.js"></script>
     <script src="js/jquery.fancybox.min.js"></script>
-    <script src="js/nstslider.js"></script>
-    <script src="js/spritespin.js"></script>
     <script src="js/core.min.js"></script>
 </body>
 </html>

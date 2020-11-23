@@ -16,7 +16,8 @@
         margin: 0;
     }
 }
-.box {
+.box,
+.box-inner {
     display: none;
     &.visible {
         display: block;
