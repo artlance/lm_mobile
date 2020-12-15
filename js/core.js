@@ -759,4 +759,28 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //delivery features
+    var deliveryFeatures,
+        deliveryFeaturesLength = $('.delivery-features').length;
+    if (deliveryFeaturesLength) {
+        deliveryFeatures = new Swiper('.delivery-features', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            speed: 500,
+            watchOverflow: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //delivery type
+    $(document).on('click', '.delivery-type-caption', function (event) {
+        event.preventDefault();
+        $(this).parents('.delivery-type').toggleClass('active').find('.delivery-type-block').slideToggle(150);
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
