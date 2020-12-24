@@ -160,6 +160,38 @@
             margin-bottom: 0;
         }
     }
+    &-favorite {
+        border-bottom: 1px solid #E3E3E3;
+        &-link {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 16px;
+        }
+        &-icon {
+            margin: 2px 4px 0 8px;
+        }
+        &-title {
+            font-size: 15px;
+            line-height: 1.4;
+            font-weight: 500;
+            color: $b;
+            padding: 0 13px;
+        }
+        &-number {
+            flex: 0 0 auto;
+            min-width: 24px;
+            height: 24px;
+            padding: 2px 5px 4px;
+            font-weight: 500;
+            color: $w;
+            text-align: center;
+            white-space: nowrap;
+            background: $p;
+            border-radius: 50%;
+        }
+    }
 }
 .copyright {
     padding-top: 2px;

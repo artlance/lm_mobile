@@ -23,7 +23,8 @@
         }
     }
     &-favorite,
-    &-cart {
+    &-cart,
+    &-profile {
         &-link {
             display: block;
             width: 40px;
@@ -58,6 +59,12 @@
         &-link {
             background: $tr url('../upload/cart.svg') 50% 50% no-repeat;
             background-size: 25px 24px;
+        }
+    }
+    &-profile {
+        &-link {
+            background: $tr url('../upload/profile.svg') 50% 50% no-repeat;
+            background-size: 40px 40px;
         }
     }
     &-fix {
@@ -367,7 +374,7 @@
         }
     }
     &-cabinet {
-        padding: 16px 16px 17px;
+        padding: 16px 16px 0;
         .button {
             width: 100%;
         }
@@ -375,7 +382,7 @@
     &-info {
         display: block;
         margin: 0;
-        padding: 0 0 25px;
+        padding: 17px 0 22px;
         list-style: none;
         border-bottom: 1px solid #e3e3e3;
         li {
