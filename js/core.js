@@ -783,4 +783,136 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //profile panel
+    $(document).on('click', '.header-profile-link', function (event) {
+        event.preventDefault();
+        $('html').addClass('profile-panel-show');
+    });
+
+    $(document).on('click', '.profile-panel-close, .profile-panel-mask', function (event) {
+        event.preventDefault();
+        $('html').removeClass('profile-panel-show');
+    });
+
+    //------------------------------------------------------------------------//
+
+    $(document).on('keyup', '.profile-panel-code-col .input-text', function (event) {
+
+        var _key = (window.Event) ? event.which : event.keyCode;
+
+        var thisElement = $(this);
+        if (thisElement.val() != '') {
+            thisElement.addClass('input-text-value');
+        } else {
+            thisElement.removeClass('input-text-value');
+        }
+
+        var thisParent = $(this).parents('.profile-panel-code-col');
+        var thisParentNext = thisParent.next('.profile-panel-code-col');
+        var thisParentPrev = thisParent.prev('.profile-panel-code-col');
+
+
+        if (_key == 8) {
+            thisParentPrev.find('.input-text').focus();
+        } else {
+            if (thisParentNext.length) {
+                thisParentNext.find('.input-text').focus();
+            }
+        }
+
+    });
+
+    var countInterval;
+    function profileCodeCount() {
+        var counter = 40;
+        countInterval = setInterval(function () {
+            $('.profile-panel-code-note-sec').text(counter);
+            counter--;
+            if (counter == -1) {
+                clearInterval(countInterval);
+            }
+        }, 1000);
+    }
+
+    //------------------------------------------------------------------------//
+
+    //profile login steps
+
+    $(document).on('click', '.profile-panel-login-email-link', function (event) {
+        event.preventDefault();
+        $('.profile-panel-login-email').removeClass('hidden');
+        $('.profile-panel-login-phone').addClass('hidden');
+    });
+
+    $(document).on('click', '.profile-panel-login-phone-link', function (event) {
+        event.preventDefault();
+        $('.profile-panel-login-email').addClass('hidden');
+        $('.profile-panel-login-phone').removeClass('hidden');
+    });
+
+    $(document).on('click', '.profile-panel-code-link', function (event) {
+        event.preventDefault();
+        $('.profile-panel-tab').addClass('hidden');
+        $('.profile-panel-code').removeClass('hidden');
+        profileCodeCount();
+    });
+
+    $(document).on('click', '.profile-panel-code-change-phone', function (event) {
+        event.preventDefault();
+        $('.profile-panel-tab').removeClass('hidden');
+        $('.profile-panel-code').addClass('hidden');
+        clearInterval(countInterval);
+    });
+
+    $(document).on('click', '.profile-panel-forgot-password', function (event) {
+        event.preventDefault();
+        $('.profile-panel-tab').addClass('hidden');
+        $('.profile-panel-recover-step-1').removeClass('hidden');
+        $('.profile-panel-title-text').text('Восстановление пароля');
+    });
+
+    $(document).on('click', '.profile-panel-recover-back', function (event) {
+        event.preventDefault();
+        $('.profile-panel-tab').removeClass('hidden');
+        $('.profile-panel-recover-step').addClass('hidden');
+        $('.profile-panel-title-text').text('Личный кабинет');
+    });
+
+    $(document).on('click', '.profile-panel-recover-go-step-2', function (event) {
+        event.preventDefault();
+        $('.profile-panel-recover-step-1').addClass('hidden');
+        $('.profile-panel-recover-step-2').removeClass('hidden');
+
+        setTimeout(function () {
+            $('.profile-panel-recover-step-2').addClass('hidden');
+            $('.profile-panel-recover-step-3').removeClass('hidden');
+        }, 3000);
+    });
+
+    $(document).on('click', '.profile-panel-recover-go-step-4', function (event) {
+        event.preventDefault();
+        $('.profile-panel-recover-step-3').addClass('hidden');
+        $('.profile-panel-recover-step-4').removeClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //error example
+    function validateEmail(email) {
+        var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    $(document).on('focusout', '#profile-panel-register-email', function () {
+        var emailValid = validateEmail($(this).val());
+        if (emailValid) {
+            $(this).parents('.input-wrapper').removeClass('error');
+            $('.profile-panel-error').addClass('hidden');
+        } else {
+            $(this).parents('.input-wrapper').addClass('error');
+            $('.profile-panel-error').removeClass('hidden');
+        }
+    });
+
+
 });//document ready

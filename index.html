@@ -494,6 +494,197 @@
             <!-- /.city-panel-content -->
         </div>
         <!-- /.city-panel -->
+        <div class="profile-panel-mask"></div>
+        <div class="profile-panel">
+            <div class="profile-panel-content">
+                <div class="profile-panel-title"><span class="profile-panel-title-text">Личный кабинет</span> <a href="#" class="profile-panel-close"></a></div>
+                <div class="profile-panel-tab tab">
+                    <ul class="profile-panel-tabs tabs">
+                        <li class="active"><a href="#">Войти</a></li>
+                        <li><a href="#">Зарегистрироваться</a></li>
+                    </ul>
+                    <div class="box visible">
+                        <div class="profile-panel-login-email hidden">
+                            <div class="profile-panel-login-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-email">Email</label>
+                                    <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-login-email">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-password">Пароль</label>
+                                    <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-login-password">
+                                    <a href="#" class="profile-panel-forgot-password">Забыли пароль?</a>
+                                </div>
+                                <div class="profile-panel-login-sep"><span>или</span></div>
+                                <div class="profile-panel-login-title">При помощи</div>
+                                <div class="profile-panel-login-types">
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-apple"><img src="upload/apple.svg" alt="">Apple ID</a>
+                                    </div>
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-google"><img src="upload/google.svg" alt="">Google</a>
+                                    </div>
+                                    <div class="profile-panel-login-type-x2">
+                                        <a href="#" class="profile-panel-login-phone-link"><img src="upload/phone2.svg" alt="">Номер телефона</a>
+                                    </div>
+                                </div>
+                                <!-- /.profile-panel-login-types -->
+                            </div>
+                            <!-- /.profile-panel-login-form -->
+                            <div class="profile-panel-login-options">
+                                <a href="#" class="button">Войти</a>
+                            </div>
+                        </div>
+                        <!-- /.profile-panel-login-email -->
+                        <div class="profile-panel-login-phone">
+                            <div class="profile-panel-login-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-phone">Ваш номер телефона</label>
+                                    <input type="tel" class="input-text phone-mask" placeholder="+7" id="profile-panel-login-phone">
+                                </div>
+                                <div class="profile-panel-login-sep"><span>или</span></div>
+                                <div class="profile-panel-login-title">При помощи</div>
+                                <div class="profile-panel-login-types">
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-apple"><img src="upload/apple.svg" alt="">Apple ID</a>
+                                    </div>
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-google"><img src="upload/google.svg" alt="">Google</a>
+                                    </div>
+                                    <div class="profile-panel-login-type-x2">
+                                        <a href="#" class="profile-panel-login-email-link"><img src="upload/email.svg" alt="">Email</a>
+                                    </div>
+                                </div>
+                                <!-- /.profile-panel-login-types -->
+                            </div>
+                            <!-- /.profile-panel-login-form -->
+                            <div class="profile-panel-login-options">
+                                <a href="#" class="button profile-panel-code-link">Войти</a>
+                            </div>
+                        </div>
+                        <!-- /.profile-panel-login-phone -->
+                    </div>
+                    <!-- /.box -->
+                    <div class="box">
+                        <div class="profile-panel-register">
+                            <div class="profile-panel-register-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-name">Ваше имя и фамилия</label>
+                                    <input type="text" class="input-text" placeholder="Введите имя и фамилию" id="profile-panel-register-name">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-phone">Телефон</label>
+                                    <input type="tel" class="input-text phone-mask" placeholder="+7" id="profile-panel-register-phone">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-email">Email</label>
+                                    <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-register-email">
+                                </div>
+                            </div>
+                            <!-- /.profile-panel-register-form -->
+                            <div class="profile-panel-register-options">
+                                <a href="#" class="button">Зарегистрироваться</a>
+                                <div class="profile-panel-register-terms">
+                                    <p>Нажав кнопку, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Условиями</a></p>
+                                </div>
+                            </div>
+                            <!-- /.profile-panel-register-options -->
+                        </div>
+                        <!-- /.profile-panel-register -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.profile-panel-tab -->
+                <div class="profile-panel-code hidden">
+                    <div class="profile-panel-code-content">
+                        <div class="profile-panel-code-title">На номер <strong class="nowrap">+7 (926) 375-02-10</strong> выслан код&nbsp;подтверждения</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-code">Введите код из SMS</label>
+                            <div class="profile-panel-code-row">
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" id="profile-panel-code" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-panel-code-note">Повторный код будет отправлен через <br><span class="profile-panel-code-note-sec">40</span> секунд</div>
+                    </div>
+                    <!-- /.profile-panel-code-content -->
+                    <div class="profile-panel-code-options">
+                        <a href="#" class="button white profile-panel-code-change-phone">Изменить номер</a>
+                        <a href="#" class="button">Войти</a>
+                    </div>
+                    <!-- /.profile-panel-code-options -->
+                </div>
+                <!-- /.profile-panel-code -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-1 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-note">Пожалуйста, введите ваш действующий адрес электронной почты</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-email">Email</label>
+                            <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-recover-email">
+                        </div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button white profile-panel-recover-back">Назад на страницу входа</a>
+                        <a href="#" class="button profile-panel-recover-go-step-2">Продолжить</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-1 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-2 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-note">На ваш действующий адрес электронной почты были высланы инструкции по восстановлению пароля.</div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                </div>
+                <!-- /.profile-panel-recover-step-2 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-3 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-title">Введите новый пароль</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-password">Новый пароль</label>
+                            <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-recover-password">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-password-repeat">Повторите новый пароль</label>
+                            <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-recover-password-repeat">
+                        </div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button profile-panel-recover-go-step-4">Изменить пароль</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-3 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-4 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-title">Поздравляем!</div>
+                        <div class="profile-panel-recover-note">Ваш пароль успешно изменен.</div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button white profile-panel-recover-back">Назад на страницу входа</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-4 -->
+            </div>
+            <!-- /.profile-panel-content -->
+            <!-- <div class="profile-panel-error">Учетная запись с такой почтой уже есть. <br>Вам нужно восстановить пароль, перейдя&nbsp;по ссылке</div> -->
+            <div class="profile-panel-error hidden">Неверный формат адреса</div>
+        </div>
+        <!-- /.profile-panel -->
         <div class="content-nav tab">
             <ul class="content-nav-tabs tabs">
                 <li class="active"><a href="#">Мебель</a></li>
@@ -1043,6 +1234,7 @@
     <!-- /.main-global -->
     <script src="js/jquery.js"></script>
     <script src="js/migrate.js"></script>
+    <script src="js/mask.js"></script>
     <script src="js/core.min.js"></script>
 </body>
 </html>
