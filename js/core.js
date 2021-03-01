@@ -914,5 +914,33 @@ $(document).ready(function () {
         }
     });
 
+    //------------------------------------------------------------------------//
+
+    //to top
+    $(document).on('click', '.to-top', function (event) {
+        event.preventDefault();
+        $('body, html').animate({ scrollTop: 0 }, 600);
+    });
+
+    $(window).scroll(function (event) {
+        fromTop();
+    });
+    function fromTop() {
+        if ($(window).scrollTop() > 100) {
+            $('body').addClass('from-top');
+        } else {
+            $('body').removeClass('from-top');
+        }
+    }
+
+    //------------------------------------------------------------------------//
+
+    //search form
+    $(document).on('click', '.search-form-delete', function (event) {
+        event.preventDefault();
+        $(this).parents('.search-form').find('.search-form-text').val('');
+    });
+
+    //------------------------------------------------------------------------//
 
 });//document ready
