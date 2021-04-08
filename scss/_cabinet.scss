@@ -1,0 +1,375 @@
+.cabinet {
+    &-caption {
+        padding: 22px 20px 18px;
+        &-name {
+            font-size: 15px;
+            line-height: 1.3334;
+            font-weight: 900;
+            color: $black;
+        }
+        &-status {
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gray;
+            strong {
+                font-weight: 500;
+                color: $b;
+            }
+        }
+    }
+    &-navigation {
+        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+        border-top: 1px solid #e1e1e1;
+        border-bottom: 1px solid #e1e1e1;
+        &.swiper-container {
+            overflow: visible;
+        }
+        .swiper-slide {
+            width: 83px;
+            border-left: 1px solid #e1e1e1;
+            &:first-child {
+                width: 82px;
+                border-left: 0;
+            }
+        }
+        .swiper-pagination {
+            bottom: -27px;
+        }
+        .swiper-pagination-bullet-active {
+            width: 6px;
+        }
+        &-link {
+            display: block;
+            height: 82px;
+            padding: 11px 5px 0;
+            overflow: hidden;
+            transition: background-color $d $f;
+            will-change: background-color;
+            &.active {
+                background-color: $s;
+                .cabinet-navigation-icon {
+                    svg path {
+                        fill: $black;
+                    }
+                }
+                .cabinet-navigation-title {
+                    color: $black;
+                }
+            }
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1px;
+            width: 40px;
+            height: 40px;
+            svg {
+                display: block;
+                path {
+                    transition: fill $d $f;
+                    will-change: fill;
+                }
+            }
+        }
+        &-title {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.5;
+            font-weight: 500;
+            color: $t;
+            transition: color $d $f;
+            will-change: color;
+        }
+    }
+    &-tabs {
+        display: flex;
+        border-bottom: 1px solid #e1e1e1;
+        margin: 0;
+        padding: 35px 1px 16px;
+        list-style: none;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $tr;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $tr;
+            outline: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background: $tr;
+        }
+        li {
+            padding: 0 15px;
+            a {
+                display: block;
+                padding: 11px 0 3px;
+                font-size: 15px;
+                line-height: 1.6;
+                font-weight: 500;
+                color: $t;
+                white-space: nowrap;
+                border-bottom: 2px solid $tr;
+                transition: color $d $f, border-color $d $f;
+                will-change: color, border-color;
+                strong {
+                    font-weight: 500;
+                    color: $p;
+                }
+            }
+            &.active {
+                a {
+                    color: $b;
+                    border-bottom-color: $p;
+                }
+            }
+        }
+    }
+    &-empty {
+        padding: 85px 0 118px;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 13px;
+            overflow: hidden;
+            border-radius: 50%;
+            background: $s;
+        }
+        &-text {
+            font-size: 15px;
+            line-height: 1.2;
+            font-weight: 500;
+            color: $t;
+            text-align: center;
+        }
+    }
+    &-profile {
+        padding: 50px 0 6px;
+        background: $s;
+        &-status {
+            margin-bottom: 24px;
+            &-title {
+                font-size: 11px;
+                line-height: 1.455;
+                color: $gray;
+                margin-bottom: 12px;
+                strong {
+                    font-weight: 500;
+                    color: $b;
+                }
+                .hint {
+                    margin: 2px 0 0 4px;
+                }
+            }
+            &-range {
+                position: relative;
+                height: 6px;
+                background: $w;
+                border-radius: 3px;
+                &-bar {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: $p;
+                    border-radius: 3px;
+                }
+            }
+        }
+        &-discount {
+            padding-bottom: 6px;
+            &-caption {
+                font-size: 15px;
+                line-height: 1.334;
+                font-weight: 500;
+                color: $black;
+                margin-bottom: 13px;
+            }
+            &-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                padding: 16px;
+                border-radius: 5px;
+                box-shadow: 0 2px 7px 0 rgba(161, 161, 161, 0.3);
+                border: solid 1px #e1e1e1;
+                background: $w;
+            }
+            &-img {
+                flex: 0 0 63px;
+                max-width: 63px;
+                padding-right: 17px;
+            }
+            &-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 46px;
+                background: $s;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            &-title {
+                flex-grow: 1;
+                max-width: calc(100% - 63px);
+                font-size: 15px;
+                line-height: 1.2;
+                font-weight: 500;
+                color: $black;
+                letter-spacing: -0.3px;
+            }
+        }
+        &-links {
+            .button {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+        &-feedback {
+            padding: 16px 0;
+            &-links {
+                .button {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+            }
+        }
+        &-manager {
+            display: flex;
+            align-items: center;
+            padding: 12px 0 18px;
+            &-img {
+                flex: 0 0 94px;
+                max-width: 94px;
+                padding: 0 16px 0 14px;
+                img {
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            &-info {
+                flex-grow: 1;
+                max-width: calc(100% - 94px);
+            }
+            &-title {
+                font-size: 15px;
+                line-height: 1.3334;
+                font-weight: 500;
+                color: $black;
+            }
+            &-subtitle {
+                font-size: 11px;
+                line-height: 1.455;
+                color: $gray;
+                margin-bottom: 2px;
+            }
+        }
+        &-logout {
+            border-top: 1px solid #e1e1e1;
+            padding: 16px 0;
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &-goods {
+        &-list {
+            margin-bottom: 14px;
+        }
+        &-item {
+            display: flex;
+            &-wrapper {
+                border-top: 1px solid #e1e1e1;
+                &:first-child {
+                    border-top: 0;
+                }
+                &.swiper-container {
+                    padding: 16px 0;
+                    overflow: visible;
+                }
+                .swiper-slide {
+                    width: 100%;
+                    height: auto;
+                    &:nth-child(2) {
+                        width: 60px;
+                    }
+                    &.swiper-slide-visible {
+                        .cabinet-goods-item-delete {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+            &-delete {
+                opacity: 0;
+                display: block;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                margin-top: -20px;
+                width: 40px;
+                height: 40px;
+                background: $s url('../upload/delete2.svg') 50% 50% no-repeat;
+                background-size: 16px 18px;
+                border-radius: 50%;
+                transition: opacity $d $f;
+                will-change: opacity;
+            }
+            &-img {
+                flex: 0 0 43.75%;
+                max-width: 43.75%;
+                padding-right: 16px;
+                a {
+                    display: block;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            &-info {
+                flex: 0 0 56.25%;
+                max-width: 56.25%;
+            }
+            &-title {
+                font-size: 13px;
+                line-height: 1.231;
+                font-weight: 500;
+                color: $b;
+                margin-bottom: 2px;
+                a {
+                    color: $b;
+                }
+            }
+            &-articul {
+                font-size: 11px;
+                line-height: 1.455;
+                color: $gr;
+                margin-bottom: 13px;
+            }
+            &-price {
+                line-height: 1.231;
+                font-weight: 500;
+                color: $b;
+                &.red {
+                    color: $red;
+                }
+            }
+        }
+    }
+}

@@ -35,6 +35,11 @@ $(document).ready(function () {
         if ($('.box:visible').find('.product-delivery-specs').length) {
             productDeliverySpecs.update();
         }
+        if ($('.box:visible').find('.cabinet-goods-item-wrapper').length) {
+            cabinetGoods.forEach(element => {
+                element.update();
+            });
+        }
     });
 
     //------------------------------------------------------------------------//
@@ -939,6 +944,46 @@ $(document).ready(function () {
     $(document).on('click', '.search-form-delete', function (event) {
         event.preventDefault();
         $(this).parents('.search-form').find('.search-form-text').val('');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //cabinet navigation
+    var cabinetNavigation,
+        cabinetNavigationLength = $('.cabinet-navigation').length;
+    if (cabinetNavigationLength) {
+        cabinetNavigation = new Swiper('.cabinet-navigation', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            speed: 500,
+            watchOverflow: true,
+            slidesPerView: 'auto',
+            initialSlide: 0,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //cabinet goods item
+    var cabinetGoods,
+        cabinetGoodsLength = $('.cabinet-goods-item-wrapper').length;
+    if (cabinetGoodsLength) {
+        cabinetGoods = new Swiper('.cabinet-goods-item-wrapper', {
+            speed: 500,
+            slidesPerView: 'auto',
+            watchSlidesProgress: true,
+            watchSlidesVisibility: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //cabinet goods item delete
+    $(document).on('click', '.cabinet-goods-item-delete', function (event) {
+        event.preventDefault();
+        $(this).parents('.cabinet-goods-item-wrapper').remove();
     });
 
     //------------------------------------------------------------------------//
