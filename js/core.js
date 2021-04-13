@@ -988,4 +988,66 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //cabinet complaints item
+    $(document).on('click', '.cabinet-complaints-item-toggle', function (event) {
+        event.preventDefault();
+        $(this).parents('.cabinet-complaints-item').toggleClass('active').find('.cabinet-complaints-item-block').slideToggle(150);
+    });
+
+    //------------------------------------------------------------------------//
+
+    //create complaint panel
+    $(document).on('click', '.cabinet-complaints-create', function (event) {
+        event.preventDefault();
+        $('html').addClass('create-complaint-panel-show');
+    });
+
+    $(document).on('click', '.create-complaint-panel-close, .create-complaint-panel-mask', function (event) {
+        event.preventDefault();
+        $('html').removeClass('create-complaint-panel-show');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //order mask
+    if ($('.order-mask').length) {
+        $('.order-mask').mask('999-9999');
+    }
+
+    //------------------------------------------------------------------------//
+
+    //cabinet feedback text more
+    $(document).on('click', '.cabinet-feedback-text-more', function (event) {
+        event.preventDefault();
+        $(this).fadeOut(50).parents('.cabinet-feedback-text').find('.cabinet-feedback-text-hidden').slideToggle(150);
+    });
+
+    //------------------------------------------------------------------------//
+
+    //cabinet feedback panel
+    $(document).on('click', '.cabinet-feedback-create-button', function (event) {
+        event.preventDefault();
+        $('html').addClass('cabinet-feedback-panel-show');
+    });
+
+    $(document).on('click', '.cabinet-feedback-panel-close, .cabinet-feedback-panel-mask', function (event) {
+        event.preventDefault();
+        $('html').removeClass('cabinet-feedback-panel-show');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //textarea maxlength
+    $(document).on('keydown keyup keypress', '.textarea-maxlength', function () {
+        var thisValue = $(this).val(),
+            currentText = $(this).parents('.input-wrapper').find('.textarea-maxlength-current');
+        if (thisValue.length) {
+            currentText.text(thisValue.length);
+        } else {
+            currentText.text('0');
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

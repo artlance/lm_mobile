@@ -19,12 +19,16 @@
         display: block;
         color: $text;
         margin: 0 0 8px;
+        .hint {
+            margin: 2px 0;
+        }
     }
     &.error {
         .input-error {
             display: block;
         }
         input.input-text,
+        textarea.textarea,
         select.select {
             color: $red;
             border-color: rgba(243, 0, 0, 0.5);
@@ -46,7 +50,8 @@
     color: $gr;
     padding-top: 8px;
 }
-input.input-text {
+input.input-text,
+textarea.textarea {
     display: block;
     width: 100%;
     height: 40px;
@@ -62,7 +67,6 @@ input.input-text {
     }
 }
 textarea.textarea {
-    @extend input.input-text;
     font-family: $fontFamily;
     height: 130px;
     resize: none;
@@ -177,6 +181,9 @@ button.button {
         color: $p;
         background: $w;
     }
+    &.red {
+        background: $red;
+    }
 }
 button.button {
     &:focus {
@@ -209,7 +216,7 @@ button.button {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 6000;
     display: block;
     max-width: 278px;
     margin: 7px;
@@ -284,5 +291,103 @@ button.button {
     }
     to {
         transform: rotate(360deg);
+    }
+}
+.upload-photo {
+    padding: 8px 0 14px;
+    &-title {
+        margin-bottom: 10px;
+        .hint {
+            margin: 2px 0;
+        }
+    }
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -10px;
+    }
+    &-item {
+        flex: 0 0 50px;
+        max-width: 50px;
+        height: 50px;
+        overflow: hidden;
+        margin: 0 0 10px 10px;
+        position: relative;
+        background: $s;
+        img {
+            width: 100%;
+        }
+        &.loading {
+            pointer-events: none;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: $s;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin: -9px 0 0 -9px;
+                width: 18px;
+                height: 18px;
+                background: $tr url('../upload/loader.png') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                animation: rotation 0.8s infinite linear;
+            }
+        }
+        &.delete {
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba($t, 0.6) url('../upload/close.svg') 50% 50% no-repeat;
+                background-size: 36px 36px;
+            }
+        }
+    }
+    &-input {
+        flex: 0 0 50px;
+        max-width: 50px;
+        margin: 0 0 10px 10px;
+        input {
+            display: none !important;
+        }
+        label {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            width: 50px;
+            height: 50px;
+            margin: 0;
+            background: $s;
+            overflow: hidden;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 20px;
+                top: 24px;
+                width: 10px;
+                height: 2px;
+                background: $t;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 24px;
+                top: 20px;
+                width: 2px;
+                height: 10px;
+                background: $t;
+            }
+        }
     }
 }
