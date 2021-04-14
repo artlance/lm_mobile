@@ -1050,4 +1050,12 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //cabinet orders item
+    $(document).on('click', '.cabinet-orders-item-toggle', function (event) {
+        event.preventDefault();
+        $(this).parents('.cabinet-orders-item').toggleClass('active').find('.cabinet-orders-item-block').slideToggle(150);
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
