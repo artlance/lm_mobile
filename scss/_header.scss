@@ -642,56 +642,78 @@
             background: $tr;
         }
     }
+    &-caption {
+        padding: 16px;
+        background: $s;
+    }
     &-title {
         font-size: 15px;
         line-height: 1.6;
         font-weight: 900;
         color: $b;
-        padding: 16px 50px 15px 16px;
-        border-bottom: 1px solid #e3e3e3;
+        padding: 0 34px 16px 0;
         position: relative;
     }
     &-close {
         display: block;
         position: absolute;
         z-index: 4150;
-        top: 8px;
-        right: 4px;
+        top: -8px;
+        right: -12px;
         width: 40px;
         height: 40px;
         background: $tr url('../upload/close-black.svg') 50% 50% no-repeat;
         background-size: 100% 100%;
     }
+    &-input {
+        position: relative;
+        .input-text {
+            padding-right: 39px;
+        }
+        &-clear {
+            display: block;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 16px;
+            height: 16px;
+            background: #c1c5c7 url('../upload/close2.svg') 50% 50% no-repeat;
+            background-size: 8px 8px;
+            border-radius: 50%;
+            &::before {
+                content: "";
+                position: absolute;
+                left: -12px;
+                top: -12px;
+                right: -12px;
+                bottom: -12px;
+            }
+        }
+    }
     &-select {
         display: block;
         margin: 0;
-        padding: 0;
+        padding: 17px 0 15px;
         list-style: none;
         li {
-            border-bottom: 1px solid #e3e3e3;
-            &:nth-child(2) {
-                border-bottom-width: 5px;
-            }
             a {
                 display: block;
-                padding: 13px 50px 13px 16px;
-                font-size: 15px;
-                line-height: 1.6;
-                font-weight: 500;
-                color: $b;
+                padding: 7px 50px 9px 16px;
+                line-height: normal;
+                color: $text;
                 position: relative;
-                transition: background-color $d $f;
-                will-change: background-color;
+                transition: color $d $f, background-color $d $f;
+                will-change: color, background-color;
                 &::after {
                     opacity: 0;
                     content: "";
                     position: absolute;
                     top: 50%;
-                    margin-top: -4px;
-                    right: 22px;
-                    width: 12px;
-                    height: 9px;
-                    background: $tr url('../upload/check-green.svg') 50% 50% no-repeat;
+                    margin-top: -7px;
+                    right: 24px;
+                    width: 13px;
+                    height: 13px;
+                    background: $tr url('../upload/check2.svg') 50% 50% no-repeat;
                     background-size: 100% 100%;
                     transition: opacity $d $f;
                     will-change: opacity;
@@ -699,12 +721,25 @@
             }
             &.active {
                 a {
+                    font-weight: 500;
+                    color: $b;
                     background-color: $s;
                     &::after {
                         opacity: 1;
                     }
                 }
             }
+        }
+    }
+    &-note {
+        border-top: 1px solid #e1e1e1;
+        padding: 12px 16px 19px;
+        font-size: 11px;
+        line-height: 1.455;
+        color: $gray;
+        p {
+            margin: 0;
+            max-width: 230px;
         }
     }
 }

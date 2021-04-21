@@ -104,6 +104,38 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //city panel clear
+    $(document).on('click', '.city-panel-input-clear', function (event) {
+        event.preventDefault();
+        $(this).hide();
+        $(this).parents('.city-panel-input').find('.input-text').val('').focus();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //city panel select
+    $(document).on('click', '.city-panel-select a', function (event) {
+        event.preventDefault();
+        $(this).parents('.city-panel-select').find('li').removeClass('active');
+        $(this).parent('li').addClass('active');
+        $('.city-panel-input').find('.input-text').val($(this).text());
+        $('.city-panel-input-clear').show();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //city panel input
+    $(document).on('change keydown keypress keyup', '.city-panel-input .input-text', function (event) {
+        var thisValue = $(this).val();
+        if (thisValue.length) {
+            $('.city-panel-input-clear').show();
+        } else {
+            $('.city-panel-input-clear').hide();
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
     //products list
     var productsList,
         productsListLength = $('.products-list').length;
@@ -1054,6 +1086,22 @@ $(document).ready(function () {
     $(document).on('click', '.cabinet-orders-item-toggle', function (event) {
         event.preventDefault();
         $(this).parents('.cabinet-orders-item').toggleClass('active').find('.cabinet-orders-item-block').slideToggle(150);
+    });
+
+    //------------------------------------------------------------------------//
+
+    //country
+    $(document).on('click', '.country-item:not(.active)', function (event) {
+        event.preventDefault();
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //faq
+    $(document).on('click', '.faq-toggle', function (event) {
+        event.preventDefault();
+        $(this).parents('.faq-item').toggleClass('active').find('.faq-info').slideToggle(150);
     });
 
     //------------------------------------------------------------------------//
