@@ -1106,4 +1106,17 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //review panel
+    $(document).on('click', '.review-panel-link', function (event) {
+        event.preventDefault();
+        $('html').addClass('review-panel-show');
+    });
+
+    $(document).on('click', '.review-panel-close, .review-panel-mask', function (event) {
+        event.preventDefault();
+        $('html').removeClass('review-panel-show');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

@@ -9,9 +9,8 @@
     <meta name="copyright" content="www.iconix.ru">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/suppliers.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-512x512.png" sizes="512x512">
@@ -26,10 +25,8 @@
                         <a href="tel:84955405517" class="header-phone-link"></a>
                     </div>
                     <div class="logo"><a href="/"><img src="upload/lifemebel.svg" alt="ЛайфМебель"></a></div>
-                    <div class="header-favorite">
-                        <a href="#" class="header-favorite-link">
-                            <span class="header-favorite-number">5</span>
-                        </a>
+                    <div class="header-profile">
+                        <a href="#" class="header-profile-link"></a>
                     </div>
                     <div class="header-cart">
                         <a href="#" class="header-cart-link">
@@ -474,208 +471,425 @@
             <!-- /.navigation-panel -->
         </div>
         <!-- /.navigation -->
+        <div class="city-panel-mask"></div>
+        <div class="city-panel">
+            <div class="city-panel-content">
+                <div class="city-panel-caption">
+                    <div class="city-panel-title">Выберите город <a href="#" class="city-panel-close"></a></div>
+                    <div class="city-panel-input">
+                        <input type="text" class="input-text" value="Благовещенск">
+                        <a href="#" class="city-panel-input-clear"></a>
+                    </div>
+                </div>
+                <!-- /.city-panel-caption -->
+                <ul class="city-panel-select">
+                    <li><a href="#">Абакан</a></li>
+                    <li><a href="#">Армавир</a></li>
+                    <li><a href="#">Архангельск</a></li>
+                    <li><a href="#">Барнаул</a></li>
+                    <li><a href="#">Белгород</a></li>
+                    <li><a href="#">Бийск</a></li>
+                    <li class="active"><a href="#">Благовещенск</a></li>
+                    <li><a href="#">Брянск</a></li>
+                    <li><a href="#">Великие Луки</a></li>
+                    <li><a href="#">Ижевск</a></li>
+                    <li><a href="#">Иркутск</a></li>
+                    <li><a href="#">Йошкар-Ола</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Калуга</a></li>
+                    <li><a href="#">Кемерово</a></li>
+                    <li><a href="#">Киров</a></li>
+                    <li><a href="#">Кострома</a></li>
+                    <li><a href="#">Краснодар</a></li>
+                </ul>
+                <!-- /.city-panel-select -->
+                <div class="city-panel-note">
+                    <p>* - в другие города отправляем через ТК по их тарифам</p>
+                </div>
+            </div>
+            <!-- /.city-panel-content -->
+        </div>
+        <!-- /.city-panel -->
+        <div class="profile-panel-mask"></div>
+        <div class="profile-panel">
+            <div class="profile-panel-content">
+                <div class="profile-panel-title"><span class="profile-panel-title-text">Личный кабинет</span> <a href="#" class="profile-panel-close"></a></div>
+                <div class="profile-panel-tab tab">
+                    <ul class="profile-panel-tabs tabs">
+                        <li class="active"><a href="#">Войти</a></li>
+                        <li><a href="#">Зарегистрироваться</a></li>
+                    </ul>
+                    <div class="box visible">
+                        <div class="profile-panel-login-email hidden">
+                            <div class="profile-panel-login-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-email">Email</label>
+                                    <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-login-email">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-password">Пароль</label>
+                                    <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-login-password">
+                                    <a href="#" class="profile-panel-forgot-password">Забыли пароль?</a>
+                                </div>
+                                <div class="profile-panel-login-sep"><span>или</span></div>
+                                <div class="profile-panel-login-title">При помощи</div>
+                                <div class="profile-panel-login-types">
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-apple"><img src="upload/apple.svg" alt="">Apple ID</a>
+                                    </div>
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-google"><img src="upload/google.svg" alt="">Google</a>
+                                    </div>
+                                    <div class="profile-panel-login-type-x2">
+                                        <a href="#" class="profile-panel-login-phone-link"><img src="upload/phone2.svg" alt="">Номер телефона</a>
+                                    </div>
+                                </div>
+                                <!-- /.profile-panel-login-types -->
+                            </div>
+                            <!-- /.profile-panel-login-form -->
+                            <div class="profile-panel-login-options">
+                                <a href="#" class="button">Войти</a>
+                            </div>
+                        </div>
+                        <!-- /.profile-panel-login-email -->
+                        <div class="profile-panel-login-phone">
+                            <div class="profile-panel-login-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-phone">Ваш номер телефона</label>
+                                    <input type="tel" class="input-text phone-mask" placeholder="+7" id="profile-panel-login-phone">
+                                </div>
+                                <div class="profile-panel-login-sep"><span>или</span></div>
+                                <div class="profile-panel-login-title">При помощи</div>
+                                <div class="profile-panel-login-types">
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-apple"><img src="upload/apple.svg" alt="">Apple ID</a>
+                                    </div>
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-google"><img src="upload/google.svg" alt="">Google</a>
+                                    </div>
+                                    <div class="profile-panel-login-type-x2">
+                                        <a href="#" class="profile-panel-login-email-link"><img src="upload/email.svg" alt="">Email</a>
+                                    </div>
+                                </div>
+                                <!-- /.profile-panel-login-types -->
+                            </div>
+                            <!-- /.profile-panel-login-form -->
+                            <div class="profile-panel-login-options">
+                                <a href="#" class="button profile-panel-code-link">Войти</a>
+                            </div>
+                        </div>
+                        <!-- /.profile-panel-login-phone -->
+                    </div>
+                    <!-- /.box -->
+                    <div class="box">
+                        <div class="profile-panel-register">
+                            <div class="profile-panel-register-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-name">Ваше имя и фамилия</label>
+                                    <input type="text" class="input-text" placeholder="Введите имя и фамилию" id="profile-panel-register-name">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-phone">Телефон</label>
+                                    <input type="tel" class="input-text phone-mask" placeholder="+7" id="profile-panel-register-phone">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-email">Email</label>
+                                    <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-register-email">
+                                </div>
+                            </div>
+                            <!-- /.profile-panel-register-form -->
+                            <div class="profile-panel-register-options">
+                                <a href="#" class="button">Зарегистрироваться</a>
+                                <div class="profile-panel-register-terms">
+                                    <p>Нажав кнопку, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Условиями</a></p>
+                                </div>
+                            </div>
+                            <!-- /.profile-panel-register-options -->
+                        </div>
+                        <!-- /.profile-panel-register -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.profile-panel-tab -->
+                <div class="profile-panel-code hidden">
+                    <div class="profile-panel-code-content">
+                        <div class="profile-panel-code-title">На номер <strong class="nowrap">+7 (926) 375-02-10</strong> выслан код&nbsp;подтверждения</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-code">Введите код из SMS</label>
+                            <div class="profile-panel-code-row">
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" id="profile-panel-code" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-panel-code-note">Повторный код будет отправлен через <br><span class="profile-panel-code-note-sec">40</span> секунд</div>
+                    </div>
+                    <!-- /.profile-panel-code-content -->
+                    <div class="profile-panel-code-options">
+                        <a href="#" class="button white profile-panel-code-change-phone">Изменить номер</a>
+                        <a href="#" class="button">Войти</a>
+                    </div>
+                    <!-- /.profile-panel-code-options -->
+                </div>
+                <!-- /.profile-panel-code -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-1 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-note">Пожалуйста, введите ваш действующий адрес электронной почты</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-email">Email</label>
+                            <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-recover-email">
+                        </div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button white profile-panel-recover-back">Назад на страницу входа</a>
+                        <a href="#" class="button profile-panel-recover-go-step-2">Продолжить</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-1 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-2 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-note">На ваш действующий адрес электронной почты были высланы инструкции по восстановлению пароля.</div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                </div>
+                <!-- /.profile-panel-recover-step-2 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-3 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-title">Введите новый пароль</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-password">Новый пароль</label>
+                            <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-recover-password">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-password-repeat">Повторите новый пароль</label>
+                            <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-recover-password-repeat">
+                        </div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button profile-panel-recover-go-step-4">Изменить пароль</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-3 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-4 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-title">Поздравляем!</div>
+                        <div class="profile-panel-recover-note">Ваш пароль успешно изменен.</div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button white profile-panel-recover-back">Назад на страницу входа</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-4 -->
+            </div>
+            <!-- /.profile-panel-content -->
+            <!-- <div class="profile-panel-error">Учетная запись с такой почтой уже есть. <br>Вам нужно восстановить пароль, перейдя&nbsp;по ссылке</div> -->
+            <div class="profile-panel-error hidden">Неверный формат адреса</div>
+        </div>
+        <!-- /.profile-panel -->
         <div class="content-back">
             <a href="#" class="content-back-link">На главную</a>
         </div>
-        <div class="contacts">
+        <div class="suppliers">
             <div class="container">
                 <div class="caption">
-                    <h1>Контакты</h1>
+                    <h1>Поставщикам</h1>
                 </div>
                 <div class="content-menu"><a href="#">Меню раздела</a></div>
-                <div class="contacts-city">
-                    <select class="select" name="contacts-city" id="contacts-city">
-                        <option value="Москва и МО">Ваш город: Москва и МО</option>
-                        <option value="Санкт-Петербург">Ваш город: Санкт-Петербург</option>
-                    </select>
-                </div>
-                <!-- /.contacts-city -->
-                <div class="contacts-metro">
-                    <div class="radio">
-                        <input type="radio" id="contacts-metro1" name="contacts-metro" checked>
-                        <label for="contacts-metro1">Метро Семеновская</label>
+                <div class="suppliers-advantages">
+                    <div class="suppliers-advantages-title">Почему с нами выгодно работать</div>
+                    <div class="suppliers-advantages-item">
+                        <div class="suppliers-advantages-icon"><img src="upload/suppliers-icon1.svg" alt=""></div>
+                        <p>Мы крупнейший мебельный интернет-магазин в России</p>
                     </div>
-                    <div class="radio">
-                        <input type="radio" id="contacts-metro2" name="contacts-metro">
-                        <label for="contacts-metro2">Метро Партизанская</label>
+                    <!-- /.suppliers-advantages-item -->
+                    <div class="suppliers-advantages-item">
+                        <div class="suppliers-advantages-icon"><img src="upload/suppliers-icon2.svg" alt=""></div>
+                        <p>Оперативно добавляем новые товары</p>
                     </div>
-                    <div class="radio">
-                        <input type="radio" id="contacts-metro3" name="contacts-metro">
-                        <label for="contacts-metro3">Станция МЦК Измайлово</label>
+                    <!-- /.suppliers-advantages-item -->
+                    <div class="suppliers-advantages-item">
+                        <div class="suppliers-advantages-icon"><img src="upload/suppliers-icon3.svg" alt=""></div>
+                        <p>Опыт работы более 12 лет</p>
                     </div>
-                </div>
-                <!-- /.contacts-metro -->
-                <div class="contacts-phone">
-                    <p>Отдел продаж <a href="mailto:zakaz@lifemebel.ru">zakaz@lifemebel.ru</a></p>
-                    <p>
-                        <a href="tel:84955405517" class="nowrap">8 (495) 540-55-17</a>
-                        <a href="tel:88005557328" class="nowrap">8 (800) 555-73-28</a>
-                        <span class="contacts-note">с 08:00 до 21:00 без выходных</span>
-                    </p>
-                    <p><a href="#" class="contacts-phone-link">Перезвоните мне</a></p>
-                </div>
-                <!-- /.contacts-phone -->
-                <div class="contacts-address">
-                    <h3>Адрес выставочного зала</h3>
-                    <p>г. Москва, ул. Мироновская, д.25 <span class="contacts-note">ежедневно с 9-00 до 21-00</span></p>
-                    <div class="contacts-address-link">
-                        <a href="#" class="review-panel-link"><span class="contacts-address-icon"><img src="upload/review-green.svg" alt=""></span>Оставить отзыв о магазине</a>
+                    <!-- /.suppliers-advantages-item -->
+                    <div class="suppliers-advantages-item">
+                        <div class="suppliers-advantages-icon"><img src="upload/suppliers-icon4.svg" alt=""></div>
+                        <p>Своя фотостудия</p>
                     </div>
-                    <div class="contacts-address-link">
-                        <a href="#"><span class="contacts-address-icon"><img src="upload/complaint.svg" alt=""></span>Оставить жалобу</a>
+                    <!-- /.suppliers-advantages-item -->
+                    <div class="suppliers-advantages-item">
+                        <div class="suppliers-advantages-icon"><img src="upload/suppliers-icon5.svg" alt=""></div>
+                        <p>Собственный склад <br>класса А</p>
                     </div>
-                </div>
-                <!-- /.contacts-address -->
-                <div class="contacts-info">
-                    <p>Подробная схема проезда и товары, представленные в шоуруме есть на странице <a href="#">Шоурум</a></p>
-                </div>
-                <div class="contacts-map-block">
-                    <div id="contacts-map" class="contacts-map"></div>
-                    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-                    <script>
-                        ymaps.ready(function () {
-                            var myMap = new ymaps.Map('contacts-map', {
-                                    center: [55.751131, 37.637388],
-                                    zoom: 16,
-                                    controls: []
-                                }, {
-                                    searchControlProvider: 'yandex#search'
-                                }),
-
-                                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                                }, {
-                                    iconLayout: 'default#image',
-                                    iconImageHref: 'upload/pin.svg',
-                                    iconImageSize: [44, 44],
-                                    iconImageOffset: [-22, -18]
-                                });
-
-                            myMap.geoObjects.add(myPlacemark);
-                        });
-                    </script>
-                </div>
-                <!-- /.contacts-map-block -->
-                <div class="contacts-features">
-                    <div class="contacts-features-caption">
-                        <h3>У нас работает собственная служба доставки в Москве</h3>
-                        <p>Это позволяет нам гарантировать низкие цены на доставку прямо до&nbsp;двери</p>
+                    <!-- /.suppliers-advantages-item -->
+                    <div class="suppliers-advantages-item">
+                        <div class="suppliers-advantages-icon"><img src="upload/suppliers-icon6.svg" alt=""></div>
+                        <p>Умеем продавать нужный товар</p>
                     </div>
-                    <div class="contacts-feature">
-                        <div class="contacts-feature-icon"><img src="upload/contact-icon1.svg" alt=""></div>
-                        <div class="contacts-feature-title">9 960</div>
-                        <div class="contacts-feature-info">заказов было доставлено нами в Москву за последние 30 дней</div>
+                    <!-- /.suppliers-advantages-item -->
+                    <div class="suppliers-advantages-item">
+                        <div class="suppliers-advantages-icon"><img src="upload/suppliers-icon7.svg" alt=""></div>
+                        <p>Работаем без отсрочек платежей</p>
                     </div>
-                    <!-- /.contacts-feature -->
-                    <div class="contacts-feature">
-                        <div class="contacts-feature-icon"><img src="upload/contact-icon2.svg" alt=""></div>
-                        <div class="contacts-feature-title">28 220</div>
-                        <div class="contacts-feature-info">человек из г.Москва и МО посещали наш сайт за последние 24 часа</div>
+                    <!-- /.suppliers-advantages-item -->
+                    <div class="suppliers-advantages-item">
+                        <div class="suppliers-advantages-icon"><img src="upload/suppliers-icon8.svg" alt=""></div>
+                        <p>Прозрачная работа</p>
                     </div>
-                    <!-- /.contacts-feature -->
+                    <!-- /.suppliers-advantages-item -->
                 </div>
-                <!-- /.contacts-features -->
-                <div class="caption">
-                    <h2>Наш шоурум</h2>
+                <!-- /.suppliers-advantages -->
+                <div class="suppliers-info">
+                    <p>Если Ваша компания удовлетворяет вышеперечисленным требованиям, то Вы можете отправить заявку на сотрудничество через форму или отправить на почту <a href="mailto:zakupka@lifemebel.ru">zakupka@lifemebel.ru*</a></p>
+                    <div class="suppliers-info-note">* Заявки, отправленные через форму ниже, обрабатываются в приоритетном порядке</div>
                 </div>
-                <div class="showroom-video">
-                    <a class="showroom-video-link" data-fancybox data-width="560" data-height="315" href="https://www.youtube.com/embed/Oc6MZhm7ZjU">
-                        <img src="upload/images/showroom-video.jpg" alt="">
-                    </a>
+                <!-- /.suppliers-info -->
+                <div class="suppliers-requirements">
+                    <div class="suppliers-requirements-title">Какие требования у нас к поставщикам и фабрикам?</div>
+                    <ul class="suppliers-requirements-list">
+                        <li>Наличие качественных фотографий</li>
+                        <li>Решение рекламаций в течение 5&nbsp;рабочих дней</li>
+                        <li>Ассортимент от 50 наименований</li>
+                        <li>Ежедневные остатки</li>
+                        <li>Контроль МРЦ</li>
+                        <li>Наличие склада в Москве или ЦФО</li>
+                        <li>Наличие уникальных артикулов</li>
+                        <li>Среднерыночная наценка</li>
+                        <li>Товарный вид</li>
+                    </ul>
                 </div>
-                <!-- /.showroom-video -->
+                <!-- /.suppliers-requirements -->
+                <div class="suppliers-form">
+                    <div class="suppliers-form-title">Заявка на сотрудничество</div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-company">Название компании*</label>
+                        <input type="text" class="input-text" placeholder="Название компании" id="suppliers-form-company">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-website">Сайт</label>
+                        <input type="text" class="input-text" placeholder="website.com" id="suppliers-form-website">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-city">Город*</label>
+                        <select class="select" name="suppliers-form-city" id="suppliers-form-city">
+                            <option hidden>Выберите город</option>
+                            <option value="Москва">Москва</option>
+                            <option value="Санкт-Петербург">Санкт-Петербург</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-products">Количество товаров</label>
+                        <select class="select" name="suppliers-form-products" id="suppliers-form-products">
+                            <option>1-100</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-mrc">Контролируется ли МРЦ*</label>
+                        <select class="select" name="suppliers-form-mrc" id="suppliers-form-mrc">
+                            <option>Да</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-markup">Уровень наценки</label>
+                        <select class="select" name="suppliers-form-markup" id="suppliers-form-markup">
+                            <option>Да</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-photo">Есть ли качественные фото</label>
+                        <select class="select" name="suppliers-form-photo" id="suppliers-form-photo">
+                            <option>Есть</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-name">ФИО контактного лица*</label>
+                        <input type="text" class="input-text" placeholder="" id="suppliers-form-name">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-phone">Телефон</label>
+                        <input type="tel" class="input-text phone-mask" placeholder="+7" id="suppliers-form-phone">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="suppliers-form-email">Email</label>
+                        <input type="email" class="input-text" placeholder="username@mail.ru" id="suppliers-form-email">
+                    </div>
+                    <div class="suppliers-form-checkbox-list">
+                        <div class="suppliers-form-checkbox-title">Какие товары у вас есть:</div>
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-1" name="suppliers-form-checkbox-1" checked>
+                            <label for="suppliers-form-checkbox-1">Столы и стулья</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-2" name="suppliers-form-checkbox-2">
+                            <label for="suppliers-form-checkbox-2">Мебель для гостинных</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-3" name="suppliers-form-checkbox-3">
+                            <label for="suppliers-form-checkbox-3">Мебель для спальни</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-4" name="suppliers-form-checkbox-4">
+                            <label for="suppliers-form-checkbox-4">Шкафы</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-5" name="suppliers-form-checkbox-5">
+                            <label for="suppliers-form-checkbox-5">Свет</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-6" name="suppliers-form-checkbox-6">
+                            <label for="suppliers-form-checkbox-6">Мягкая мебель</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-7" name="suppliers-form-checkbox-7">
+                            <label for="suppliers-form-checkbox-7">Мебель для детской</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-8" name="suppliers-form-checkbox-8">
+                            <label for="suppliers-form-checkbox-8">Мебель для прихожей</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-9" name="suppliers-form-checkbox-9">
+                            <label for="suppliers-form-checkbox-9">Товары для дачи</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                        <div class="suppliers-form-checkbox">
+                            <input type="checkbox" id="suppliers-form-checkbox-10" name="suppliers-form-checkbox-10">
+                            <label for="suppliers-form-checkbox-10">Прочее</label>
+                        </div>
+                        <!-- /.suppliers-form-checkbox -->
+                    </div>
+                    <!-- /.suppliers-form-checkbox-list -->
+                    <div class="suppliers-form-button"><input type="submit" class="button" value="Отправить"></div>
+                    <div class="suppliers-form-note">Нажав кнопку, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Условиями</a></div>
+                </div>
+                <!-- /.suppliers-form -->
             </div>
             <!-- /.container -->
         </div>
-        <!-- /.contacts -->
-        <div class="review-panel-mask"></div>
-        <div class="review-panel">
-            <div class="review-panel-content">
-                <div class="review-panel-title">Оставить отзыв <a href="#" class="review-panel-close"></a></div>
-                <div class="review-panel-rating-wrapper">
-                    <div class="container">
-                        <div class="review-panel-rating-title">Магазин*</div>
-                        <div class="review-panel-rating">
-                            <input type="radio" id="review-panel-rating-shop-5" value="5" name="review-panel-rating-shop">
-                            <label for="review-panel-rating-shop-5"></label>
-                            <input type="radio" id="review-panel-rating-shop-4" value="4" name="review-panel-rating-shop">
-                            <label for="review-panel-rating-shop-4"></label>
-                            <input type="radio" id="review-panel-rating-shop-3" value="3" name="review-panel-rating-shop">
-                            <label for="review-panel-rating-shop-3"></label>
-                            <input type="radio" id="review-panel-rating-shop-2" value="2" name="review-panel-rating-shop">
-                            <label for="review-panel-rating-shop-2"></label>
-                            <input type="radio" id="review-panel-rating-shop-1" value="1" name="review-panel-rating-shop">
-                            <label for="review-panel-rating-shop-1"></label>
-                        </div>
-                        <!-- /.review-panel-rating -->
-                        <div class="review-panel-rating-title">Работа менеджеров*</div>
-                        <div class="review-panel-rating">
-                            <input type="radio" id="review-panel-rating-manager-5" value="5" name="review-panel-rating-manager">
-                            <label for="review-panel-rating-manager-5"></label>
-                            <input type="radio" id="review-panel-rating-manager-4" value="4" name="review-panel-rating-manager">
-                            <label for="review-panel-rating-manager-4"></label>
-                            <input type="radio" id="review-panel-rating-manager-3" value="3" name="review-panel-rating-manager">
-                            <label for="review-panel-rating-manager-3"></label>
-                            <input type="radio" id="review-panel-rating-manager-2" value="2" name="review-panel-rating-manager">
-                            <label for="review-panel-rating-manager-2"></label>
-                            <input type="radio" id="review-panel-rating-manager-1" value="1" name="review-panel-rating-manager">
-                            <label for="review-panel-rating-manager-1"></label>
-                        </div>
-                        <!-- /.review-panel-rating -->
-                        <div class="review-panel-rating-title">Работа курьера*</div>
-                        <div class="review-panel-rating">
-                            <input type="radio" id="review-panel-rating-courier-5" value="5" name="review-panel-rating-courier">
-                            <label for="review-panel-rating-courier-5"></label>
-                            <input type="radio" id="review-panel-rating-courier-4" value="4" name="review-panel-rating-courier">
-                            <label for="review-panel-rating-courier-4"></label>
-                            <input type="radio" id="review-panel-rating-courier-3" value="3" name="review-panel-rating-courier">
-                            <label for="review-panel-rating-courier-3"></label>
-                            <input type="radio" id="review-panel-rating-courier-2" value="2" name="review-panel-rating-courier">
-                            <label for="review-panel-rating-courier-2"></label>
-                            <input type="radio" id="review-panel-rating-courier-1" value="1" name="review-panel-rating-courier">
-                            <label for="review-panel-rating-courier-1"></label>
-                        </div>
-                        <!-- /.review-panel-rating -->
-                    </div>
-                    <!-- /.container -->
-                </div>
-                <!-- /.review-panel-rating-wrapper -->
-                <div class="review-panel-form">
-                    <div class="container">
-                        <div class="input-wrapper">
-                            <label for="review-panel-form-name">Ваше имя*</label>
-                            <input type="text" class="input-text" placeholder="Иванов Иван" id="review-panel-form-name">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="review-panel-form-email">Ваш email*</label>
-                            <input type="email" class="input-text" placeholder="username@mail.com" id="review-panel-form-email">
-                            <div class="input-note">Email на сайте не публикуется</div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="review-panel-form-order">Номер заказа*</label>
-                            <input type="text" class="input-text" placeholder="XXX-XXX-XXX" id="review-panel-form-order">
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="review-panel-form-like">Что понравилось?</label>
-                            <textarea class="textarea" placeholder="Текст отзыва" name="review-panel-form-like" id="review-panel-form-like"></textarea>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="review-panel-form-dislike">Что не понравилось?</label>
-                            <textarea class="textarea" placeholder="Текст отзыва" name="review-panel-form-dislike" id="review-panel-form-dislike"></textarea>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="review-panel-form-comment">Доп. комментарий*</label>
-                            <textarea class="textarea review-panel-form-comment" placeholder="Текст комментария" name="review-panel-form-comment" id="review-panel-form-comment"></textarea>
-                        </div>
-                        <div class="review-panel-form-button"><input type="submit" class="button" value="Отправить"></div>
-                        <div class="review-panel-form-note">Нажимая кнопку "Отправить", я даю согласие на обработку своих персональных данных в соответствии с <a href="#">Условиями</a>.</div>
-                    </div>
-                    <!-- /.container -->
-                </div>
-                <!-- /.review-panel-form -->
-            </div>
-            <!-- /.review-panel-content -->
-        </div>
-        <!-- /.review-panel -->
+        <!-- /.suppliers -->
         <div class="banner-delivery">
             <a href="#" class="banner-delivery-link" style="background-image: url('upload/images/delivery.jpg');">
                 <span class="banner-delivery-content">
@@ -758,6 +972,14 @@
                 <!-- /.footer-menu-block -->
             </div>
             <!-- /.footer-menu -->
+            <div class="footer-favorite">
+                <a href="#" class="footer-favorite-link">
+                    <span class="footer-favorite-icon"><img src="upload/favorite.svg" alt=""></span>
+                    <span class="footer-favorite-title">Избранное</span>
+                    <span class="footer-favorite-number">4</span>
+                </a>
+            </div>
+            <!-- /.footer-favorite -->
             <div class="footer-info">
                 <div class="container">
                     <div class="footer-logo"><a href="/"><img src="upload/lifemebel.svg" alt="ЛайфМебель"></a></div>
@@ -785,7 +1007,7 @@
     <!-- /.main-global -->
     <script src="js/jquery.js"></script>
     <script src="js/migrate.js"></script>
-    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/mask.js"></script>
     <script src="js/core.min.js"></script>
 </body>
 </html>

@@ -1066,3 +1066,176 @@
         pointer-events: auto;
     }
 }
+.review-panel {
+    position: fixed;
+    z-index: 4100;
+    top: 56px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 56px);
+    background: $w;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity $d*2 $f, visibility $d*2 $f;
+    will-change: opacity, visibility;
+    &-mask {
+        position: fixed;
+        z-index: 4000;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($b, 0.7);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity $d*2 $f, visibility $d*2 $f;
+        will-change: opacity, visibility;
+    }
+    &-content {
+        height: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $tr;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $tr;
+            outline: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background: $tr;
+        }
+    }
+    &-title {
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 900;
+        color: $b;
+        padding: 16px 50px 15px 16px;
+        border-bottom: 1px solid #e3e3e3;
+        position: relative;
+    }
+    &-close {
+        display: block;
+        position: absolute;
+        z-index: 4150;
+        top: 8px;
+        right: 4px;
+        width: 40px;
+        height: 40px;
+        background: $tr url('../upload/close-black.svg') 50% 50% no-repeat;
+        background-size: 100% 100%;
+    }
+    &-rating-wrapper {
+        padding: 29px 0 1px;
+    }
+    &-rating-title {
+        margin-bottom: 11px;
+        text-align: center;
+        font-weight: 500;
+        color: $b;
+        letter-spacing: -0.1px;
+    }
+    &-rating {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        margin-bottom: 29px;
+        & > input {
+            appearance: none;
+            position: absolute;
+            left: -9999px;
+        }
+        label {
+            cursor: pointer;
+            display: block;
+            position: relative;
+            margin: 0 4px;
+            width: 30px;
+            height: 28px;
+            user-select: none;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: $tr url('../upload/star.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                transition: opacity $d $f;
+                will-change: opacity;
+            }
+            &:after {
+                opacity: 0;
+                background-image: url('../upload/star-active.svg');
+            }
+        }
+        & > input:checked ~ label {
+            &:before {
+                opacity: 0;
+            }
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+    &-form {
+        padding: 18px 0 6px;
+        border-top: 1px solid #e1e1e1;
+        textarea.textarea {
+            height: 100px;
+            &.review-panel-form-comment {
+                height: 90px;
+            }
+        }
+        &-button {
+            margin-top: -2px;
+            margin-bottom: 16px;
+            .button {
+                width: 100%;
+            }
+        }
+        &-note {
+            margin-bottom: 16px;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gr;
+            text-align: center;
+            a {
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
+    }
+}
+.review-panel-show {
+    body {
+        touch-action: none;
+        -webkit-overflow-scrolling: none;
+        overflow: hidden;
+        overscroll-behavior: none;
+    }
+    .review-panel,
+    .review-panel-mask {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+}
