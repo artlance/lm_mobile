@@ -64,6 +64,12 @@
             border-bottom: 1px solid #E3E3E3;
             border-left: 1px solid #E3E3E3;
         }
+        &-v2 {
+            li {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
     }
     &-item {
         display: block;
