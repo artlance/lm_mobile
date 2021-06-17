@@ -1119,4 +1119,15 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //profile panel
+    function minHeightFix() {
+        $('.profile-panel-register, .profile-panel-login-email, .profile-panel-login-phone').css("min-height", window.innerHeight - 203);
+    }
+    minHeightFix();
+    $(window).resize(function () {
+        minHeightFix();
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
