@@ -124,3 +124,71 @@
         margin-bottom: 9px;
     }
 }
+
+@media (min-width: $screen) {
+    .content-nav {
+        margin-bottom: 30px;
+        &-tabs {
+            li {
+                padding-left: 22px;
+                padding-right: 22px;
+                a {
+                    height: 70px;
+                    padding-top: 22px;
+                    padding-bottom: 22px;
+                    font-size: 20px;
+                    line-height: normal;
+                    border-bottom-width: 3px;
+                }
+            }
+        }
+        &-item {
+            padding-top: 14px;
+            padding-bottom: 22px;
+        }
+        &-img {
+            max-width: 110px;
+            height: 110px;
+            margin-bottom: 6px;
+            img {
+                transform: scale(1.375);
+            }
+        }
+        &-title {
+            min-height: 36px;
+            font-size: 14px;
+            line-height: 1.286;
+        }
+    }
+    .advantages {
+        padding-top: 14px;
+        padding-bottom: 21px;
+    }
+    .advantage {
+        padding: 21px 32px 25px 24px;
+        &-img {
+            flex: 0 0 133px;
+            max-width: 133px;
+            padding-right: 33px;
+            padding-bottom: 4px;
+            span {
+                height: 100px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &-info {
+            p {
+                font-size: 17px;
+                line-height: 1.5;
+            }
+        }
+        &-title {
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: -0.4px;
+            margin-bottom: 13px;
+        }
+    }
+}

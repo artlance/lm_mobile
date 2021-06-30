@@ -1143,3 +1143,69 @@
         pointer-events: auto;
     }
 }
+
+@media (min-width: $screen) {
+    .header {
+        &-content {
+            padding-top: 14px;
+            padding-bottom: 14px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &-phone {
+            &-link {
+                width: 48px;
+                height: 48px;
+                background-size: 26px 26px;
+            }
+        }
+        &-favorite,
+        &-cart,
+        &-profile {
+            &-link {
+                width: 48px;
+                height: 48px;
+            }
+        }
+        &-favorite {
+            &-link {
+                background-size: 26px 24px;
+            }
+        }
+        &-cart {
+            &-link {
+                background-size: 30px 29px;
+            }
+        }
+        &-profile {
+            &-link {
+                background-size: 48px 48px;
+            }
+        }
+        &-fix {
+            flex: 0 0 48px;
+            max-width: 48px;
+        }
+    }
+    .logo {
+        a {
+            max-width: 180px;
+        }
+    }
+    .navigation-toggle {
+        flex: 0 0 48px;
+        max-width: 48px;
+        height: 48px;
+    }
+    .navigation-toggle-icon {
+        left: 12px;
+        right: 12px;
+        height: 3px;
+        &:before {
+            transform: translate3d(0, -8px, 0)
+        }
+        &:after {
+            transform: translate3d(0, 8px, 0)
+        }
+    }
+}

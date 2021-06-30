@@ -1239,3 +1239,26 @@
         pointer-events: auto;
     }
 }
+
+@media (min-width: $screen) {
+    .caption {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+    }
+    .banner-showroom {
+        &-content {
+            padding-top: 44px;
+            padding-bottom: 48px;
+        }
+        &-title {
+            font-size: 26px;
+            line-height: 1.154;
+            margin-bottom: 11px;
+        }
+        &-address {
+            font-size: 17px;
+            line-height: 1.5;
+        }
+    }
+}
