@@ -352,6 +352,11 @@ $(document).ready(function () {
             spaceBetween: 8,
             slidesPerView: 'auto',
             watchOverflow: true,
+            breakpoints: {
+                420: {
+                    spaceBetween: 10,
+                }
+            }
         });
     }
 
@@ -373,6 +378,11 @@ $(document).ready(function () {
             slidesPerView: 'auto',
             watchOverflow: true,
             centerInsufficientSlides: true,
+            breakpoints: {
+                420: {
+                    spaceBetween: 10,
+                }
+            }
         });
     }
 

@@ -1246,6 +1246,20 @@
         line-height: 1.2;
         margin-bottom: 24px;
     }
+    .content-back {
+        margin-bottom: 24px;
+        &-link {
+            padding: 14px 16px 14px 55px;
+            font-size: 15px;
+            line-height: 1.334;
+            &:before {
+                margin-top: -5px;
+                left: 25px;
+                width: 14px;
+                height: 9px;
+            }
+        }
+    }
     .banner-showroom {
         &-content {
             padding-top: 44px;
@@ -1259,6 +1273,78 @@
         &-address {
             font-size: 17px;
             line-height: 1.5;
+        }
+    }
+    .banner-delivery {
+        &-content {
+            max-width: 340px;
+            padding: 39px 40px;
+        }
+        &-title {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+        &-total {
+            font-size: 17px;
+            line-height: 1.24;
+        }
+    }
+    .hint {
+        margin: 2px 0;
+        width: 18px;
+        height: 18px;
+        border-width: 3px;
+        background-size: 5px auto;
+    }
+    .recently-viewed {
+        .caption {
+            margin-bottom: 24px;
+        }
+        &-products {
+            margin-bottom: 40px;
+            &.swiper-container {
+                padding-bottom: 8px;
+            }
+            .swiper-slide {
+                width: 224px;
+            }
+        }
+        &-product-img {
+            margin-bottom: 24px;
+        }
+    }
+    .similar {
+        &-products {
+            .caption {
+                margin-bottom: 24px;
+            }
+            &-list {
+                margin-bottom: 44px;
+                &.swiper-container {
+                    padding-bottom: 8px;
+                }
+                .swiper-slide {
+                    width: 333px;
+                }
+            }
+        }
+        &-product {
+            padding-bottom: 15px;
+            &-img {
+                margin-bottom: 24px;
+            }
+            &-title {
+                font-size: 15px;
+                line-height: 1.334;
+            }
+            &-price {
+                font-size: 17px;
+                line-height: 1.24;
+                &-old {
+                    font-size: 15px;
+                    line-height: 1.4;
+                }
+            }
         }
     }
 }

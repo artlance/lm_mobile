@@ -297,6 +297,21 @@ button.swiper-pagination-bullet {
 .swiper-container-horizontal.swiper-container-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   transition: 200ms transform, 200ms right;
 }
+
+@media (min-width: $screen) {
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 4px;
+  }
+  .swiper-pagination-bullet-active {
+    width: 32px;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 10px 11px;
+  }
+}
+
 /* Progress */
 .swiper-pagination-progressbar {
   background: rgba(0, 0, 0, 0.25);
@@ -381,6 +396,12 @@ button.swiper-pagination-bullet {
 .swiper-scrollbar-lock {
   display: none !important;
 }
+@media (min-width: $screen) {
+  .swiper-container-horizontal > .swiper-scrollbar {
+    height: 8px;
+  }
+}
+
 .swiper-zoom-container {
   width: 100%;
   height: 100%;
