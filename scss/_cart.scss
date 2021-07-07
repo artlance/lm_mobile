@@ -1,3 +1,13 @@
+.main-global-cart {
+    background: $s;
+    .header-global {
+        background-color: $w;
+        position: relative;
+    }
+    .cart {
+        background: $w;
+    }
+}
 .cart {
     padding-bottom: 10px;
     &-empty {
