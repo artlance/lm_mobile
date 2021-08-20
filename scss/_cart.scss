@@ -193,6 +193,13 @@
             border: 0;
             border-radius: 0;
         }
+        &-number-final {
+            margin-top: -5px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            line-height: 1.154;
+            color: $b;
+        }
         &-content {
             flex: 0 0 56.25%;
             max-width: 56.25%;
@@ -291,6 +298,15 @@
                 strong {
                     font-weight: 500;
                 }
+            }
+        }
+        &-assembly-final {
+            margin-top: -6px;
+            margin-bottom: 15px;
+            font-size: 11px;
+            line-height: 1.455;
+            strong {
+                font-weight: 500;
             }
         }
         &-delete {
@@ -658,5 +674,71 @@
             border-radius: 50%;
             cursor: default;
         }
+    }
+}
+
+.payment {
+    &-intro {
+        padding: 15px 0 10px;
+        font-size: 11px;
+        line-height: 1.455;
+        color: $gray;
+        text-align: center;
+        p {
+            margin-bottom: 16px;
+        }
+    }
+    &-info {
+        margin-bottom: 10px;
+        &-note {
+            padding-top: 8px;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gray;
+        }
+        &-text {
+            font-size: 13px;
+            line-height: 1.93;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    &-cta {
+        padding: 15px 0;
+        .button {
+            width: 100%;
+        }
+    }
+    &-order {
+        padding-bottom: 12px;
+        &-caption {
+            margin-bottom: 17px;
+            font-size: 13px;
+            line-height: 1.93;
+            text-align: center;
+            .caption {
+                margin-bottom: 0;
+            }
+            p {
+                margin: 0;
+            }
+            strong {
+                font-weight: 500;
+            }
+        }
+        &-products {
+            margin: 0 -16px;
+            .cart-product {
+                border-top: 1px solid #e3e3e3;
+                &-price {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+    &-total {
+        margin-bottom: -10px;
+        padding-bottom: 33px;
     }
 }
