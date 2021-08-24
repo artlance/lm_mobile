@@ -336,4 +336,22 @@
             }
         }
     }
+    &-call {
+        padding: 2px 4px 4px;
+        &-button {
+            padding-top: 10px;
+            margin-bottom: 16px;
+            .button {
+                width: 100%;
+            }
+        }
+        &-note {
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gr;
+            a {
+                font-weight: 500;
+            }
+        }
+    }
 }
