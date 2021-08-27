@@ -23,7 +23,7 @@
             cursor: pointer;
             display: block;
             position: relative;
-            margin: 0 4px;
+            margin: 0 4px 0 3px;
             width: 30px;
             height: 28px;
             user-select: none;
@@ -55,10 +55,19 @@
         }
     }
     &-form {
-        padding: 18px 0 14px;
+        padding: 25px 0 14px;
         border-top: 1px solid #e3e3e3;
+        &-title {
+            margin-bottom: 9px;
+        }
+        &-radio {
+            padding-bottom: 10px;
+            .radio {
+                margin-bottom: 8px;
+            }
+        }
         &-button {
-            margin-top: -2px;
+            padding-top: 10px;
             margin-bottom: 16px;
             .button {
                 width: 100%;
@@ -73,6 +82,11 @@
             a {
                 font-weight: 500;
             }
+        }
+        .modal-review-photo {
+            border-top: 0;
+            margin: 0;
+            padding: 6px 0 13px;
         }
     }
 }

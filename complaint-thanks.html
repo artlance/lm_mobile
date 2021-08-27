@@ -9,16 +9,15 @@
     <meta name="copyright" content="www.iconix.ru">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/complaint.css">
+    <link rel="stylesheet" href="css/assembly-review.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/modal.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-512x512.png" sizes="512x512">
 </head>
 <body class="no-js">
     <main class="main-global">
-        <header class="header-global">
+        <header class="header-global header-shadow">
             <div class="container">
                 <div class="header-content">
                     <a href="#" class="navigation-toggle"><span class="navigation-toggle-icon"></span></a>
@@ -26,10 +25,8 @@
                         <a href="tel:84955405517" class="header-phone-link"></a>
                     </div>
                     <div class="logo"><a href="/"><img src="upload/lifemebel.svg" alt="ЛайфМебель"></a></div>
-                    <div class="header-favorite">
-                        <a href="#" class="header-favorite-link">
-                            <span class="header-favorite-number">5</span>
-                        </a>
+                    <div class="header-profile">
+                        <a href="#" class="header-profile-link"></a>
                     </div>
                     <div class="header-cart">
                         <a href="#" class="header-cart-link">
@@ -474,130 +471,250 @@
             <!-- /.navigation-panel -->
         </div>
         <!-- /.navigation -->
-        <div class="content-back">
-            <a href="#" class="content-back-link">На главную</a>
+        <div class="city-panel-mask"></div>
+        <div class="city-panel">
+            <div class="city-panel-content">
+                <div class="city-panel-caption">
+                    <div class="city-panel-title">Выберите город <a href="#" class="city-panel-close"></a></div>
+                    <div class="city-panel-input">
+                        <input type="text" class="input-text" value="Благовещенск">
+                        <a href="#" class="city-panel-input-clear"></a>
+                    </div>
+                </div>
+                <!-- /.city-panel-caption -->
+                <ul class="city-panel-select">
+                    <li><a href="#">Абакан</a></li>
+                    <li><a href="#">Армавир</a></li>
+                    <li><a href="#">Архангельск</a></li>
+                    <li><a href="#">Барнаул</a></li>
+                    <li><a href="#">Белгород</a></li>
+                    <li><a href="#">Бийск</a></li>
+                    <li class="active"><a href="#">Благовещенск</a></li>
+                    <li><a href="#">Брянск</a></li>
+                    <li><a href="#">Великие Луки</a></li>
+                    <li><a href="#">Ижевск</a></li>
+                    <li><a href="#">Иркутск</a></li>
+                    <li><a href="#">Йошкар-Ола</a></li>
+                    <li><a href="#">Казань</a></li>
+                    <li><a href="#">Калуга</a></li>
+                    <li><a href="#">Кемерово</a></li>
+                    <li><a href="#">Киров</a></li>
+                    <li><a href="#">Кострома</a></li>
+                    <li><a href="#">Краснодар</a></li>
+                </ul>
+                <!-- /.city-panel-select -->
+                <div class="city-panel-note">
+                    <p>* - в другие города отправляем через ТК по их тарифам</p>
+                </div>
+            </div>
+            <!-- /.city-panel-content -->
         </div>
-        <div class="complaint">
+        <!-- /.city-panel -->
+        <div class="profile-panel-mask"></div>
+        <div class="profile-panel">
+            <div class="profile-panel-content">
+                <div class="profile-panel-title"><span class="profile-panel-title-text">Личный кабинет</span> <a href="#" class="profile-panel-close"></a></div>
+                <div class="profile-panel-tab tab">
+                    <ul class="profile-panel-tabs tabs">
+                        <li class="active"><a href="#">Войти</a></li>
+                        <li><a href="#">Зарегистрироваться</a></li>
+                    </ul>
+                    <div class="box visible">
+                        <div class="profile-panel-login-email hidden">
+                            <div class="profile-panel-login-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-email">Email</label>
+                                    <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-login-email">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-password">Пароль</label>
+                                    <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-login-password">
+                                    <a href="#" class="profile-panel-forgot-password">Забыли пароль?</a>
+                                </div>
+                                <div class="profile-panel-login-sep"><span>или</span></div>
+                                <div class="profile-panel-login-title">При помощи</div>
+                                <div class="profile-panel-login-types">
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-apple"><img src="upload/apple.svg" alt="">Apple ID</a>
+                                    </div>
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-google"><img src="upload/google.svg" alt="">Google</a>
+                                    </div>
+                                    <div class="profile-panel-login-type-x2">
+                                        <a href="#" class="profile-panel-login-phone-link"><img src="upload/phone2.svg" alt="">Номер телефона</a>
+                                    </div>
+                                </div>
+                                <!-- /.profile-panel-login-types -->
+                            </div>
+                            <!-- /.profile-panel-login-form -->
+                            <div class="profile-panel-login-options">
+                                <a href="#" class="button">Войти</a>
+                            </div>
+                        </div>
+                        <!-- /.profile-panel-login-email -->
+                        <div class="profile-panel-login-phone">
+                            <div class="profile-panel-login-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-login-phone">Ваш номер телефона</label>
+                                    <input type="tel" class="input-text phone-mask" placeholder="+7" id="profile-panel-login-phone">
+                                </div>
+                                <div class="profile-panel-login-sep"><span>или</span></div>
+                                <div class="profile-panel-login-title">При помощи</div>
+                                <div class="profile-panel-login-types">
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-apple"><img src="upload/apple.svg" alt="">Apple ID</a>
+                                    </div>
+                                    <div class="profile-panel-login-type">
+                                        <a href="#" class="profile-panel-login-google"><img src="upload/google.svg" alt="">Google</a>
+                                    </div>
+                                    <div class="profile-panel-login-type-x2">
+                                        <a href="#" class="profile-panel-login-email-link"><img src="upload/email.svg" alt="">Email</a>
+                                    </div>
+                                </div>
+                                <!-- /.profile-panel-login-types -->
+                            </div>
+                            <!-- /.profile-panel-login-form -->
+                            <div class="profile-panel-login-options">
+                                <a href="#" class="button profile-panel-code-link">Войти</a>
+                            </div>
+                        </div>
+                        <!-- /.profile-panel-login-phone -->
+                    </div>
+                    <!-- /.box -->
+                    <div class="box">
+                        <div class="profile-panel-register">
+                            <div class="profile-panel-register-form">
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-name">Ваше имя и фамилия</label>
+                                    <input type="text" class="input-text" placeholder="Введите имя и фамилию" id="profile-panel-register-name">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-phone">Телефон</label>
+                                    <input type="tel" class="input-text phone-mask" placeholder="+7" id="profile-panel-register-phone">
+                                </div>
+                                <div class="input-wrapper">
+                                    <label for="profile-panel-register-email">Email</label>
+                                    <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-register-email">
+                                </div>
+                            </div>
+                            <!-- /.profile-panel-register-form -->
+                            <div class="profile-panel-register-options">
+                                <a href="#" class="button">Зарегистрироваться</a>
+                                <div class="profile-panel-register-terms">
+                                    <p>Нажав кнопку, вы подтверждаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Условиями</a></p>
+                                </div>
+                            </div>
+                            <!-- /.profile-panel-register-options -->
+                        </div>
+                        <!-- /.profile-panel-register -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+                <!-- /.profile-panel-tab -->
+                <div class="profile-panel-code hidden">
+                    <div class="profile-panel-code-content">
+                        <div class="profile-panel-code-title">На номер <strong class="nowrap">+7 (926) 375-02-10</strong> выслан код&nbsp;подтверждения</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-code">Введите код из SMS</label>
+                            <div class="profile-panel-code-row">
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" id="profile-panel-code" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                                <div class="profile-panel-code-col">
+                                    <input type="tel" class="input-text" maxlength="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-panel-code-note">Повторный код будет отправлен через <br><span class="profile-panel-code-note-sec">40</span> секунд</div>
+                    </div>
+                    <!-- /.profile-panel-code-content -->
+                    <div class="profile-panel-code-options">
+                        <a href="#" class="button white profile-panel-code-change-phone">Изменить номер</a>
+                        <a href="#" class="button">Войти</a>
+                    </div>
+                    <!-- /.profile-panel-code-options -->
+                </div>
+                <!-- /.profile-panel-code -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-1 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-note">Пожалуйста, введите ваш действующий адрес электронной почты</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-email">Email</label>
+                            <input type="email" class="input-text" placeholder="username@mail.ru" id="profile-panel-recover-email">
+                        </div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button white profile-panel-recover-back">Назад на страницу входа</a>
+                        <a href="#" class="button profile-panel-recover-go-step-2">Продолжить</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-1 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-2 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-note">На ваш действующий адрес электронной почты были высланы инструкции по восстановлению пароля.</div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                </div>
+                <!-- /.profile-panel-recover-step-2 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-3 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-title">Введите новый пароль</div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-password">Новый пароль</label>
+                            <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-recover-password">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="profile-panel-recover-password-repeat">Повторите новый пароль</label>
+                            <input type="password" class="input-text" placeholder="Введите пароль" id="profile-panel-recover-password-repeat">
+                        </div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button profile-panel-recover-go-step-4">Изменить пароль</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-3 -->
+                <div class="profile-panel-recover-step profile-panel-recover-step-4 hidden">
+                    <div class="profile-panel-recover-content">
+                        <div class="profile-panel-recover-title">Поздравляем!</div>
+                        <div class="profile-panel-recover-note">Ваш пароль успешно изменен.</div>
+                    </div>
+                    <!-- /.profile-panel-recover-content -->
+                    <div class="profile-panel-recover-options">
+                        <a href="#" class="button white profile-panel-recover-back">Назад на страницу входа</a>
+                    </div>
+                    <!-- /.profile-panel-recover-options -->
+                </div>
+                <!-- /.profile-panel-recover-step-4 -->
+            </div>
+            <!-- /.profile-panel-content -->
+            <!-- <div class="profile-panel-error">Учетная запись с такой почтой уже есть. <br>Вам нужно восстановить пароль, перейдя&nbsp;по ссылке</div> -->
+            <div class="profile-panel-error hidden">Неверный формат адреса</div>
+        </div>
+        <!-- /.profile-panel -->
+        <div class="assembly-review">
             <div class="container">
-                <div class="caption">
-                    <h1>Пожаловаться директору</h1>
+                <div class="assembly-review-thanks">
+                    <div class="assembly-review-thanks-icon"><img src="upload/feedback.svg" alt=""></div>
+                    <div class="assembly-review-thanks-title">
+                        <h1>Спасибо! <br>Ваше обращение отправлено.</h1>
+                    </div>
                 </div>
-                <div class="content-menu"><a href="#">Меню раздела</a></div>
-                <div class="complaint-rating-wrapper">
-                    <div class="complaint-rating-title">Магазин:</div>
-                    <div class="complaint-rating">
-                        <input type="radio" id="complaint-rating-shop-5" value="5" name="complaint-rating-shop">
-                        <label for="complaint-rating-shop-5"></label>
-                        <input type="radio" id="complaint-rating-shop-4" value="4" name="complaint-rating-shop">
-                        <label for="complaint-rating-shop-4"></label>
-                        <input type="radio" id="complaint-rating-shop-3" value="3" name="complaint-rating-shop">
-                        <label for="complaint-rating-shop-3"></label>
-                        <input type="radio" id="complaint-rating-shop-2" value="2" name="complaint-rating-shop">
-                        <label for="complaint-rating-shop-2"></label>
-                        <input type="radio" id="complaint-rating-shop-1" value="1" name="complaint-rating-shop">
-                        <label for="complaint-rating-shop-1"></label>
-                    </div>
-                    <!-- /.complaint-rating -->
-                    <div class="complaint-rating-title">Работа менеджеров:</div>
-                    <div class="complaint-rating">
-                        <input type="radio" id="complaint-rating-manager-5" value="5" name="complaint-rating-manager">
-                        <label for="complaint-rating-manager-5"></label>
-                        <input type="radio" id="complaint-rating-manager-4" value="4" name="complaint-rating-manager">
-                        <label for="complaint-rating-manager-4"></label>
-                        <input type="radio" id="complaint-rating-manager-3" value="3" name="complaint-rating-manager">
-                        <label for="complaint-rating-manager-3"></label>
-                        <input type="radio" id="complaint-rating-manager-2" value="2" name="complaint-rating-manager">
-                        <label for="complaint-rating-manager-2"></label>
-                        <input type="radio" id="complaint-rating-manager-1" value="1" name="complaint-rating-manager">
-                        <label for="complaint-rating-manager-1"></label>
-                    </div>
-                    <!-- /.complaint-rating -->
-                    <div class="complaint-rating-title">Работа курьера:</div>
-                    <div class="complaint-rating">
-                        <input type="radio" id="complaint-rating-courier-5" value="5" name="complaint-rating-courier">
-                        <label for="complaint-rating-courier-5"></label>
-                        <input type="radio" id="complaint-rating-courier-4" value="4" name="complaint-rating-courier">
-                        <label for="complaint-rating-courier-4"></label>
-                        <input type="radio" id="complaint-rating-courier-3" value="3" name="complaint-rating-courier">
-                        <label for="complaint-rating-courier-3"></label>
-                        <input type="radio" id="complaint-rating-courier-2" value="2" name="complaint-rating-courier">
-                        <label for="complaint-rating-courier-2"></label>
-                        <input type="radio" id="complaint-rating-courier-1" value="1" name="complaint-rating-courier">
-                        <label for="complaint-rating-courier-1"></label>
-                    </div>
-                    <!-- /.complaint-rating -->
-                </div>
-                <!-- /.complaint-rating-wrapper -->
+                <!-- /.assembly-review-thanks -->
+                <div class="assembly-review-shop"><a href="#" class="button">Продолжить покупки</a></div>
             </div>
             <!-- /.container -->
-            <div class="complaint-form">
-                <div class="container">
-                    <div class="complaint-form-title">Тематика обращения*</div>
-                    <div class="complaint-form-radio">
-                        <div class="radio">
-                            <input type="radio" id="complaint-form-subject1" name="complaint-form-subject" checked>
-                            <label for="complaint-form-subject1">Рекламация</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" id="complaint-form-subject2" name="complaint-form-subject">
-                            <label for="complaint-form-subject2">Обслуживание</label>
-                        </div>
-                    </div>
-                    <!-- /.complaint-form-radio -->
-                    <div class="input-wrapper">
-                        <label for="complaint-form-order">Номер заказа*</label>
-                        <input type="text" class="input-text" placeholder="1234567890" id="complaint-form-order">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="complaint-form-name">Ваши имя и фамилия*</label>
-                        <input type="text" class="input-text" placeholder="Иванов Иван" id="complaint-form-name">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="complaint-form-phone">Телефон*</label>
-                        <input type="text" class="input-text phone-mask" placeholder="+7 (   ) ___-__-__" id="complaint-form-phone">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="complaint-form-email">Email</label>
-                        <input type="email" class="input-text" placeholder="example@mail.ru" id="complaint-form-email">
-                        <div class="input-error">Введите email, чтобы мы могли с Вами связаться</div>
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="complaint-form-text">Жалоба*</label>
-                        <textarea class="textarea" placeholder="Текст жалобы" name="complaint-form-text" id="complaint-form-text"></textarea>
-                    </div>
-                    <div class="modal-review-photo">
-                        <div class="modal-review-photo-list">
-                            <a href="#" class="modal-review-photo-item loading"><img src="upload/images/product-review2.jpg" alt=""></a>
-                            <a href="#" class="modal-review-photo-item"><img src="upload/images/product-review1.jpg" alt=""></a>
-                            <a href="#" class="modal-review-photo-item delete"><img src="upload/images/product-review3.jpg" alt=""></a>
-                        </div>
-                        <!-- /.modal-review-photo-list -->
-                        <div class="modal-review-photo-upload">
-                            <input type="file" id="modal-review-photo-upload" name="modal-review-photo-upload">
-                            <label for="modal-review-photo-upload">Добавить фото</label>
-                        </div>
-                    </div>
-                    <!-- /.modal-review-photo -->
-                    <div class="complaint-form-title">Удобный способ связи*</div>
-                    <div class="complaint-form-radio">
-                        <div class="radio">
-                            <input type="radio" id="complaint-form-communication1" name="complaint-form-communication" checked>
-                            <label for="complaint-form-communication1">Телефон</label>
-                        </div>
-                        <div class="radio">
-                            <input type="radio" id="complaint-form-communication2" name="complaint-form-communication">
-                            <label for="complaint-form-communication2">Почта</label>
-                        </div>
-                    </div>
-                    <!-- /.complaint-form-radio -->
-                    <div class="complaint-form-button"><input type="submit" class="button" value="Отправить"></div>
-                    <div class="complaint-form-note">Нажимая кнопку "Отправить", я даю согласие на обработку своих персональных данных в соответствии с <a href="#">Условиями</a>.</div>
-                </div>
-                <!-- /.container -->
-            </div>
-            <!-- /.complaint-form -->
         </div>
-        <!-- /.complaint -->
+        <!-- /.assembly-review -->
         <div class="banner-delivery">
             <a href="#" class="banner-delivery-link" style="background-image: url('upload/images/delivery.jpg');">
                 <span class="banner-delivery-content">
@@ -680,6 +797,14 @@
                 <!-- /.footer-menu-block -->
             </div>
             <!-- /.footer-menu -->
+            <div class="footer-favorite">
+                <a href="#" class="footer-favorite-link">
+                    <span class="footer-favorite-icon"><img src="upload/favorite.svg" alt=""></span>
+                    <span class="footer-favorite-title">Избранное</span>
+                    <span class="footer-favorite-number">4</span>
+                </a>
+            </div>
+            <!-- /.footer-favorite -->
             <div class="footer-info">
                 <div class="container">
                     <div class="footer-logo"><a href="/"><img src="upload/lifemebel.svg" alt="ЛайфМебель"></a></div>
