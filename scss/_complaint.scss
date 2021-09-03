@@ -65,6 +65,15 @@
             .radio {
                 margin-bottom: 8px;
             }
+            &-x2 {
+                display: flex;
+                margin: 0 -4px 10px;
+                .radio {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    padding: 0 4px 8px;
+                }
+            }
         }
         &-button {
             padding-top: 10px;
