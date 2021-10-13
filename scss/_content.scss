@@ -1239,6 +1239,91 @@
         pointer-events: auto;
     }
 }
+.content-navigation {
+    margin-bottom: 18px;
+    &-with-toggle {
+        padding-left: 40px;
+        position: relative;
+        .content-navigation-tabs {
+            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+    &-toggle {
+        position: absolute;
+        left: -8px;
+        top: -3px;
+        display: block;
+        width: 40px;
+        height: 40px;
+        &-icon {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            right: 10px;
+            height: 2px;
+            background: #7F7F7F;
+            transform: translate3d(0, -50%, 0);
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                background: #7F7F7F;
+                transform: translate3d(0, -7px, 0);
+            }
+            &:after {
+                transform: translate3d(0, 7px, 0);
+            }
+        }
+    }
+    &-tabs {
+        display: flex;
+        margin: 0 -16px;
+        padding: 0 8px 0 16px;
+        list-style: none;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        &::-webkit-scrollbar-track {
+            background: $tr;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $tr;
+            outline: none;
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background: $tr;
+        }
+        li {
+            padding-right: 8px;
+            a {
+                display: block;
+                font-size: 11px;
+                line-height: 1.455;
+                text-align: center;
+                white-space: nowrap;
+                color: $b;
+                padding: 9px 12px 10px;
+                border-radius: 3px;
+                background: $s;
+            }
+        }
+    }
+}
 
 @media (min-width: $screen) {
     .caption {

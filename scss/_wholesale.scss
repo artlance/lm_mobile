@@ -1,0 +1,82 @@
+.wholesale {
+    &-hero {
+        margin-top: -16px;
+        color: $w;
+        background: $dgr 50% 50% no-repeat;
+        background-size: cover;
+        &-content {
+            padding: 33px 0 20px;
+            min-height: 220px;
+        }
+        &-title {
+            font-size: 18px;
+            line-height: 1.223;
+            font-weight: 900;
+            text-align: center;
+            margin-bottom: 20px;
+            h1 {
+                font-size: 100%;
+                font-weight: 900;
+                margin: 0;
+            }
+        }
+    }
+    &-advantages {
+        padding: 39px 0 13px;
+        background: $s;
+        &-item {
+            padding: 13px 0 27px;
+            text-align: center;
+        }
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 125px;
+            height: 125px;
+            background: $w;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 24px;
+        }
+        &-info {
+            color: $b;
+        }
+    }
+    &-apply {
+        padding-top: 39px;
+        .caption {
+            margin-bottom: 23px;
+        }
+        &-button {
+            padding-top: 6px;
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &-contacts {
+        padding: 39px 0 20px;
+        border-bottom: 1px solid #e1e1e1;
+        text-align: center;
+        .caption {
+            margin-bottom: 21px;
+        }
+        &-item {
+            margin-bottom: 14px;
+            a {
+                display: block;
+                padding: 6px 0;
+                color: $b;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen) {
+    .wholesale {
+        &-hero {
+            margin-top: -24px;
+        }
+    }
+}
