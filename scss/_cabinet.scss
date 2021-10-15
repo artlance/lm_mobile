@@ -1279,3 +1279,13 @@
         pointer-events: auto;
     }
 }
+
+@media (min-width: $screen) {
+    .cabinet {
+        &-navigation {
+            .swiper-pagination-bullet-active {
+                width: 8px;
+            }
+        }
+    }
+}

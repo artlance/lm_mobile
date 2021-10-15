@@ -1143,4 +1143,20 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //wholesale advantages
+    var wholesaleAdvantages,
+        wholesaleAdvantagesLength = $('.wholesale-advantages-slider').length;
+    if (wholesaleAdvantagesLength) {
+        wholesaleAdvantages = new Swiper('.wholesale-advantages-slider', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            speed: 500,
+            watchOverflow: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready
