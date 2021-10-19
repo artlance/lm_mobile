@@ -1159,4 +1159,24 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //wholesale subcategory
+    var wholesaleSubcategory,
+        wholesaleSubcategoryLength = $('.wholesale-subcategory-list').length;
+    if (wholesaleSubcategoryLength) {
+        wholesaleSubcategory = new Swiper('.wholesale-subcategory-list', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 'auto',
+            watchOverflow: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready

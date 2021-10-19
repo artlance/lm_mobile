@@ -106,6 +106,98 @@
             }
         }
     }
+    &-categories {
+        padding-top: 39px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+    &-subcategory {
+        padding: 5px 0 15px;
+        &-caption {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        &-icon {
+            flex: 0 0 62px;
+            max-width: 62px;
+            padding-right: 12px;
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                overflow: hidden;
+                background: $s;
+                border-radius: 50%;
+            }
+        }
+        &-title {
+            flex-grow: 1;
+            font-size: 15px;
+            line-height: 1.334;
+            font-weight: 500;
+            color: $b;
+        }
+        &-list {
+            margin-bottom: 24px;
+            &.swiper-container {
+                overflow: visible;
+                padding-bottom: 6px;
+            }
+            .swiper-slide {
+                width: 140px;
+            }
+        }
+        &-product {
+            display: block;
+            text-align: center;
+            padding-bottom: 12px;
+            &-img {
+                display: block;
+                margin-bottom: 7px;
+                img {
+                    width: 100%;
+                }
+            }
+            &-title {
+                display: block;
+                font-size: 11px;
+                line-height: 1.455;
+                color: $text;
+                margin-bottom: 3px;
+            }
+            &-price {
+                display: block;
+                margin-bottom: 9px;
+                font-size: 13px;
+                line-height: 1.231;
+                font-weight: 500;
+                color: $b;
+                &-old {
+                    display: inline-block;
+                    vertical-align: top;
+                    white-space: nowrap;
+                    font-size: 11px;
+                    line-height: 1.455;
+                    color: $t;
+                    text-decoration: line-through;
+                }
+                &-new {
+                    display: inline-block;
+                    vertical-align: top;
+                    white-space: nowrap;
+                    color: $red;
+                }
+            }
+        }
+        &-all {
+            margin-bottom: 24px;
+            .button {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (min-width: $screen) {
@@ -129,6 +221,13 @@
             &-item {
                 padding-left: 20px;
                 padding-right: 20px;
+            }
+        }
+        &-subcategory {
+            &-list {
+                &.swiper-container {
+                    padding-bottom: 8px;
+                }
             }
         }
     }
