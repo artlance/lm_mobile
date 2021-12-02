@@ -1179,4 +1179,34 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //product advantages
+    var productAdvantages,
+        productAdvantagesLength = $('.product-advantages').length;
+    if (productAdvantagesLength) {
+        productAdvantages = new Swiper('.product-advantages', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            slidesPerColumn: 2,
+            slidesPerColumnFill: 'row',
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 'auto',
+            watchOverflow: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
+    //product advantage more
+    $(document).on('click', '.product-advantage-more', function (event) {
+        event.preventDefault();
+        $(this).parents('.product-advantage').toggleClass('active').find('.product-advantage-detail').slideToggle(150);
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

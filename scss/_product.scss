@@ -1404,6 +1404,130 @@
             }
         }
     }
+    &-advantages {
+        margin-bottom: 33px;
+        &.swiper-container {
+            overflow: visible;
+            padding-bottom: 6px;
+        }
+        .swiper-slide {
+            width: 140px;
+            margin-top: 0 !important;
+        }
+    }
+    &-advantage {
+        margin-bottom: 16px;
+        font-size: 11px;
+        line-height: 1.455;
+        color: $b;
+        &.active {
+            .product-advantage-more {
+                &::after {
+                    transform: rotate(-180deg);
+                }
+                &-show {
+                    display: none;
+                }
+                &-hide {
+                    display: block;
+                }
+            }
+        }
+        &-img {
+            position: relative;
+            height: 0;
+            padding-top: 56.43%;
+            background: $s;
+            margin-bottom: 10px;
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &-title {
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        p {
+            margin-bottom: 0;
+        }
+        &-text {}
+        &-detail {
+            display: none;
+        }
+        &-more {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            font-weight: 500;
+            padding: 8px 25px 5px 0;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -10px;
+                right: 0;
+                width: 24px;
+                height: 24px;
+                background: $tr url('../upload/arrow-down2.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+                transition: transform $d $f;
+                will-change: transform;
+            }
+            &-show {
+                display: block;
+            }
+            &-hide {
+                display: none;
+            }
+        }
+        &-video {
+            margin-bottom: 10px;
+            &-link {
+                display: block;
+                position: relative;
+                height: 0;
+                padding-top: 56.43%;
+                background: $s;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    z-index: 2;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0, 0, 0, 0.4);
+                    opacity: 0.7;
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    z-index: 3;
+                    left: 50%;
+                    top: 50%;
+                    margin: -14px 0 0 -14px;
+                    width: 28px;
+                    height: 28px;
+                    background: $w url('../upload/play2.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                    border-radius: 50%;
+                }
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
 }
 .product-cta {
     position: fixed;
@@ -1771,6 +1895,11 @@
                 width: 19px;
                 margin-top: 1px;
                 margin-right: 8px;
+            }
+        }
+        &-advantages {
+            &.swiper-container {
+                padding-bottom: 8px;
             }
         }
     }
