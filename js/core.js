@@ -35,6 +35,9 @@ $(document).ready(function () {
         if ($('.box:visible').find('.product-delivery-specs').length) {
             productDeliverySpecs.update();
         }
+        if ($('.box:visible').find('.product-advantages').length) {
+            productAdvantages.update();
+        }
         if ($('.box:visible').find('.cabinet-goods-item-wrapper').length) {
             cabinetGoods.forEach(element => {
                 element.update();
