@@ -1212,4 +1212,31 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //product thumbnails
+    var productThumbnails,
+        productThumbnailsLength = $('.product-thumbnails').length;
+    if (productThumbnailsLength) {
+        productThumbnails = new Swiper('.product-thumbnails', {
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 4,
+            watchOverflow: true,
+        });
+        $('.product-thumbnails .swiper-slide').each(function (index) {
+            if (index >= 3) {
+                $(this).addClass('product-thumbnail-opacity');
+            }
+        });
+        productThumbnails.on('slideChange', function () {
+            var thisTargetIndex = productThumbnails.realIndex + 3;
+            $('.product-thumbnails .swiper-slide').each(function (index) {
+                if (index <= thisTargetIndex) {
+                    $(this).removeClass('product-thumbnail-opacity');
+                }
+            });
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready
