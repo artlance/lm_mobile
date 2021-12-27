@@ -712,12 +712,13 @@ $(document).ready(function () {
     var totalFrames = 51;
     var api;
 
-    if ($('.product-three-d-block').length && $('.product-three-d').is(':visible') && !state3DGallery) {
-        state3DGallery = true;
-        init3DGallery();
-    }
+    // if ($('.product-three-d-block').length && $('.product-three-d').is(':visible') && !state3DGallery) {
+    //     state3DGallery = true;
+    //     init3DGallery();
+    // }
 
     function init3DGallery() {
+
         var frames = SpriteSpin.sourceArray('../upload/3d/{frame}.jpg', { frame: [1, totalFrames], digits: 1 });
         var dataSlider = $('.product-three-d-block');
 
@@ -1236,6 +1237,35 @@ $(document).ready(function () {
             });
         });
     }
+
+    //------------------------------------------------------------------------//
+
+    //product about
+    $(document).on('click', '.product-about-nav a', function (event) {
+        event.preventDefault();
+        var thisId = $(this).attr('href');
+        thisId = thisId.substr(1);
+        $('[data-about="' + thisId + '"]').addClass('show');
+        $('html').addClass('product-about-show');
+        $('.product-about-panel-title').text($(this).data('title'));
+
+        if (!state3DGallery && $('[data-about="' + thisId + '"]').find('.product-three-d-block').length) {
+            init3DGallery();
+            state3DGallery = true;
+        }
+        if ($('[data-about="' + thisId + '"]').find('.product-delivery-specs').length) {
+            productDeliverySpecs.update();
+        }
+        if ($('[data-about="' + thisId + '"]').find('.product-advantages').length) {
+            productAdvantages.update();
+        }
+    });
+
+    $(document).on('click', '.product-about-panel-caption-back, .product-about-panel-close, .product-about-panel-back', function (event) {
+        event.preventDefault();
+        $('.product-about-panel').removeClass('show');
+        $('html').removeClass('product-about-show');
+    });
 
     //------------------------------------------------------------------------//
 
