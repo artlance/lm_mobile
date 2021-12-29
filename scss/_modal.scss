@@ -354,4 +354,43 @@
             }
         }
     }
+    &-showroom {
+        padding-top: 16px;
+        &-map {
+            height: 189px;
+            &-block {
+                margin: 0 -16px 36px;
+            }
+        }
+        &-route {
+            &-title {
+                font-size: 15px;
+                line-height: 1.3334;
+                color: $b;
+                font-weight: 500;
+                letter-spacing: -0.3px;
+                margin-bottom: 13px;
+            }
+            ul {
+                display: block;
+                margin: 0;
+                padding: 0 0 3px;
+                list-style: none;
+                li {
+                    margin-bottom: 18px;
+                    padding-left: 11px;
+                    position: relative;
+                    &::after {
+                        content: "•";
+                        position: absolute;
+                        left: 1px;
+                        top: 0;
+                    }
+                }
+            }
+            p {
+                margin-bottom: 16px;
+            }
+        }
+    }
 }
