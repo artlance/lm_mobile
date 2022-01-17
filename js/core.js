@@ -1269,4 +1269,22 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //new cabinet status promocode
+    var cabinetStatusPromocode,
+        cabinetStatusPromocodeLength = $('.new-cabinet-status-promocode-list').length;
+    if (cabinetStatusPromocodeLength) {
+        cabinetStatusPromocode = new Swiper('.new-cabinet-status-promocode-list', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            speed: 500,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            watchOverflow: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready
