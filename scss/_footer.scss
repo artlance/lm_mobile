@@ -1,6 +1,8 @@
 /* footer */
 .footer {
-    &-global {}
+    &-global {
+        background: $s;
+    }
     &-contacts {
         text-align: center;
         padding: 24px 0 20px;
@@ -190,6 +192,35 @@
             white-space: nowrap;
             background: $p;
             border-radius: 50%;
+        }
+    }
+    &-payment {
+        margin-bottom: 21px;
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -3px;
+            padding: 0;
+            list-style: none;
+            li {
+                flex: 0 0 57px;
+                max-width: 57px;
+                padding: 3px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 3px;
+                    height: 24px;
+                    background: $w;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    img {
+                        max-height: 100%;
+                    }
+                }
+            }
         }
     }
 }
