@@ -549,6 +549,29 @@
             padding-bottom: 8px;
             .radio {
                 margin-bottom: 8px;
+                label {
+                    padding: 18px 18px 16px 42px;
+                    font-size: 13px;
+                    line-height: 1.54;
+                    color: $b;
+                    &:before {
+                        margin-top: 0;
+                        top: 19px;
+                        left: 18px;
+                    }
+                    &:after {
+                        margin-top: 0;
+                        top: 24px;
+                        left: 23px;
+                    }
+                }
+            }
+            &-note {
+                display: block;
+                padding-top: 2px;
+                font-size: 11px;
+                line-height: 1.455;
+                color: $gray;
             }
         }
     }
