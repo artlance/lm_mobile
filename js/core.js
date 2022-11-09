@@ -1241,7 +1241,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //product about
-    $(document).on('click', '.product-about-nav a', function (event) {
+    $(document).on('click', '.product-about-nav a, .v3-product-reviews-item', function (event) {
         event.preventDefault();
         var thisId = $(this).attr('href');
         thisId = thisId.substr(1);
@@ -1259,12 +1259,20 @@ $(document).ready(function () {
         if ($('[data-about="' + thisId + '"]').find('.product-advantages').length) {
             productAdvantages.update();
         }
+        if ($('[data-about="' + thisId + '"]').find('.v3-product-reviews-list').length) {
+            v3ProductReviews.update();
+        }
     });
 
     $(document).on('click', '.product-about-panel-caption-back, .product-about-panel-close, .product-about-panel-back', function (event) {
         event.preventDefault();
-        $('.product-about-panel').removeClass('show');
-        $('html').removeClass('product-about-show');
+        if ($('[data-about="v3-product-review"]').hasClass('show') && $(event.currentTarget).hasClass('product-about-panel-caption-back')) {
+            $('[data-about="v3-product-review"]').removeClass('show');
+            $('.product-about-panel-title').text($('a[href="#product-about-reviews"]').data('title'));
+        } else {
+            $('.product-about-panel').removeClass('show');
+            $('html').removeClass('product-about-show');
+        }
     });
 
     //------------------------------------------------------------------------//
@@ -1286,5 +1294,26 @@ $(document).ready(function () {
     }
 
     //------------------------------------------------------------------------//
+
+    //v3 product reviews
+    var v3ProductReviews,
+        v3ProductReviewsLength = $('.v3-product-reviews-list').length;
+    if (v3ProductReviewsLength) {
+        v3ProductReviews = new Swiper('.v3-product-reviews-list', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 1,
+            watchOverflow: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 
 });//document ready
