@@ -61,7 +61,7 @@ $(document).ready(function () {
         $('html').addClass('navigation-show');
     });
 
-    $(document).on('click', '.navigation-close, .navigation-mask, .navigation-city-link', function (event) {
+    $(document).on('click', '.navigation-close, .navigation-mask, .navigation-city-link, .navigation-profile-cabinet', function (event) {
         event.preventDefault();
         $('.navigation-panel').each(function (index, el) {
             $(el).removeClass('show');
@@ -838,7 +838,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //profile panel
-    $(document).on('click', '.header-profile-link', function (event) {
+    $(document).on('click', '.header-profile-link, .navigation-profile-cabinet', function (event) {
         event.preventDefault();
         $('html').addClass('profile-panel-show');
     });
@@ -1315,5 +1315,38 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //search panel
+    $(document).on('click', '.header-search-link', function (event) {
+        event.preventDefault();
+        $('html').addClass('search-panel-show');
+    });
+
+    $(document).on('click', '.search-panel-close, .search-panel-mask', function (event) {
+        event.preventDefault();
+        $('html').removeClass('search-panel-show');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //search panel clear
+    $(document).on('click', '.search-panel-input-clear', function (event) {
+        event.preventDefault();
+        $(this).hide();
+        $(this).parents('.search-panel-input').find('.input-text').val('').focus();
+    });
+
+    //------------------------------------------------------------------------//
+
+    //search panel input
+    $(document).on('change keydown keypress keyup', '.search-panel-input .input-text', function (event) {
+        var thisValue = $(this).val();
+        if (thisValue.length) {
+            $('.search-panel-input-clear').show();
+        } else {
+            $('.search-panel-input-clear').hide();
+        }
+    });
+
+    //------------------------------------------------------------------------//
 
 });//document ready
