@@ -1423,6 +1423,23 @@
         pointer-events: auto;
     }
 }
+.top-banner {
+    display: block;
+    height: 40px;
+    position: relative;
+    &-v2 {
+        height: 20px;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 430px;
+        height: 100%;
+        max-width: none;
+    }
+}
 
 @media (min-width: $screen) {
     .header {
