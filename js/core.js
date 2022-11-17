@@ -1349,4 +1349,21 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //filter categories all
+    $(document).on('click', '.filter-categories-all .button', function (event) {
+        event.preventDefault();
+        $(this).parent('.filter-categories-all').addClass('hidden');
+        $(this).parents('.filter-categories').find('.filter-category').removeClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //filter quick sorting
+    $(document).on('click', '.filter-quick-sorting-item', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

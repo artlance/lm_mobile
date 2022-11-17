@@ -76,6 +76,9 @@
     &-categories {
         padding: 12px 16px 16px;
         border-bottom: 1px solid #e3e3e3;
+        &-no-border {
+            border-bottom: 0;
+        }
         &-title {
             font-size: 15px;
             line-height: 1.6;
@@ -595,6 +598,106 @@
         &-options {
             flex: 0 0 100%;
             max-width: 100%;
+        }
+    }
+    &-quick-sorting {
+        padding: 8px 16px 16px;
+        border-bottom: 1px solid #e3e3e3;
+        &-title {
+            font-size: 15px;
+            line-height: 1.6;
+            font-weight: 500;
+            color: $b;
+            margin-bottom: 16px;
+        }
+        &-number {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 4px;
+            min-width: 24px;
+            height: 24px;
+            white-space: nowrap;
+            padding: 7px 3px 6px;
+            font-size: 11px;
+            line-height: 1;
+            font-weight: 500;
+            color: #ffffff;
+            text-align: center;
+            background: $p;
+            border-radius: 50%;
+        }
+        &-list {
+            display: flex;
+            margin: 0 -16px 16px;
+            padding: 0 8px 0 16px;
+            list-style: none;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            overflow-scrolling: touch;
+            scrollbar-width: none;
+            &::-webkit-scrollbar {
+                width: 0;
+                height: 0;
+            }
+            &::-webkit-scrollbar-track {
+                background: $tr;
+            }
+            &::-webkit-scrollbar-thumb {
+                background-color: $tr;
+                outline: none;
+            }
+            &::-webkit-scrollbar-button {
+                width: 0;
+                height: 0;
+                display: none;
+            }
+            &::-webkit-scrollbar-corner {
+                background: $tr;
+            }
+            li {
+                padding-right: 8px;
+            }
+        }
+        &-item {
+            display: block;
+            padding: 9px 19px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+            white-space: nowrap;
+            border-radius: 20px;
+            background: $s;
+            border: 1px solid $s;
+            position: relative;
+            transition: background-color $d $f, border-color $d $f, padding $d $f;
+            will-change: background-color, border-color, padding;
+            &:before,
+            &:after {
+                opacity: 0;
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 14px;
+                width: 10px;
+                height: 2px;
+                margin-top: -1px;
+                background: $t;
+                transform: rotate(45deg);
+                transition: opacity $d $f;
+                will-change: opacity;
+            }
+            &:after {
+                transform: rotate(-45deg);
+            }
+            &.active {
+                padding-right: 35px;
+                background-color: $w;
+                border-color: #E1E1E1;
+                &:before,
+                &:after {
+                    opacity: 1;
+                }
+            }
         }
     }
 }
