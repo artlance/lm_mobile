@@ -205,7 +205,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //filter toggle active
-    $(document).on('click', '.filter-category-link, .filter-delivery-link', function (event) {
+    $(document).on('click', '.filter-delivery-link', function (event) {
         event.preventDefault();
         $(this).toggleClass('active');
     });
@@ -403,13 +403,13 @@ $(document).ready(function () {
     //fancybox
     if ($('[data-fancybox]').length) {
         $('[data-fancybox]').fancybox({
-            gutter: 0,
-            loop: true,
-            arrows: false,
-            infobar: false,
-            smallBtn: true,
-            wheel: false,
-            animationEffect: "fade"
+            // gutter: 0,
+            // loop: true,
+            // arrows: false,
+            // infobar: false,
+            // smallBtn: true,
+            // wheel: false,
+            // animationEffect: "fade"
         });
     }
 
@@ -1208,7 +1208,7 @@ $(document).ready(function () {
     //product advantage more
     $(document).on('click', '.product-advantage-more', function (event) {
         event.preventDefault();
-        $(this).parents('.product-advantage').toggleClass('active').find('.product-advantage-detail').slideToggle(150);
+        $(this).parents('.product-advantage').toggleClass('active');
     });
 
     //------------------------------------------------------------------------//

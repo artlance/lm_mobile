@@ -1422,6 +1422,9 @@
                     display: block;
                 }
             }
+            .product-advantage-text {
+                -webkit-line-clamp: initial;
+            }
         }
         &-img {
             position: relative;
@@ -1445,7 +1448,12 @@
         p {
             margin-bottom: 0;
         }
-        &-text {}
+        &-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
         &-detail {
             display: none;
         }
@@ -1507,7 +1515,8 @@
                     background-size: 100% 100%;
                     border-radius: 50%;
                 }
-                img {
+                img,
+                video {
                     position: absolute;
                     left: 0;
                     top: 0;
@@ -2194,9 +2203,11 @@
                 &-link {
                     padding-top: 100%;
                     &::before {
+                        display: none;
                         opacity: 1;
                     }
                     &::after {
+                        display: none;
                         width: 48px;
                         height: 48px;
                         margin-top: -24px;

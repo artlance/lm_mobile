@@ -1292,6 +1292,9 @@
     &-input {
         position: relative;
         .input-text {
+            font-size: 16px;
+            padding-top: 5px;
+            padding-bottom: 5px;
             padding-right: 39px;
             &::placeholder {
                 color: $b;
