@@ -1211,6 +1211,30 @@ $(document).ready(function () {
         $(this).parents('.product-advantage').toggleClass('active');
     });
 
+    function productAdvantageMore() {
+        $('.v3-product-advantages .product-advantage-text').each(function (index, element) {
+            const thisElement = $(element);
+            const thisParent = thisElement.parents('.product-advantage-text-wrap');
+            const thisToggle = thisParent.find('.product-advantage-more');
+            if (!thisParent.find('.product-advantage-text-virtual').length) {
+                const virtualText = thisElement.clone();
+                $('<div class="product-advantage-text-virtual">' + virtualText.html() + '</div>').insertAfter(thisElement);
+            }
+            const thisVirtual = thisParent.find('.product-advantage-text-virtual');
+            if (thisVirtual.innerHeight() > thisElement.innerHeight()) {
+                thisToggle.addClass('product-advantage-more-visible');
+            } else {
+                thisToggle.removeClass('product-advantage-more-visible');
+            }
+        });
+    }
+
+    productAdvantageMore();
+
+    $(window).resize(function () {
+        productAdvantageMore();
+    });
+
     //------------------------------------------------------------------------//
 
     //product thumbnails

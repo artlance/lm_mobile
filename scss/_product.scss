@@ -1453,6 +1453,17 @@
             -webkit-line-clamp: 5;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            &-wrap {
+                position: relative;
+            }
+            &-virtual {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                opacity: 0;
+                pointer-events: none;
+            }
         }
         &-detail {
             display: none;
@@ -2221,7 +2232,11 @@
                 margin-bottom: 4px;
             }
             &-more {
+                display: none;
                 padding: 9px 29px 11px 0;
+                &-visible {
+                    display: inline-block;
+                }
                 &::after {
                     margin-top: -12px;
                 }
