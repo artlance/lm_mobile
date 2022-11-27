@@ -200,11 +200,11 @@ button.button {
     will-change: opacity, visibility;
 }
 .drop-opened {
-   .drop-panel {
+    .drop-panel {
         opacity: 1;
         visibility: visible;
         pointer-events: auto;
-   }
+    }
 }
 .fade {
     transition: opacity $d linear;
@@ -231,6 +231,7 @@ button.button {
     background: rgba($dgr, 0.9);
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
     border-radius: 2px;
+    pointer-events: none;
     .arrow {
         position: absolute;
         display: block;

@@ -1265,13 +1265,13 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //product about
-    $(document).on('click', '.product-about-nav a, .v3-product-reviews-item', function (event) {
+    $(document).on('click', '.product-about-nav a, .v3-product-reviews-item, .v3-product-color-toggle', function (event) {
         event.preventDefault();
         var thisId = $(this).attr('href');
         thisId = thisId.substr(1);
         $('[data-about="' + thisId + '"]').addClass('show');
         $('html').addClass('product-about-show');
-        $('.product-about-panel-title').text($(this).data('title'));
+        $('.product-about-panel-title').html($(this).data('title'));
 
         if (!state3DGallery && $('[data-about="' + thisId + '"]').find('.product-three-d-block').length) {
             init3DGallery();
@@ -1288,11 +1288,11 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on('click', '.product-about-panel-caption-back, .product-about-panel-close, .product-about-panel-back', function (event) {
+    $(document).on('click', '.product-about-panel-caption-back, .product-about-panel-close, .product-about-panel-back, .v3-product-color-panel-cta', function (event) {
         event.preventDefault();
         if ($('[data-about="v3-product-review"]').hasClass('show') && $(event.currentTarget).hasClass('product-about-panel-caption-back')) {
             $('[data-about="v3-product-review"]').removeClass('show');
-            $('.product-about-panel-title').text($('a[href="#product-about-reviews"]').data('title'));
+            $('.product-about-panel-title').html($('a[href="#product-about-reviews"]').data('title'));
         } else {
             $('.product-about-panel').removeClass('show');
             $('html').removeClass('product-about-show');
@@ -1386,6 +1386,26 @@ $(document).ready(function () {
     $(document).on('click', '.filter-quick-sorting-item', function (event) {
         event.preventDefault();
         $(this).toggleClass('active');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product color item
+    $(document).on('click', '.v3-product-color-category-item', function (event) {
+        event.preventDefault();
+        $('.v3-product-color').addClass('v3-product-color-push').find('.v3-product-color-category-item').removeClass('active');
+        $(this).addClass('active');
+        $('.v3-product-color-panel').addClass('show');
+        $('.v3-product-color-panel-title').html($(this).data('color-title'));
+        $('.v3-product-color-panel-price').html($(this).data('color-price'));
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 product color detail
+    $(document).on('click', '.v3-product-color-detail-title', function (event) {
+        event.preventDefault();
+        $(this).parents('.v3-product-color-detail-text').toggleClass('active');
     });
 
     //------------------------------------------------------------------------//
