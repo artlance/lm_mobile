@@ -1410,4 +1410,25 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //catalog sale
+    var catalogSale,
+        catalogSaleLength = $('.catalog-sale').length;
+    if (catalogSaleLength) {
+        catalogSale = new Swiper('.catalog-sale', {
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: false,
+                draggable: true,
+                snapOnRelease: false
+            },
+            speed: 500,
+            spaceBetween: 8,
+            slidesPerView: 'auto',
+            watchOverflow: true,
+            centerInsufficientSlides: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready
