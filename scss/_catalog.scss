@@ -178,6 +178,29 @@
                 }
             }
         }
+        &-delivery {
+            display: block;
+            margin-bottom: 8px;
+            padding: 2px 5px 2px 22px;
+            font-size: 10px;
+            line-height: 1.6;
+            color: $text;
+            text-align: left;
+            position: relative;
+            background: $s;
+            border-radius: 2px;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 4px;
+                top: 50%;
+                margin-top: -8px;
+                width: 16px;
+                height: 16px;
+                background: $tr url('../upload/delivery-catalog.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+            }
+        }
     }
     &-banner {
         flex: 0 0 50%;
