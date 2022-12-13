@@ -416,6 +416,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //modal
+    var v3ProductCustomerPhotoIndex = 0;
     if ($('[data-fancymodal]').length) {
         $('[data-fancymodal]').fancybox({
             gutter: 0,
@@ -425,6 +426,7 @@ $(document).ready(function () {
             wheel: false,
             keyboard: false,
             animationEffect: "fade",
+            backFocus: false,
             touch: false,
             afterShow: function () {
                 var modalCertificate,
@@ -457,9 +459,42 @@ $(document).ready(function () {
                 if ($('.phone-mask').length) {
                     $('.phone-mask').mask('+7 (999) 999-99-99');
                 }
+                var v3ProductCustomerPhoto,
+                    v3ProductCustomerPhotoLength = $('.v3-product-customer-review-photo-slider').length;
+                if (v3ProductCustomerPhotoLength) {
+                    v3ProductCustomerPhoto = new Swiper('.v3-product-customer-review-photo-slider', {
+                        speed: 500,
+                        watchOverflow: true,
+                        spaceBetween: 10,
+                        initialSlide: v3ProductCustomerPhotoIndex,
+                        on: {
+                            init: function () {
+                                let thisElement = this;
+                                thisElement.slideTo(v3ProductCustomerPhotoIndex, 0);
+                                $('.v3-product-customer-counter-current').text(thisElement.activeIndex + 1);
+                                $('.v3-product-customer-counter-all').text(thisElement.slides.length);
+                            },
+                            slideChange: function () {
+                                v3ProductCustomerPhotoIndex = this.activeIndex;
+                                $('.v3-product-customer-counter-current').text(this.activeIndex + 1);
+                            }
+                        },
+                    });
+                }
             }
         });
     }
+
+    $(document).on('click', '.product-customer-photo-item', function (event) {
+        event.preventDefault();
+        v3ProductCustomerPhotoIndex = $(this).parents('.swiper-slide').index();
+    });
+
+    $(document).on('click', '.v3-product-customer-photo', function (event) {
+        event.preventDefault();
+        v3ProductCustomerPhotoIndex = $(this).parents('.v3-product-customer-photo-item').index() - 1;
+    });
+
 
     //------------------------------------------------------------------------//
 
@@ -1265,7 +1300,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //product about
-    $(document).on('click', '.product-about-nav a, .v3-product-reviews-item, .v3-product-color-toggle', function (event) {
+    $(document).on('click', '.product-about-nav a, .v3-product-reviews-item, .v3-product-color-toggle, .product-customer-all, .v3-product-customer-review-link', function (event) {
         event.preventDefault();
         var thisId = $(this).attr('href');
         thisId = thisId.substr(1);
@@ -1286,17 +1321,54 @@ $(document).ready(function () {
         if ($('[data-about="' + thisId + '"]').find('.v3-product-reviews-list').length) {
             v3ProductReviews.update();
         }
+
+        if ($('[data-about="' + thisId + '"]').find('.v3-product-customer-photo-list').length) {
+            var v3ProductCustomerGrid = $('.v3-product-customer-photo-list').imagesLoaded(function () {
+                v3ProductCustomerGrid.masonry({
+                    itemSelector: '.grid-item',
+                    columnWidth: '.grid-sizer',
+                    percentPosition: true
+                });
+            });
+        }
+
     });
 
     $(document).on('click', '.product-about-panel-caption-back, .product-about-panel-close, .product-about-panel-back, .v3-product-color-panel-cta', function (event) {
         event.preventDefault();
-        if ($('[data-about="v3-product-review"]').hasClass('show') && $(event.currentTarget).hasClass('product-about-panel-caption-back')) {
+        if (
+            $('[data-about="v3-product-review"]').hasClass('show') &&
+            !$('[data-about="product-about-reviews"]').hasClass('show') &&
+            $(event.currentTarget).hasClass('product-about-panel-caption-back')
+        ) {
+            $('.product-customer-photo-item[data-fancymodal]').eq(v3ProductCustomerPhotoIndex).click();
+        }
+
+        if (
+            $('[data-about="v3-product-review"]').hasClass('show') &&
+            $('[data-about="product-about-reviews"]').hasClass('show') &&
+            $(event.currentTarget).hasClass('product-about-panel-caption-back')
+        ) {
             $('[data-about="v3-product-review"]').removeClass('show');
             $('.product-about-panel-title').html($('a[href="#product-about-reviews"]').data('title'));
+        } else if (
+            $('[data-about="v3-product-review"]').hasClass('show') &&
+            $('[data-about="product-about-customer"]').hasClass('show') &&
+            $(event.currentTarget).hasClass('product-about-panel-caption-back')
+        ) {
+            $('[data-about="v3-product-review"]').removeClass('show');
+            $('.product-about-panel-title').html($('a[href="#product-about-customer"]').data('title'));
         } else {
             $('.product-about-panel').removeClass('show');
             $('html').removeClass('product-about-show');
         }
+
+    });
+
+    //close modal
+    $(document).on('click', '.v3-product-customer-review-link', function (event) {
+        event.preventDefault();
+        $.fancybox.close();
     });
 
     //------------------------------------------------------------------------//
