@@ -168,7 +168,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //filter
-    $(document).on('click', '.catalog-nav-filter', function (event) {
+    $(document).on('click', '.catalog-nav-filter, .v3-product-color-filter-toggle', function (event) {
         event.preventDefault();
         $('html').addClass('filter-show');
     });
@@ -184,7 +184,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //filter panel
-    $(document).on('click', '.filter-panel-toggle', function (event) {
+    $(document).on('click', '.filter-panel-toggle, .v3-product-color-filter-toggle', function (event) {
         event.preventDefault();
         var thisId = $(this).attr('href');
         thisId = thisId.substr(1);
