@@ -173,7 +173,7 @@ $(document).ready(function () {
         $('html').addClass('filter-show');
     });
 
-    $(document).on('click', '.filter-close, .filter-mask', function (event) {
+    $(document).on('click', '.filter-close, .filter-mask, .filter-panel-close', function (event) {
         event.preventDefault();
         $('.filter-panel').each(function (index, el) {
             $(el).removeClass('show');
