@@ -473,10 +473,12 @@ $(document).ready(function () {
                                 thisElement.slideTo(v3ProductCustomerPhotoIndex, 0);
                                 $('.v3-product-customer-counter-current').text(thisElement.activeIndex + 1);
                                 $('.v3-product-customer-counter-all').text(thisElement.slides.length);
+                                printV3ProductReview(thisElement.activeIndex);
                             },
                             slideChange: function () {
                                 v3ProductCustomerPhotoIndex = this.activeIndex;
                                 $('.v3-product-customer-counter-current').text(this.activeIndex + 1);
+                                printV3ProductReview(this.activeIndex);
                             }
                         },
                     });
@@ -495,6 +497,25 @@ $(document).ready(function () {
         v3ProductCustomerPhotoIndex = $(this).parents('.v3-product-customer-photo-item').index() - 1;
     });
 
+    function printV3ProductReview(thisID = 0) {
+        const thisReview = $('.v3-product-review-template[data-id="' + thisID + '"]');
+        const thisSmallReview = $('.v3-product-customer-review');
+        if (thisReview.length) {
+            $('.product-about-panel[data-about="v3-product-review"] .product-reviews').html(thisReview.html());
+            const thisHTML = $($.parseHTML(thisReview.html()));
+            thisSmallReview.find('.v3-product-customer-review-name').text(thisHTML.find('.product-review-customer').text());
+
+            const thisRating = thisHTML.find('.product-review-rating li');
+            let thisRatingHTML = '';
+            thisRating.each(function (index) {
+                thisRatingHTML += $(this).html();
+            });
+            thisSmallReview.find('.v3-product-customer-review-rating').html(thisRatingHTML);
+            thisSmallReview.removeClass('hidden');
+        } else {
+            thisSmallReview.addClass('hidden');
+        }
+    }
 
     //------------------------------------------------------------------------//
 

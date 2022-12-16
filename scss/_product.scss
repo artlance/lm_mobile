@@ -1130,6 +1130,14 @@
             .swiper-slide {
                 width: 103px;
             }
+            &-separator {
+                position: absolute;
+                top: 0;
+                height: 72px;
+                right: -4px;
+                width: 1px;
+                background: #E1E1E1;
+            }
         }
         &-photo-item {
             display: block;
