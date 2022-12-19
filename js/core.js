@@ -1355,27 +1355,29 @@ $(document).ready(function () {
 
     });
 
-    $(document).on('click', '.product-about-panel-caption-back, .product-about-panel-close, .product-about-panel-back, .v3-product-color-panel-cta', function (event) {
+    $(document).on('click', '.product-about-panel-caption-back, .product-about-panel-title, .product-about-panel-close, .product-about-panel-back, .v3-product-color-panel-cta', function (event) {
         event.preventDefault();
         if (
             $('[data-about="v3-product-review"]').hasClass('show') &&
             !$('[data-about="product-about-reviews"]').hasClass('show') &&
-            $(event.currentTarget).hasClass('product-about-panel-caption-back')
+            ($(event.currentTarget).hasClass('product-about-panel-caption-back') || $(event.currentTarget).hasClass('product-about-panel-title'))
         ) {
-            $('.product-customer-photo-item[data-fancymodal]').eq(v3ProductCustomerPhotoIndex).click();
+            setTimeout(function () {
+                $('.product-customer-photo-item[data-fancymodal]').eq(v3ProductCustomerPhotoIndex).click();
+            }, 250);
         }
 
         if (
             $('[data-about="v3-product-review"]').hasClass('show') &&
             $('[data-about="product-about-reviews"]').hasClass('show') &&
-            $(event.currentTarget).hasClass('product-about-panel-caption-back')
+            ($(event.currentTarget).hasClass('product-about-panel-caption-back') || $(event.currentTarget).hasClass('product-about-panel-title'))
         ) {
             $('[data-about="v3-product-review"]').removeClass('show');
             $('.product-about-panel-title').html($('a[href="#product-about-reviews"]').data('title'));
         } else if (
             $('[data-about="v3-product-review"]').hasClass('show') &&
             $('[data-about="product-about-customer"]').hasClass('show') &&
-            $(event.currentTarget).hasClass('product-about-panel-caption-back')
+            ($(event.currentTarget).hasClass('product-about-panel-caption-back') || $(event.currentTarget).hasClass('product-about-panel-title'))
         ) {
             $('[data-about="v3-product-review"]').removeClass('show');
             $('.product-about-panel-title').html($('a[href="#product-about-customer"]').data('title'));
