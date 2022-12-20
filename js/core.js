@@ -1526,4 +1526,23 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product promocode copy
+    $(document).on('click', '.v3-product-promocode', function (event) {
+        event.preventDefault();
+        navigator.clipboard.writeText($(this).find('.v3-product-promocode-text').text());
+    });
+
+    //------------------------------------------------------------------------//
+
+    //v3 cart share
+    $(document).on('click', '.v3-cart-share-cta', function (event) {
+        event.preventDefault();
+        var thisParents = $(this).parents('.v3-cart-share');
+        thisParents.addClass('active');
+        navigator.clipboard.writeText(thisParents.find('.v3-cart-share-link').text());
+    });
+
+    //------------------------------------------------------------------------//
+
+
 });//document ready

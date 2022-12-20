@@ -765,3 +765,50 @@
         padding-bottom: 33px;
     }
 }
+
+.v3-cart {
+    &-share {
+        padding-top: 4px;
+        margin-bottom: 10px;
+        text-align: center;
+        &.active {
+            .v3-cart-share-cta {
+                display: none;
+            }
+            .v3-cart-share-block {
+                display: block;
+            }
+        }
+        &-cta {
+            display: block;
+            font-weight: 500;
+        }
+        &-block {
+            display: none;
+        }
+        &-link {
+            display: block;
+            font-size: 11px;
+            line-height: 1.64;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+        &-success {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            color: $gray;
+            padding-left: 16px;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 2px;
+                width: 15px;
+                height: 14px;
+                background: $tr url('../upload/check3.svg') 50% 50% no-repeat;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
