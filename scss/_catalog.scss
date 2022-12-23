@@ -40,7 +40,7 @@
     &-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -4px;
+        margin: 0 -4px 12px;
     }
     &-product {
         flex: 0 0 50%;
@@ -49,7 +49,6 @@
         position: relative;
         &-link {
             display: block;
-            text-align: center;
         }
         &-img {
             display: block;
@@ -64,20 +63,26 @@
             line-height: 1.455;
             color: $text;
             margin-bottom: 6px;
+            max-height: 32px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
         &-price {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 2px;
             font-size: 13px;
             line-height: 1.231;
             font-weight: 500;
-            color: $b;
+            color: $text;
             &-old {
                 display: inline-block;
                 vertical-align: top;
                 white-space: nowrap;
+                padding-top: 2px;
                 font-size: 11px;
-                line-height: 1.455;
+                line-height: 1.273;
                 color: $t;
                 text-decoration: line-through;
             }
@@ -116,12 +121,11 @@
             display: flex;
             flex-wrap: wrap;
             align-items: flex-start;
-            justify-content: center;
-            margin: 0 -3px;
+            margin: 0 -2px;
             overflow: hidden;
         }
         &-rating {
-            padding: 0 3px 6px;
+            padding: 0 2px 8px;
             font-size: 11px;
             line-height: 1.182;
             color: $p;
@@ -130,14 +134,14 @@
             img {
                 display: inline-block;
                 vertical-align: top;
-                margin: 1px 3px 0 0;
+                margin: 1px 2px 0 0;
             }
         }
         &-reviews {
-            padding: 0 3px 6px;
+            padding: 0 2px 8px;
             font-size: 11px;
             line-height: 1.182;
-            color: $t;
+            color: $gray;
             white-space: nowrap;
         }
         &-favorite {

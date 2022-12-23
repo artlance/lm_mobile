@@ -1545,5 +1545,19 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //пример переключения блоков для дизайнера
+    $(document).on('click', '.modal-color-custom-button .button', function (event) {
+        event.preventDefault();
+        $(this).addClass('button-disabled');
+        $(this).parents('.modal-color-custom').find('.input-wrapper').addClass('error');
+    });
+
+    $(document).on('click', '.modal-color-custom-button .button-disabled', function (event) {
+        event.preventDefault();
+        $(this).parents('.modal-color-custom').hide();
+        $(this).parents('.modal-content').find('.modal-color-custom-success').show();
+    });
+
+    //------------------------------------------------------------------------//
 
 });//document ready

@@ -2949,6 +2949,22 @@
         &-push {
             padding-bottom: 40px;
         }
+        &-custom {
+            margin: -5px -16px 16px;
+            padding: 0 16px 15px;
+            border-bottom: 1px solid #E1E1E1;
+            &-cta {
+                display: block;
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+            }
+            &-note {
+                font-size: 11px;
+                line-height: 1.455;
+                color: $gray;
+            }
+        }
     }
     &-customer {
         &-photo {
