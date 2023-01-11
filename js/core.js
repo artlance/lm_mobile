@@ -1560,4 +1560,19 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product toolbar
+    $(document).on('click', '.v3-product-toolbar-favorite, .v3-product-toolbar-compare', function () {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+            activePop = null;
+            closeInactivePop();
+        } else {
+            $(this).parent('.drop-wrap').addClass('drop-opened');
+            $(this).addClass('active');
+            activePop = $(this).parent('.drop-wrap').index('.drop-wrap');
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

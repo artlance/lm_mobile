@@ -611,4 +611,26 @@
             }
         }
     }
+    &-share {
+        padding: 18px 2px 26px;
+        &-list {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            li {
+                padding: 6px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+        }
+    }
 }
