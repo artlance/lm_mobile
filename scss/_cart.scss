@@ -549,8 +549,15 @@
             padding-bottom: 8px;
             .radio {
                 margin-bottom: 8px;
+                input {
+                    &:checked + label {
+                        .cart-payment-type-icon {
+                            background-color: $s;
+                        }
+                    }
+                }
                 label {
-                    padding: 18px 18px 16px 42px;
+                    padding: 13px 18px 13px 42px;
                     font-size: 13px;
                     line-height: 1.54;
                     color: $b;
@@ -568,10 +575,43 @@
             }
             &-note {
                 display: block;
-                padding-top: 2px;
+                padding-top: 1px;
                 font-size: 11px;
                 line-height: 1.455;
                 color: $gray;
+            }
+            &-caption {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+            &-title {
+                max-width: 100%;
+                padding: 4px 8px 4px 0;
+            }
+            &-icon {
+                flex: 0 0 51px;
+                max-width: 51px;
+                height: 24px;
+                padding: 3px;
+                margin: 2px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $w;
+                border-radius: 4px;
+                overflow: hidden;
+                transition: background-color $d $f;
+                will-change: background-color;
+                img {
+                    max-height: 100%;
+                }
+            }
+            &-list {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                margin-left: -2px;
             }
         }
     }
@@ -701,6 +741,9 @@
 }
 
 .payment {
+    &-caption {
+        padding-top: 16px;
+    }
     &-intro {
         padding: 15px 0 10px;
         font-size: 11px;
@@ -712,11 +755,11 @@
         }
     }
     &-info {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
         &-note {
             padding-top: 8px;
-            font-size: 11px;
-            line-height: 1.455;
+            font-size: 13px;
+            line-height: 1.54;
             color: $gray;
         }
         &-text {
@@ -728,9 +771,21 @@
         }
     }
     &-cta {
-        padding: 15px 0;
+        padding: 7px 0 18px;
+        &-sbp {
+            white-space: nowrap;
+            &.button {
+                background: #1D1346;
+            }
+            img {
+                display: inline-block;
+                vertical-align: top;
+                margin: -6px 0 -7px 11px;
+            }
+        }
         .button {
             width: 100%;
+            margin-bottom: 12px;
         }
     }
     &-order {

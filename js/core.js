@@ -1575,4 +1575,23 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 payment advantages slider
+    var v3PaymentAdvantagesSlider,
+        v3PaymentAdvantagesSliderLength = $('.v3-payment-advantages-slider').length;
+    if (v3PaymentAdvantagesSliderLength) {
+        v3PaymentAdvantagesSlider = new Swiper('.v3-payment-advantages-slider', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            speed: 500,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            watchOverflow: true,
+            autoHeight: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready

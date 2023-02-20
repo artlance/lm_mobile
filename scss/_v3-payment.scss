@@ -75,7 +75,7 @@
             margin: 0 auto 16px;
             width: 178px;
             min-height: 64px;
-            padding: 10px;
+            padding: 8px;
             background: $s;
             border-radius: 12px;
         }
@@ -166,6 +166,15 @@
             line-height: 1.54;
             margin-bottom: 8px;
         }
+        &-slider {
+            &.swiper-container {
+                padding-bottom: 14px;
+                margin-bottom: 16px;
+                .swiper-pagination-bullet-active {
+                    width: 6px;
+                }
+            }
+        }
     }
     &-process {
         padding-bottom: 16px;
@@ -202,6 +211,9 @@
                 height: 100%;
                 object-fit: cover;
             }
+            & + .v3-payment-process-info {
+                margin-top: -12px;
+            }
         }
         &-title {
             font-size: 15px;
@@ -218,6 +230,12 @@
             font-size: 11px;
             line-height: 1.455;
             color: $gray;
+            margin-bottom: 8px;
+        }
+        &-info {
+            text-align: left;
+            font-size: 13px;
+            line-height: 1.54;
             margin-bottom: 8px;
         }
     }
@@ -327,6 +345,20 @@
                 font-size: 13px;
                 line-height: 1.54;
                 color: $b;
+            }
+        }
+    }
+}
+
+@media (min-width: $screen) {
+    .v3-payment {
+        &-advantages {
+            &-slider {
+                &.swiper-container {
+                    .swiper-pagination-bullet-active {
+                        width: 8px;
+                    }
+                }
             }
         }
     }
