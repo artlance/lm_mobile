@@ -1594,4 +1594,15 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //warning message
+    $(document).on('click', '.warning-message-toggle', function (event) {
+        event.preventDefault();
+        $('.warning-message').removeClass('hidden');
+        setTimeout(function () {
+            $('.warning-message').addClass('hidden');
+        }, 5000);
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready

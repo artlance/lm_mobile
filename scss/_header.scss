@@ -79,6 +79,23 @@
         max-width: 40px;
         min-height: 1px;
     }
+    &-back {
+        display: block;
+        flex: 0 0 40px;
+        max-width: 40px;
+        height: 40px;
+        background: $tr url('../upload/header-back.svg') 50% 50% no-repeat;
+        background-size: 40px 40px;
+    }
+    &-chat {
+        &-link {
+            display: block;
+            width: 40px;
+            height: 40px;
+            background: $tr url('../upload/header-chat.svg') 50% 50% no-repeat;
+            background-size: 40px 40px;
+        }
+    }
 }
 .logo {
     flex-grow: 1;
@@ -1491,6 +1508,19 @@
         &-fix {
             flex: 0 0 48px;
             max-width: 48px;
+        }
+        &-back {
+            flex: 0 0 48px;
+            max-width: 48px;
+            height: 48px;
+            background-size: 48px 48px;
+        }
+        &-chat {
+            &-link {
+                width: 48px;
+                height: 48px;
+                background-size: 48px 48px;
+            }
         }
     }
     .logo {

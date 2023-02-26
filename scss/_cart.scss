@@ -431,6 +431,93 @@
                 max-width: 50%;
                 padding: 0 4px 8px;
             }
+            &-v2 {
+                padding-bottom: 20px;
+            }
+            &-radio {
+                display: block;
+                margin-bottom: 12px;
+                input {
+                    appearance: none;
+                    position: absolute;
+                    left: -9999px;
+                    &:checked + label {
+                        border-color: $t;
+                        background-color: $w;
+                        box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+                        &:before {
+                            border-color: $p;
+                            background-color: $p;
+                        }
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                    &:disabled + label {
+                        cursor: default;
+                        color: $t;
+                        &:before {
+                            border-color: #E1E1E1;
+                        }
+                    }
+                }
+                label {
+                    cursor: pointer;
+                    display: block;
+                    margin: 0;
+                    font-size: 13px;
+                    line-height: 1.54;
+                    color: $b;
+                    padding: 14px 14px 14px 44px;
+                    position: relative;
+                    user-select: none;
+                    border: 2px solid $tr;
+                    border-radius: 5px;
+                    background: $s;
+                    transition: color $d $f, border-color $d $f, background-color $d $f, box-shadow $d $f;
+                    will-change: color, border-color, background-color, box-shadow;
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: 14px;
+                        left: 14px;
+                        width: 20px;
+                        height: 20px;
+                        border: 1px solid $t;
+                        background: $w;
+                        border-radius: 50%;
+                        transition: border-color $d $f, background-color $d $f;
+                        will-change: border-color, background-color;
+                    }
+                    &:after {
+                        opacity: 0;
+                        content: "";
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        width: 8px;
+                        height: 8px;
+                        background: $w;
+                        border-radius: 50%;
+                        transition: opacity $d $f;
+                        will-change: opacity;
+                    }
+                }
+            }
+            &-title {
+                display: block;
+            }
+            &-price {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: 500;
+            }
+            &-date {
+                display: block;
+                font-size: 11px;
+                line-height: 1.455;
+                color: $b;
+            }
         }
         &-cost {
             padding-bottom: 14px;
@@ -488,6 +575,16 @@
         &-comment {
             textarea.textarea {
                 height: 100px;
+            }
+        }
+        &-detail {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -4px 6px;
+            &-col {
+                flex: 0 0 50%;
+                max-width: 50%;
+                padding: 0 4px;
             }
         }
     }
@@ -864,6 +961,25 @@
                 background: $tr url('../upload/check3.svg') 50% 50% no-repeat;
                 background-size: 100% 100%;
             }
+        }
+    }
+}
+
+.warning-message {
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 24px 0 28px;
+    background: $info;
+    font-size: 13px;
+    line-height: 1.54;
+    color: $w;
+    p {
+        margin: 0;
+        & + p {
+            margin-top: 10px;
         }
     }
 }
