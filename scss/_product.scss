@@ -2277,6 +2277,14 @@
             background-size: 100% 100%;
             border-radius: 50%;
         }
+        &-mask-gray {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.04);
+        }
     }
     &-description {
         &-video {
