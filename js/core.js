@@ -1321,7 +1321,7 @@ $(document).ready(function () {
     //------------------------------------------------------------------------//
 
     //product about
-    $(document).on('click', '.product-about-nav a, .v3-product-reviews-item, .v3-product-color-toggle, .product-customer-all, .v3-product-customer-review-link', function (event) {
+    $(document).on('click', '.product-about-nav a, .v3-product-reviews-item, .v3-product-color-toggle, .product-customer-all, .v3-product-customer-review-link, .v3-product-showroom-info-map, .v3-product-showroom-item-cta a', function (event) {
         event.preventDefault();
         var thisId = $(this).attr('href');
         thisId = thisId.substr(1);
@@ -1381,6 +1381,20 @@ $(document).ready(function () {
         ) {
             $('[data-about="v3-product-review"]').removeClass('show');
             $('.product-about-panel-title').html($('a[href="#product-about-customer"]').data('title'));
+        } else if (
+            $('[data-about="showroom-nr1"]').hasClass('show') &&
+            $('[data-about="product-about-showroom"]').hasClass('show') &&
+            ($(event.currentTarget).hasClass('product-about-panel-caption-back') || $(event.currentTarget).hasClass('product-about-panel-title'))
+        ) {
+            $('[data-about="showroom-nr1"]').removeClass('show');
+            $('.product-about-panel-title').html($('a[href="#product-about-showroom"]').data('title'));
+        } else if (
+            $('[data-about="showroom-nr2"]').hasClass('show') &&
+            $('[data-about="product-about-showroom"]').hasClass('show') &&
+            ($(event.currentTarget).hasClass('product-about-panel-caption-back') || $(event.currentTarget).hasClass('product-about-panel-title'))
+        ) {
+            $('[data-about="showroom-nr2"]').removeClass('show');
+            $('.product-about-panel-title').html($('a[href="#product-about-showroom"]').data('title'));
         } else {
             $('.product-about-panel').removeClass('show');
             $('html').removeClass('product-about-show');

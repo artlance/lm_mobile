@@ -3345,6 +3345,240 @@
             }
         }
     }
+    &-showroom {
+        &-info {
+            padding: 8px 0 24px;
+            &-content {
+                padding: 24px 16px;
+                color: $b;
+                background: $s;
+                border-radius: 5px;
+            }
+            &-title {
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+            &-map {
+                display: block;
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+                margin-bottom: 4px;
+            }
+            &-items {
+                padding: 8px 0 16px;
+            }
+            &-item {
+                margin-bottom: 4px;
+                padding-left: 16px;
+                position: relative;
+                font-size: 13px;
+                line-height: 1.54;
+                p {
+                    margin: 0;
+                }
+                strong {
+                    display: block;
+                    font-weight: normal;
+                    font-size: 11px;
+                    line-height: 1.64;
+                    color: $gray;
+                }
+            }
+            &-dot-green,
+            &-dot-blue {
+                position: absolute;
+                left: 0;
+                top: 5px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+            }
+            &-dot-green {
+                background: #BAD35D;
+            }
+            &-dot-blue {
+                background: #3376BB;
+            }
+            &-call {
+                .button {
+                    width: 100%;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                }
+            }
+        }
+        &-map {
+            width: 100%;
+            height: 340px;
+            &-block {
+                margin: -8px -16px 32px;
+            }
+            &-number {
+                width: 24px;
+                font-size: 13px;
+                line-height: 1.2;
+                font-weight: bold;
+                color: $dgr;
+                white-space: nowrap;
+                overflow: hidden;
+                text-align: center;
+                font-family: $ff;
+            }
+        }
+        &-items {
+            padding-bottom: 8px;
+        }
+        &-item {
+            margin-bottom: 16px;
+            padding: 24px 16px 32px;
+            background: $s;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+            &-title {
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            & > p {
+                margin: 0 0 8px;
+            }
+            &-station {
+                padding-left: 26px;
+                margin-bottom: 16px;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 0;
+                    top: -2px;
+                    width: 24px;
+                    height: auto;
+                }
+                strong {
+                    font-weight: normal;
+                    color: $t;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+            &-info {
+                margin-bottom: 12px;
+                a[href^="tel:"] {
+                    color: $b;
+                }
+                &-title {
+                    font-weight: 500;
+                    margin-bottom: 2px;
+                }
+                & > p {
+                    margin: 0 0 8px;
+                }
+            }
+            &-cta {
+                padding-top: 12px;
+                .button {
+                    width: 100%;
+                    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
+                }
+            }
+            &-detail {
+                margin-top: -8px;
+                padding-bottom: 8px;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $b;
+                & > p {
+                    margin: 0 0 8px;
+                }
+                .v3-product-showroom-item-title {
+                    margin-bottom: 16px;
+                }
+                .v3-product-showroom-item-station {
+                    margin-bottom: 8px;
+                }
+                .showroom-feature {
+                    padding: 16px 0 20px;
+                    &-icon {
+                        width: 100px;
+                        height: 100px;
+                        margin-bottom: 24px;
+                    }
+                    &-title {
+                        font-size: 15px;
+                        line-height: 1.4;
+                        color: $dgr;
+                        letter-spacing: 0;
+                        margin-bottom: 8px;
+                    }
+                    &-info {
+                        color: $dgr;
+                        margin-bottom: 0;
+                        p {
+                            margin: 0;
+                            & + p {
+                                margin-top: 8px;
+                            }
+                        }
+                    }
+                    a[href^="tel:"] {
+                        color: $dgr;
+                    }
+                }
+            }
+            &-features {
+                margin-bottom: 36px;
+            }
+            &-video {
+                &-title {
+                    font-size: 15px;
+                    line-height: 1.4;
+                    font-weight: 900;
+                    color: $b;
+                    text-align: center;
+                    margin-bottom: 24px;
+                }
+                .showroom-video {
+                    margin-bottom: 16px;
+                    &-link {
+                        &:after {
+                            box-shadow: 0px 3.75px 7.5px rgba(0, 0, 0, 0.2);
+                        }
+                    }
+                }
+            }
+            &-address {
+                margin-bottom: 8px;
+                padding-left: 20px;
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    width: 3px;
+                    height: 3px;
+                    background: $b;
+                    border-radius: 50%;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+            &-route {
+                display: block;
+                font-weight: 500;
+            }
+            &-call {
+                padding: 16px 0 24px;
+                .button {
+                    width: 100%;
+                }
+            }
+        }
+    }
 }
 
 @media (min-width: $screen) {
