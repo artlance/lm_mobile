@@ -2511,7 +2511,8 @@
             align-items: center;
             margin-bottom: 14px;
             padding: 8px 12px;
-            background: #E6F2DC;
+            background: $w;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
             &-img {
                 flex: 0 0 52px;
@@ -2529,7 +2530,7 @@
                 flex-grow: 1;
                 font-size: 11px;
                 line-height: 1.455;
-                margin-bottom: 2px;
+                color: $b;
             }
             &-suptitle {}
             &-title {
@@ -3408,6 +3409,11 @@
                     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.05);
                 }
             }
+            &-address {
+                font-size: 13px;
+                line-height: 1.54;
+                padding: 2px 0 4px;
+            }
         }
         &-map {
             width: 100%;
@@ -3575,6 +3581,18 @@
                 padding: 16px 0 24px;
                 .button {
                     width: 100%;
+                }
+            }
+            &-attention {
+                padding: 16px 0 4px 32px;
+                position: relative;
+                img {
+                    position: absolute;
+                    left: 4px;
+                    top: 18px;
+                }
+                p {
+                    margin: 0;
                 }
             }
         }
