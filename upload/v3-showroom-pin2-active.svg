@@ -4,13 +4,15 @@
     <title>Artboard</title>
     <desc>Created with Sketch.</desc>
     <defs>
-        <filter x="-18.8%" y="-18.8%" width="137.5%" height="137.5%" filterUnits="objectBoundingBox" id="filter-1">
-            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        <filter x="-25.0%" y="-25.0%" width="150.0%" height="150.0%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="4" in="SourceGraphic"></feGaussianBlur>
         </filter>
     </defs>
     <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <circle id="Oval-Copy" fill-opacity="0.2" fill="#000000" fill-rule="nonzero" filter="url(#filter-1)" cx="32" cy="35" r="24"></circle>
-        <g id="v3-showroom-pin2-active" transform="translate(8.000000, 8.000000)" fill-rule="nonzero">
+        <g id="v3-showroom-pin2" transform="translate(8.000000, 4.000000)" fill="#000000" fill-opacity="0.2" fill-rule="nonzero">
+            <circle id="Oval-Copy" filter="url(#filter-1)" cx="24" cy="27" r="24"></circle>
+        </g>
+        <g id="v3-showroom-pin2-active" transform="translate(8.000000, 4.000000)" fill-rule="nonzero">
             <circle id="Oval" fill="#FFFFFF" cx="24" cy="24" r="24"></circle>
             <circle id="Oval" stroke="#3376BB" stroke-width="7" fill="#3376BB" cx="24" cy="24" r="16.5"></circle>
             <path d="M28.2913,19.0447 C29.0192,18.3245 30.2064,18.3176 30.9429,19.0293 C31.6228,19.6863 31.6811,20.7259 31.1136,21.4484 L30.9587,21.622 L23.547,28.9553 C22.8778,29.6174 21.8198,29.677 21.0808,29.128 L20.9031,28.978 L17.0647,25.3114 C16.324,24.6038 16.3102,23.4431 17.0338,22.7188 C17.7018,22.0503 18.7647,21.9873 19.5069,22.5381 L19.6853,22.6886 L22.1888,25.0817 L28.2913,19.0447 Z" id="Path" fill="#FFFFFF"></path>
