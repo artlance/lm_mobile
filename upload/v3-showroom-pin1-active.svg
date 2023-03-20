@@ -1,18 +1,19 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_d_2737_147747)">
-<circle cx="32" cy="28" r="24" fill="white"/>
-<circle cx="32" cy="28" r="16.5" fill="#BAD35D" stroke="#BAD35D" stroke-width="7"/>
-<path d="M36.2913 23.0447C37.0192 22.3245 38.2064 22.3176 38.9429 23.0293C39.6228 23.6863 39.6811 24.7259 39.1136 25.4484L38.9587 25.622L31.547 32.9553C30.8778 33.6174 29.8198 33.677 29.0808 33.128L28.9031 32.978L25.0647 29.3114C24.324 28.6038 24.3102 27.4431 25.0338 26.7188C25.7018 26.0503 26.7647 25.9873 27.5069 26.5381L27.6853 26.6886L30.1888 29.0817L36.2913 23.0447Z" fill="white"/>
-</g>
-<defs>
-<filter id="filter0_d_2737_147747" x="0" y="0" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="4"/>
-<feGaussianBlur stdDeviation="4"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2737_147747"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2737_147747" result="shape"/>
-</filter>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Artboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-18.8%" y="-18.8%" width="137.5%" height="137.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="3" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <circle id="Oval-Copy" fill-opacity="0.2" fill="#000000" fill-rule="nonzero" filter="url(#filter-1)" cx="32" cy="35" r="24"></circle>
+        <g id="v3-showroom-pin1-active2" transform="translate(8.000000, 8.000000)" fill-rule="nonzero">
+            <circle id="Oval" fill="#FFFFFF" cx="24" cy="24" r="24"></circle>
+            <circle id="Oval" stroke="#BAD35D" stroke-width="7" fill="#BAD35D" cx="24" cy="24" r="16.5"></circle>
+            <path d="M28.2913,19.0447 C29.0192,18.3245 30.2064,18.3176 30.9429,19.0293 C31.6228,19.6863 31.6811,20.7259 31.1136,21.4484 L30.9587,21.622 L23.547,28.9553 C22.8778,29.6174 21.8198,29.677 21.0808,29.128 L20.9031,28.978 L17.0647,25.3114 C16.324,24.6038 16.3102,23.4431 17.0338,22.7188 C17.7018,22.0503 18.7647,21.9873 19.5069,22.5381 L19.6853,22.6886 L22.1888,25.0817 L28.2913,19.0447 Z" id="Path" fill="#FFFFFF"></path>
+        </g>
+    </g>
 </svg>
