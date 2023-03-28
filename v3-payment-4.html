@@ -9,7 +9,8 @@
     <meta name="copyright" content="www.iconix.ru">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <link rel="stylesheet" href="css/v3-payment.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -17,13 +18,23 @@
 </head>
 <body class="no-js">
     <main class="main-global">
-        <header class="header-global header-shadow">
+        <header class="header-global">
             <div class="container">
                 <div class="header-content">
-                    <a href="#" class="header-back"></a>
+                    <a href="#" class="navigation-toggle"><span class="navigation-toggle-icon"></span></a>
+                    <div class="header-phone">
+                        <a href="tel:84955405517" class="header-phone-link"></a>
+                    </div>
                     <div class="logo"><a href="/"><img src="upload/lifemebel.svg" alt="ЛайфМебель"></a></div>
-                    <div class="header-chat">
-                        <a href="#" class="header-chat-link"></a>
+                    <div class="header-favorite">
+                        <a href="#" class="header-favorite-link">
+                            <span class="header-favorite-number">5</span>
+                        </a>
+                    </div>
+                    <div class="header-cart">
+                        <a href="#" class="header-cart-link">
+                            <span class="header-cart-number">3</span>
+                        </a>
                     </div>
                 </div>
                 <!-- /.header-content -->
@@ -463,280 +474,350 @@
             <!-- /.navigation-panel -->
         </div>
         <!-- /.navigation -->
-        <div class="cart">
+        <div class="content-back">
+            <a href="#" class="content-back-link">Назад</a>
+        </div>
+        <div class="v3-payment">
             <div class="container">
-                <div class="cart-caption">
-                    <div class="caption">
-                        <h1>Оформление заказа</h1>
-                    </div>
+                <div class="caption">
+                    <h1>Оплата</h1>
                 </div>
-                <!-- /.cart-caption -->
-                <div class="cart-checkout">
-                    <div class="input-wrapper">
-                        <label for="cart-checkout-name">Имя и фамилия</label>
-                        <input type="text" class="input-text" placeholder="Иван Иванов" id="cart-checkout-name">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="cart-checkout-phone">Телефон</label>
-                        <input type="tel" class="input-text phone-mask" placeholder="+7" id="cart-checkout-phone">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="cart-checkout-email">Email</label>
-                        <input type="email" class="input-text" placeholder="username@mail.ru" id="cart-checkout-email">
-                    </div>
-                    <div class="cart-delivery">
-                        <div class="cart-delivery-caption">
-                            <h2>Доставка</h2>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="cart-delivery-city">Город доставки</label>
-                            <select class="select" name="cart-delivery-city" id="cart-delivery-city">
-                                <option value="Москва и МО" selected>Москва и МО</option>
-                                <option value="Санкт-Петербург">Санкт-Петербург</option>
-                            </select>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="cart-delivery-address">Укажите адрес доставки</label>
-                            <input type="text" class="input-text" value="Проспект Ленина, влд 70" id="cart-delivery-address">
-                        </div>
-                        <div class="cart-map-block">
-                            <a href="#" class="cart-map-show">Показать на карте</a>
-                            <div class="cart-map-wrapper hidden">
-                                <div id="cart-map" class="cart-map"></div>
-                                <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-                                <script>
-                                    ymaps.ready(function () {
-                                        var myMap = new ymaps.Map('cart-map', {
-                                                center: [55.751131, 37.637388],
-                                                zoom: 16,
-                                                controls: []
-                                            }, {
-                                                searchControlProvider: 'yandex#search'
-                                            }),
-
-                                            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                                            }, {
-                                                iconLayout: 'default#image',
-                                                iconImageHref: 'upload/pin.svg',
-                                                iconImageSize: [44, 44],
-                                                iconImageOffset: [-22, -18]
-                                            });
-
-                                        myMap.geoObjects.add(myPlacemark);
-                                    });
-                                </script>
-                                <a href="#" class="cart-map-hide"></a>
-                            </div>
-                            <!-- /.cart-map-wrapper -->
-                        </div>
-                        <!-- /.cart-map-block -->
-                        <div class="cart-delivery-type-v2">
-                            <div class="cart-delivery-type-radio">
-                                <input type="radio" id="cart-delivery-type-1" name="cart-delivery-type" checked>
-                                <label for="cart-delivery-type-1">
-                                    <span class="cart-delivery-type-title">Курьером</span>
-                                    <span class="cart-delivery-type-price"><span class="nowrap">от 590 ₽</span></span>
-                                    <span class="cart-delivery-type-date">Доставим завтра, 23.06.2022</span>
-                                </label>
-                            </div>
-                            <!-- /.cart-delivery-type-radio -->
-                            <div class="cart-delivery-type-radio">
-                                <input type="radio" id="cart-delivery-type-2" name="cart-delivery-type">
-                                <label for="cart-delivery-type-2">
-                                    <span class="cart-delivery-type-title">Express доставка</span>
-                                    <span class="cart-delivery-type-price"><span class="nowrap">от 1 590 ₽</span></span>
-                                    <span class="cart-delivery-type-date">Доставим сегодня, 22.06.2022</span>
-                                </label>
-                            </div>
-                            <!-- /.cart-delivery-type-radio -->
-                            <div class="cart-delivery-type-radio">
-                                <input type="radio" id="cart-delivery-type-3" name="cart-delivery-type">
-                                <label for="cart-delivery-type-3">
-                                    <span class="cart-delivery-type-title">Доставка ко времени</span>
-                                    <span class="cart-delivery-type-price"><span class="nowrap">от 2 590 ₽</span></span>
-                                    <span class="cart-delivery-type-date">Доставим завтра, 23.06.22 с 13.00</span>
-                                </label>
-                            </div>
-                            <!-- /.cart-delivery-type-radio -->
-                        </div>
-                        <!-- /.cart-delivery-type-v2 -->
-                        <div class="cart-delivery-detail">
-                            <div class="cart-delivery-detail-col">
-                                <div class="input-wrapper">
-                                    <label for="cart-delivery-entrance">Подъезд</label>
-                                    <input type="text" class="input-text" placeholder="Номер" id="cart-delivery-entrance">
-                                </div>
-                            </div>
-                            <!-- /.cart-delivery-detail-col -->
-                            <div class="cart-delivery-detail-col">
-                                <div class="input-wrapper">
-                                    <label for="cart-delivery-floor">Этаж</label>
-                                    <input type="text" class="input-text" placeholder="Номер" id="cart-delivery-floor">
-                                </div>
-                            </div>
-                            <!-- /.cart-delivery-detail-col -->
-                        </div>
-                        <!-- /.cart-delivery-detail -->
-                        <div class="input-wrapper">
-                            <label for="cart-delivery-date">Удобная дата доставки</label>
-                            <div class="cart-delivery-date">
-                                <input type="text" class="input-text datepicker" id="cart-delivery-date" value="25 мая 2020 г." readonly>
-                            </div>
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="cart-delivery-time">Удобное время доставки</label>
-                            <div class="cart-delivery-time">
-                                <select class="select" name="cart-delivery-time" id="cart-delivery-time">
-                                    <option value="10:00 – 13:00">10:00 – 13:00</option>
-                                    <option value="13:00 – 16:00">13:00 – 16:00</option>
-                                </select>
-                            </div>
-                            <!-- /.cart-delivery-time -->
-                        </div>
-                        <div class="input-wrapper">
-                            <label for="cart-delivery-comment">Комментарий</label>
-                            <div class="cart-delivery-comment">
-                                <textarea class="textarea" name="cart-delivery-comment" id="cart-delivery-comment">Перезвонить за 30 минут</textarea>
-                            </div>
-                        </div>
-                        <div class="cart-payment">
-                            <div class="cart-payment-caption">
-                                <h2>Оплата</h2>
-                            </div>
-                            <div class="cart-payment-subtitle">При получении</div>
-                            <div class="cart-payment-type">
-                                <div class="radio">
-                                    <input type="radio" id="cart-payment-type-1" name="cart-payment-type">
-                                    <label for="cart-payment-type-1">
-                                        <span class="cart-payment-type-caption">
-                                            <span class="cart-payment-type-title">СБП</span>
-                                            <span class="cart-payment-type-icon"><img src="upload/payment-card-sbp.svg" alt=""></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <input type="radio" id="cart-payment-type-2" name="cart-payment-type">
-                                    <label for="cart-payment-type-2">
-                                        <span class="cart-payment-type-caption">
-                                            <span class="cart-payment-type-title">Наличными</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /.cart-payment-type -->
-                            <div class="cart-payment-subtitle">По предоплате</div>
-                            <div class="cart-payment-type">
-                                <div class="radio">
-                                    <input type="radio" id="cart-payment-type-3" name="cart-payment-type">
-                                    <label for="cart-payment-type-3">
-                                        <span class="cart-payment-type-caption">
-                                            <span class="cart-payment-type-title">Картой</span>
-                                            <span class="cart-payment-type-icon"><img src="upload/payment-card-mir.svg" alt=""></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <input type="radio" id="cart-payment-type-4" name="cart-payment-type">
-                                    <label for="cart-payment-type-4">
-                                        <span class="cart-payment-type-caption">
-                                            <span class="cart-payment-type-title">СБП</span>
-                                            <span class="cart-payment-type-icon"><img src="upload/payment-card-sbp.svg" alt=""></span>
-                                        </span>
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <input type="radio" id="cart-payment-type-5" name="cart-payment-type">
-                                    <label for="cart-payment-type-5">
-                                        <span class="cart-payment-type-caption">
-                                            <span class="cart-payment-type-title">Долями</span>
-                                            <span class="cart-payment-type-icon"><img src="upload/payment-card-dolyame.svg" alt=""></span>
-                                        </span>
-                                        <span class="cart-payment-type-note">Делим сумму покупки на 4 равных платежа. Сейчас&nbsp;платите&nbsp;только&nbsp;25%</span>
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <input type="radio" id="cart-payment-type-6" name="cart-payment-type">
-                                    <label for="cart-payment-type-6">
-                                        <span class="cart-payment-type-caption">
-                                            <span class="cart-payment-type-title">По счету в банке</span>
-                                        </span>
-                                    </label>
-                                </div>
-                            </div>
-                            <!-- /.cart-payment-type -->
-                        </div>
-                        <!-- /.cart-payment -->
-                        <div class="cart-promo-code">
-                            <div class="input-wrapper">
-                                <label for="cart-promo-code">Введите промокод <span class="hint popover-target" data-placement="top" data-content="Бесплатный подьем осуществляется, если товар помещается в лифт, иначе оплачивается ручной подъем за каждый этаж"></span></label>
-                                <input type="text" class="input-text" id="cart-promo-code">
-                                <div class="input-error">Этот промокод устарел</div>
-                            </div>
-                            <a href="#" class="button secondary">Применить</a>
-                        </div>
-                        <!-- /.cart-promo-code -->
-                    </div>
-                    <!-- /.cart-delivery -->
+                <div class="content-navigation">
+                    <ul class="content-navigation-tabs">
+                        <li><a href="#">Доставка</a></li>
+                        <li><a href="#">Оплата долями</a></li>
+                        <li><a href="#">Сборка</a></li>
+                        <li><a href="#">Гарантия и возврат</a></li>
+                    </ul>
                 </div>
-                <!-- /.cart-checkout -->
+                <!-- /.content-navigation -->
+                <div class="v3-payment-list">
+                    <div class="v3-payment-type-list">
+                        <div class="v3-payment-type-item">
+                            <div class="v3-payment-type-icon"><img src="upload/payment-cash.svg" alt=""></div>
+                            <div class="v3-payment-type-title">Наличными при получении</div>
+                            <div class="v3-payment-type-text">Если не уверены в качестве товара, то оплатите после получения и проверки</div>
+                        </div>
+                        <!-- /.v3-payment-type-item -->
+                        <div class="v3-payment-type-item">
+                            <div class="v3-payment-type-icon"><img src="upload/payment-card.svg" alt=""></div>
+                            <div class="v3-payment-type-title">Картой на сайте</div>
+                            <div class="v3-payment-type-text">Оплачивайте картами Visa, <br>Mastercard, МИР</div>
+                            <div class="v3-payment-type-cards">
+                                <div class="v3-payment-type-card">
+                                    <div class="v3-payment-type-card-block"><img src="upload/payment-card-visa.svg" alt=""></div>
+                                </div>
+                                <div class="v3-payment-type-card">
+                                    <div class="v3-payment-type-card-block"><img src="upload/payment-card-master.svg" alt=""></div>
+                                </div>
+                                <div class="v3-payment-type-card">
+                                    <div class="v3-payment-type-card-block"><img src="upload/payment-card-mir.svg" alt=""></div>
+                                </div>
+                            </div>
+                            <!-- /.v3-payment-type-cards -->
+                        </div>
+                        <!-- /.v3-payment-type-item -->
+                        <div class="v3-payment-type-item">
+                            <div class="v3-payment-type-icon"><img src="upload/payment-bank.svg" alt=""></div>
+                            <div class="v3-payment-type-title">По счету в банке</div>
+                            <div class="v3-payment-type-text">Удобный способ для оплаты заказов юридическими лицами</div>
+                        </div>
+                        <!-- /.v3-payment-type-item -->
+                    </div>
+                    <!-- /.v3-payment-type-list -->
+                    <div class="v3-payment-item">
+                        <div class="v3-payment-item-img">
+                            <img src="upload/payment-logo4.svg" alt="">
+                        </div>
+                        <div class="v3-payment-item-caption">
+                            <div class="v3-payment-item-title">Система быстрых платежей</div>
+                            <div class="v3-payment-item-subtitle">Оплачивайте при получении <br>или по предоплате на сайте</div>
+                        </div>
+                        <ul class="v3-payment-item-advantages">
+                            <li>Удобно и быстро — не нужно вводить данные своей карты</li>
+                            <li>Оплата при получении: водитель доставит товар и покажет <span class="nowrap">QR-код.</span> Нужно только отсканировать его и подтвердить платеж</li>
+                            <li>Предоплата заказа на сайте: выбираете удобный банк и подтверждаете оплату в его приложении</li>
+                            <li>Просто выберите СБП на этапе оформления заказа</li>
+                        </ul>
+                    </div>
+                    <!-- /.v3-payment-item -->
+                    <div class="v3-payment-item">
+                        <div class="v3-payment-item-img">
+                            <img src="upload/payment-logo2.svg" alt="">
+                        </div>
+                        <div class="v3-payment-item-caption">
+                            <div class="v3-payment-item-title">Долями</div>
+                            <div class="v3-payment-item-subtitle">На заказы суммой до <span class="nowrap">30 000 Р</span></div>
+                        </div>
+                        <ul class="v3-payment-item-advantages">
+                            <li>Получите товар сразу, а платите 4&nbsp;частями каждые 2 недели</li>
+                            <li>Без комиссий и переплат</li>
+                            <li>Оплата картами любых банков</li>
+                            <li>Без документов, без регистрации в сервисе, полностью онлайн</li>
+                        </ul>
+                        <div class="v3-payment-item-more">
+                            <a href="#" class="button secondary">Подробнее об оплате Долями</a>
+                        </div>
+                    </div>
+                    <!-- /.v3-payment-item -->
+                </div>
+                <!-- /.v3-payment-list -->
+                <div class="v3-payment-advantages">
+                    <div class="v3-payment-advantages-caption">
+                        <h2>Оплата СБП</h2>
+                    </div>
+                    <div class="v3-payment-advantages-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="v3-payment-advantages-item">
+                                    <div class="v3-payment-advantages-icon"><img src="upload/payment-icon7.svg" alt=""></div>
+                                    <div class="v3-payment-advantages-title">Мгновенный перевод</div>
+                                    <div class="v3-payment-advantages-text">Быстрое зачисление в режиме 24/7/365, включая выходные и праздники</div>
+                                </div>
+                                <!-- /.v3-payment-advantages-item -->
+                            </div>
+                            <!-- /.swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="v3-payment-advantages-item">
+                                    <div class="v3-payment-advantages-icon"><img src="upload/payment-icon10.svg" alt=""></div>
+                                    <div class="v3-payment-advantages-title">Оплата по СБП при получении</div>
+                                    <div class="v3-payment-advantages-text">Оплачиваете только после доставки и проверки товара</div>
+                                </div>
+                                <!-- /.v3-payment-advantages-item -->
+                            </div>
+                            <!-- /.swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="v3-payment-advantages-item">
+                                    <div class="v3-payment-advantages-icon"><img src="upload/payment-icon11.svg" alt=""></div>
+                                    <div class="v3-payment-advantages-title">Предоплата по СБП на сайте</div>
+                                    <div class="v3-payment-advantages-text">Оплачивайте заказ сразу после его подтверждения</div>
+                                </div>
+                                <!-- /.v3-payment-advantages-item -->
+                            </div>
+                            <!-- /.swiper-slide -->
+                        </div>
+                        <!-- /.swiper-wrapper -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- /.v3-payment-advantages-slider -->
+                </div>
+                <!-- /.v3-payment-advantages -->
+                <div class="v3-payment-process">
+                    <div class="v3-payment-process-caption">
+                        <h2>Как провести предоплату по СБП?</h2>
+                    </div>
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-7.png" alt=""></div>
+                        <div class="v3-payment-process-info">Выбираете оплату по Системе быстрых платежей на этапе оформления заказа</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-8.png" alt=""></div>
+                        <div class="v3-payment-process-info">После оформления менеджер подтвердит заказ по телефону и пришлет на почту ссылку на оплату</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-9.png" alt=""></div>
+                        <div class="v3-payment-process-info">Переходите на страницу оплаты и нажимаете «Оплатить СБП»</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-10.png" alt=""></div>
+                        <div class="v3-payment-process-info">Далее если вы покупаете с компьютера или планшета, то отсканируйте QR-код. Если вы переходили на страницу оплаты со смартфона, то этот шаг не нужен</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-11.png" alt=""></div>
+                        <div class="v3-payment-process-info">На экране смартфона появится список банков — выбираете нужный и попадаете в его мобильное приложение</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-12.png" alt=""></div>
+                        <div class="v3-payment-process-info">Подтверждаете платеж в мобильном приложении выбранного банка. Средства спишутся мгновенно</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                </div>
+                <!-- /.v3-payment-process -->
+                <div class="v3-payment-advantages">
+                    <div class="v3-payment-advantages-caption">
+                        <h2>Оплата Долями</h2>
+                    </div>
+                    <div class="v3-payment-advantages-slider swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="v3-payment-advantages-item">
+                                    <div class="v3-payment-advantages-icon"><img src="upload/payment-icon1.svg" alt=""></div>
+                                    <div class="v3-payment-advantages-title">Покупайте сейчас — платите потом</div>
+                                    <div class="v3-payment-advantages-text">Не нужно откладывать деньги. Долями — это мгновернная и короткая беспроцентная рассрочка.</div>
+                                </div>
+                                <!-- /.v3-payment-advantages-item -->
+                            </div>
+                            <!-- /.swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="v3-payment-advantages-item">
+                                    <div class="v3-payment-advantages-icon"><img src="upload/payment-icon2.svg" alt=""></div>
+                                    <div class="v3-payment-advantages-title">Оплачивайте 4 равными долями</div>
+                                    <div class="v3-payment-advantages-text">Оплачивайте сегодня только 25%, оставшиеся 75% спишутся тремя равными платежами через каждые две недели </div>
+                                </div>
+                                <!-- /.v3-payment-advantages-item -->
+                            </div>
+                            <!-- /.swiper-slide -->
+                            <div class="swiper-slide">
+                                <div class="v3-payment-advantages-item">
+                                    <div class="v3-payment-advantages-icon"><img src="upload/payment-icon3.svg" alt=""></div>
+                                    <div class="v3-payment-advantages-title">Без процентов, комиссий и&nbsp;переплат</div>
+                                    <div class="v3-payment-advantages-text">Платите картой любого банка без комиссий. Никаких дополнительных платежей и скрытых процентов.</div>
+                                </div>
+                                <!-- /.v3-payment-advantages-item -->
+                            </div>
+                            <!-- /.swiper-slide -->
+                        </div>
+                        <!-- /.swiper-wrapper -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <!-- /.v3-payment-advantages-slider -->
+                </div>
+                <!-- /.v3-payment-advantages -->
+                <div class="v3-payment-process">
+                    <div class="v3-payment-process-caption">
+                        <h2>Как оплатить Долями в&nbsp;ЛайфМебель?</h2>
+                    </div>
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-1.png" alt=""></div>
+                        <div class="v3-payment-process-title">Сформируйте корзину с покупками, суммой до <span class="nowrap">30 000 Р</span></div>
+                        <div class="v3-payment-process-text">Добавьте товары в корзину общей суммой не более <span class="nowrap">30 000 Р</span>, включая цену доставки, сборки и подъема. Нажмите «Оформить заказ» и на этапе оформления выберите тип оплаты «Долями»</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-2.png" alt=""></div>
+                        <div class="v3-payment-process-title">Укажите номер телефона и данные карты на сайте Dolyame.ru</div>
+                        <div class="v3-payment-process-text">Подтвердите заказ с менеджером по телефону. После чего перейдите по ссылке, отправленной менеджером, на сайт dolyame.ru и введите данные вашего номера телефона и банковской карты</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                    <div class="v3-payment-process-item">
+                        <div class="v3-payment-process-img"><img src="upload/images/payment-3.png" alt=""></div>
+                        <div class="v3-payment-process-title">Оплатите 25% от стоимости покупки с помощью карты</div>
+                        <div class="v3-payment-process-text">Оплатите только четверть покупки. Оставшиеся 75% спишутся с карты автоматически тремя равными платежами с периодом в две недели</div>
+                    </div>
+                    <!-- /.v3-payment-process-item -->
+                </div>
+                <!-- /.v3-payment-process -->
             </div>
             <!-- /.container -->
-            <div class="cart-total">
+        </div>
+        <!-- /.v3-payment -->
+        <footer class="footer-global">
+            <div class="footer-contacts">
                 <div class="container">
-                    <div class="caption">
-                        <h2>В корзине 5 товаров</h2>
+                    <div class="footer-title">Контакты</div>
+                    <div class="footer-phone">
+                        <p><a href="tel:84955405517" class="nowrap">8 (495) 540-55-17</a></p>
+                        <p><a href="tel:88005557328" class="nowrap">8 (800) 555-73-28</a></p>
+                        <div class="footer-contacts-note">Звонок бесплатный</div>
                     </div>
-                    <div class="cart-total-info">
-                        <div class="cart-total-item">
-                            <div class="cart-total-title">Скидка по заказу:</div>
-                            <div class="cart-total-price red"><span class="nowrap">-16 000 ₽</span></div>
-                        </div>
-                        <!-- /.cart-total-item -->
-                        <div class="cart-total-item">
-                            <div class="cart-total-title">Сборка:</div>
-                            <div class="cart-total-price"><span class="nowrap">1 200 ₽</span></div>
-                        </div>
-                        <!-- /.cart-total-item -->
-                        <div class="cart-total-item">
-                            <div class="cart-total-title">Доставка:</div>
-                            <div class="cart-total-price"><span class="nowrap">475 ₽</span></div>
-                        </div>
-                        <!-- /.cart-total-item -->
-                        <div class="cart-total-item">
-                            <div class="cart-total-title">Подъем до двери:</div>
-                            <div class="cart-total-price green">Бесплатно</div>
-                        </div>
-                        <!-- /.cart-total-item -->
+                    <div class="footer-address">
+                        <p>Москва, ул. Мироновская д.25</p>
+                        <p>E-mail: <a href="mailto:zakaz@lifemebel.ru">zakaz@lifemebel.ru</a></p>
                     </div>
-                    <!-- /.cart-total-info -->
-                    <div class="cart-total-sum">
-                        <div class="cart-total-item">
-                            <div class="cart-total-title">Итого:</div>
-                            <div class="cart-total-price"><span class="nowrap">79 294 ₽</span></div>
-                        </div>
-                        <!-- /.cart-total-item -->
-                    </div>
-                    <!-- /.cart-total-sum -->
                 </div>
                 <!-- /.container -->
             </div>
-            <!-- /.cart-total -->
-            <div class="cart-button">
-                <a href="#" class="button">Оформить заказ</a>
-                <div class="cart-terms">
-                    <p>Нажимая кнопку, вы подтвердаете свое совершеннолетие, соглашаетесь на обработку персональных данных в соответствии с <a href="#">Условиями</a></p>
+            <!-- /.footer-contacts -->
+            <div class="footer-menu">
+                <a href="#" class="footer-menu-toggle">Лайфмебель</a>
+                <div class="footer-menu-block">
+                    <ul class="footer-menu-list">
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Новости</a></li>
+                        <li><a href="#">Отзывы</a></li>
+                        <li><a href="#">Работа у нас</a></li>
+                        <li><a href="#">Оптовикам</a></li>
+                        <li><a href="#">Поставщикам</a></li>
+                    </ul>
                 </div>
+                <!-- /.footer-menu-block -->
             </div>
-        </div>
-        <!-- /.cart -->
+            <!-- /.footer-menu -->
+            <div class="footer-menu">
+                <a href="#" class="footer-menu-toggle">Интернет-магазин</a>
+                <div class="footer-menu-block">
+                    <ul class="footer-menu-list">
+                        <li><a href="#">Помощь в покупке</a></li>
+                        <li><a href="#">Доставка и оплата</a></li>
+                        <li><a href="#">Услуга подъёма</a></li>
+                        <li><a href="#">Сборка</a></li>
+                        <li><a href="#">Часто задаваемые вопросы</a></li>
+                        <li><a href="#">Гарантия</a></li>
+                        <li><a href="#">Обмен и возврат</a></li>
+                    </ul>
+                </div>
+                <!-- /.footer-menu-block -->
+            </div>
+            <!-- /.footer-menu -->
+            <div class="footer-menu">
+                <a href="#" class="footer-menu-toggle">Преимущества</a>
+                <div class="footer-menu-block">
+                    <ul class="footer-menu-list">
+                        <li><a href="#">Гарантия лучшей цены</a></li>
+                        <li><a href="#">Дисконтная программа</a></li>
+                        <li><a href="#">Надёжная компания</a></li>
+                        <li><a href="#">Собственная служба доставки</a></li>
+                        <li><a href="#">3D-модели</a></li>
+                    </ul>
+                </div>
+                <!-- /.footer-menu-block -->
+            </div>
+            <!-- /.footer-menu -->
+            <div class="footer-menu">
+                <a href="#" class="footer-menu-toggle">Спецпредложения</a>
+                <div class="footer-menu-block">
+                    <ul class="footer-menu-list">
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Распродажи</a></li>
+                    </ul>
+                </div>
+                <!-- /.footer-menu-block -->
+            </div>
+            <!-- /.footer-menu -->
+            <div class="footer-info">
+                <div class="container">
+                    <div class="footer-logo"><a href="/"><img src="upload/lifemebel.svg" alt="ЛайфМебель"></a></div>
+                    <div class="copyright">Copyright &copy; 2018. Все права защищены</div>
+                    <ul class="footer-social">
+                        <li><a href="#"><img src="upload/facebook.svg" alt=""></a></li>
+                        <li><a href="#"><img src="upload/youtube.svg" alt=""></a></li>
+                        <li><a href="#"><img src="upload/vk.svg" alt=""></a></li>
+                        <li><a href="#"><img src="upload/instagram.svg" alt=""></a></li>
+                        <li class="footer-social-dot"></li>
+                        <li><a href="#"><img src="upload/whatsapp.svg" alt=""></a></li>
+                        <li><a href="#"><img src="upload/viber.svg" alt=""></a></li>
+                        <li><a href="#"><img src="upload/telegram.svg" alt=""></a></li>
+                    </ul>
+                    <div class="footer-version"><a href="#">Полная версия сайта</a></div>
+                    <div class="footer-payment">
+                        <ul class="footer-payment-list">
+                            <li><a href="#"><img src="upload/payment-card-visa.svg" alt=""></a></li>
+                            <li><a href="#"><img src="upload/payment-card-master.svg" alt=""></a></li>
+                            <li><a href="#"><img src="upload/payment-card-mir.svg" alt=""></a></li>
+                            <li><a href="#"><img src="upload/payment-card-halva.svg" alt=""></a></li>
+                            <li><a href="#"><img src="upload/payment-card-dolyame.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <!-- /.footer-payment -->
+                    <div class="footer-reference">
+                        <p>Предоставленная на сайте информация несёт справочный характер. Информация на сайте не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. До оплаты товара удостоверьтесь во всех для вас важных характеристиках в товаре и условиях его эксплуатации.</p>
+                    </div>
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.footer-info -->
+        </footer>
     </main>
     <!-- /.main-global -->
     <script src="js/jquery.js"></script>
     <script src="js/migrate.js"></script>
     <script src="js/mask.js"></script>
-    <script src="js/datepicker.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/tooltip.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/core.min.js"></script>
 </body>
 </html>

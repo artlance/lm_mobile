@@ -1969,6 +1969,14 @@
                 &-title {
                     max-width: 83.61%;
                     min-height: 40px;
+                    a {
+                        font-weight: 500;
+                    }
+                }
+                &-v2 {
+                    .product-payment-item-process-title {
+                        max-width: 94.7%;
+                    }
                 }
             }
             &-advantages {
