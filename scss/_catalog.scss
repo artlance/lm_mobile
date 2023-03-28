@@ -40,13 +40,32 @@
     &-list {
         display: flex;
         flex-wrap: wrap;
-        margin: 0 -4px 12px;
+        margin: 0 -4px 26px;
     }
     &-product {
         flex: 0 0 50%;
         max-width: 50%;
         padding: 0 4px 16px;
         position: relative;
+        &-sep {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 4px;
+            height: 16px;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 4px;
+                right: 4px;
+                top: 0;
+                height: 1px;
+                background: #E1E1E1;
+            }
+            &:last-child {
+                display: none;
+            }
+        }
         &-link {
             display: block;
         }
@@ -57,12 +76,17 @@
                 width: 100%;
             }
         }
+        &-text {
+            display: block;
+            height: 72px;
+            overflow: hidden;
+        }
         &-title {
             display: block;
-            font-size: 11px;
-            line-height: 1.455;
+            font-size: 12px;
+            line-height: 1.334;
             color: $text;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             max-height: 32px;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -71,7 +95,7 @@
         }
         &-price {
             display: block;
-            margin-bottom: 2px;
+            padding: 1px 0 2px;
             font-size: 13px;
             line-height: 1.231;
             font-weight: 500;
@@ -80,9 +104,8 @@
                 display: inline-block;
                 vertical-align: top;
                 white-space: nowrap;
-                padding-top: 2px;
-                font-size: 11px;
-                line-height: 1.273;
+                font-size: 12px;
+                line-height: 1.334;
                 color: $t;
                 text-decoration: line-through;
             }
@@ -94,27 +117,51 @@
             }
         }
         &-colors {
+            margin-top: 6px;
             display: flex;
-            align-items: center;
             overflow: hidden;
-            margin: 0 0 8px -4px;
+            margin-left: -4px;
             &-more {
-                flex: 0 0 25%;
-                max-width: 25%;
-                padding-left: 4px;
                 font-size: 11px;
                 line-height: 1.455;
                 font-weight: 500;
                 color: $gray;
                 text-align: center;
+                & > span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100%;
+                    background: $secondary;
+                    border-radius: 2px;
+                    overflow: hidden;
+                }
             }
         }
-        &-color {
+        &-color,
+        &-colors-more {
             flex: 0 0 25%;
             max-width: 25%;
             padding-left: 4px;
+        }
+        &-color {
+            & > span {
+                display: block;
+                height: 0;
+                padding-top: 100%;
+                position: relative;
+                background: $secondary;
+                border-radius: 2px;
+                overflow: hidden;
+            }
             img {
+                position: absolute;
+                left: 0;
+                top: 0;
                 width: 100%;
+                height: 100%;
+                object-fit: contain;
+                border-radius: 2px;
             }
         }
         &-info {
@@ -123,24 +170,22 @@
             align-items: flex-start;
             margin: 0 -2px;
             overflow: hidden;
+            font-size: 12px;
+            line-height: 1.334;
         }
         &-rating {
-            padding: 0 2px 8px;
-            font-size: 11px;
-            line-height: 1.182;
+            padding: 0 2px 1px;
             color: $p;
             font-weight: 500;
             white-space: nowrap;
             img {
                 display: inline-block;
                 vertical-align: top;
-                margin: 1px 2px 0 0;
+                margin: 3px 2px 0 0;
             }
         }
         &-reviews {
-            padding: 0 2px 8px;
-            font-size: 11px;
-            line-height: 1.182;
+            padding: 0 2px 1px;
             color: $gray;
             white-space: nowrap;
         }
@@ -183,11 +228,11 @@
             }
         }
         &-delivery {
+            margin-top: 6px;
             display: block;
-            margin-bottom: 8px;
-            padding: 2px 5px 2px 22px;
-            font-size: 10px;
-            line-height: 1.6;
+            padding: 2px 5px 4px 24px;
+            font-size: 12px;
+            line-height: 1.334;
             color: $text;
             text-align: left;
             position: relative;
@@ -203,6 +248,9 @@
                 height: 16px;
                 background: $tr url('../upload/delivery-catalog.svg') 50% 50% no-repeat;
                 background-size: 100% 100%;
+            }
+            & + .catalog-product-colors {
+                margin-top: 8px;
             }
         }
     }
