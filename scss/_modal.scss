@@ -633,4 +633,60 @@
             }
         }
     }
+    &-favorite-overfill {
+        padding: 24px 4px 16px;
+        &-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 124px;
+            height: 124px;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 32px;
+        }
+        &-text {
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+            margin-bottom: 24px;
+        }
+        &-button {
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &-cart-textile {
+        padding: 8px 4px 16px;
+        &-img {
+            margin-bottom: 23px;
+            img {
+                width: 100%;
+            }
+        }
+        &-text {
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+            p {
+                margin: 0 0 8px;
+            }
+            strong {
+                font-weight: 500;
+                line-height: normal;
+            }
+            em {
+                color: $gray;
+                font-style: normal;
+            }
+        }
+        &-button {
+            padding-top: 18px;
+            .button {
+                width: 100%;
+            }
+        }
+    }
 }

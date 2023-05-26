@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/cart.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" href="android-chrome-512x512.png" sizes="512x512">
@@ -466,7 +468,7 @@
             <div class="container">
                 <div class="cart-caption">
                     <div class="caption">
-                        <h1>Корзина <span class="nowrap">№474-648</span></h1>
+                        <h1>Корзина <span class="nowrap">№ 248-624</span></h1>
                     </div>
                     <div class="v3-cart-share">
                         <a href="#" class="v3-cart-share-cta">Поделиться корзиной</a>
@@ -476,120 +478,237 @@
                         </div>
                     </div>
                     <!-- /.v3-cart-share -->
-                    <p>Ближайшая дата доставки - <strong>завтра</strong></p>
+                    <p>Ближайшая дата доставки — 22.04.2022</p>
                 </div>
                 <!-- /.cart-caption -->
             </div>
             <!-- /.container -->
             <div class="cart-products">
-                <div class="cart-product-wrapper swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="cart-product">
-                                <div class="cart-product-info">
-                                    <div class="cart-product-img"><a href="#"><img src="upload/images/cart1.jpg" alt=""></a></div>
-                                    <div class="cart-product-number">
-                                        <a href="#" class="cart-product-number-minus"></a>
-                                        <input type="text" class="cart-product-number-text" value="3">
-                                        <a href="#" class="cart-product-number-plus"></a>
-                                    </div>
-                                </div>
-                                <!-- /.cart-product-info -->
-                                <div class="cart-product-content">
-                                    <div class="cart-product-title"><a href="#">Стул Eames PC-015 белый</a></div>
-                                    <div class="cart-product-articul">Артикул: 146389</div>
-                                    <div class="cart-product-price"><span class="nowrap">21 500 ₽</span></div>
-                                    <div class="cart-product-assembly">
-                                        <input type="checkbox" id="cart-product-assembly-1" name="cart-product-assembly-1" checked>
-                                        <label for="cart-product-assembly-1">Сборка – <strong>300</strong>&nbsp;₽/шт</label>
-                                    </div>
-                                </div>
-                                <!-- /.cart-product-content -->
-                            </div>
-                            <!-- /.cart-product -->
+                <div class="v3-cart-product-wrapper">
+                    <div class="v3-cart-product-return">
+                        <a href="#" class="v3-cart-product-return-delete"></a>
+                        <div class="v3-cart-product-return-title"><a href="#">Стул Eames PC-015 белый</a></div>
+                        <div class="v3-cart-product-return-price">
+                            <span class="nowrap">56 000 ₽</span>
                         </div>
-                        <!-- /.swiper-slide -->
-                        <div class="swiper-slide">
-                            <a href="#" class="cart-product-delete"></a>
-                        </div>
-                        <!-- /.swiper-slide -->
+                        <a href="#" class="v3-cart-product-return-link">Вернуть</a>
                     </div>
-                    <!-- /.swiper-wrapper -->
+                    <!-- /.v3-cart-product-return -->
                 </div>
-                <!-- /.cart-product-wrapper -->
-                <div class="cart-product-wrapper swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="cart-product">
-                                <div class="cart-product-info">
-                                    <div class="cart-product-img"><a href="#"><img src="upload/images/cart2.jpg" alt=""></a></div>
-                                    <div class="cart-product-number">
-                                        <a href="#" class="cart-product-number-minus"></a>
-                                        <input type="text" class="cart-product-number-text" value="1">
-                                        <a href="#" class="cart-product-number-plus"></a>
-                                    </div>
-                                </div>
-                                <!-- /.cart-product-info -->
-                                <div class="cart-product-content">
-                                    <div class="cart-product-title"><a href="#">Стул Eames PC-015 белый</a></div>
-                                    <div class="cart-product-articul">Артикул: 146389</div>
-                                    <div class="cart-product-price">
-                                        <span class="cart-product-price-old">72 540 ₽&nbsp;</span>
-                                        <span class="cart-product-price-new">58 540 ₽</span>
-                                    </div>
-                                    <div class="cart-product-assembly">
-                                        <input type="checkbox" id="cart-product-assembly-2" name="cart-product-assembly-2" checked>
-                                        <label for="cart-product-assembly-2">Сборка – <strong>300</strong>&nbsp;₽/шт</label>
-                                    </div>
-                                </div>
-                                <!-- /.cart-product-content -->
-                            </div>
-                            <!-- /.cart-product -->
+                <!-- /.v3-cart-product-wrapper -->
+                <div class="v3-cart-product-wrapper">
+                    <div class="v3-cart-product-return">
+                        <a href="#" class="v3-cart-product-return-delete"></a>
+                        <div class="v3-cart-product-return-title"><a href="#">Стул Eames PC-015 белый длинное название у товара в две строки название у товара в две строки</a></div>
+                        <div class="v3-cart-product-return-price">
+                            <span class="v3-cart-product-return-price-new">24 000 ₽&nbsp;</span>
+                            <span class="v3-cart-product-return-price-old">32 000 ₽</span>
                         </div>
-                        <!-- /.swiper-slide -->
-                        <div class="swiper-slide">
-                            <a href="#" class="cart-product-delete"></a>
-                        </div>
-                        <!-- /.swiper-slide -->
+                        <a href="#" class="v3-cart-product-return-link">Вернуть</a>
                     </div>
-                    <!-- /.swiper-wrapper -->
+                    <!-- /.v3-cart-product-return -->
                 </div>
-                <!-- /.cart-product-wrapper -->
-                <div class="cart-product-wrapper swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="cart-product">
-                                <div class="cart-product-info">
-                                    <div class="cart-product-img"><a href="#"><img src="upload/images/cart3.jpg" alt=""></a></div>
-                                    <div class="cart-product-number">
-                                        <a href="#" class="cart-product-number-minus"></a>
-                                        <input type="text" class="cart-product-number-text" value="1">
-                                        <a href="#" class="cart-product-number-plus"></a>
-                                    </div>
-                                </div>
-                                <!-- /.cart-product-info -->
-                                <div class="cart-product-content">
-                                    <div class="cart-product-title"><a href="#">Стул белый мягкий с&nbsp;подлокотниками</a></div>
-                                    <div class="cart-product-articul">Артикул: 146389</div>
-                                    <div class="cart-product-price"><span class="nowrap">23 200 ₽</span></div>
-                                    <div class="cart-product-assembly">
-                                        <input type="checkbox" id="cart-product-assembly-3" name="cart-product-assembly-3" checked>
-                                        <label for="cart-product-assembly-3">Сборка – <strong>300</strong>&nbsp;₽/шт</label>
-                                    </div>
-                                </div>
-                                <!-- /.cart-product-content -->
+                <!-- /.v3-cart-product-wrapper -->
+                <div class="v3-cart-product-wrapper">
+                    <div class="cart-product v3-cart-product">
+                        <div class="cart-product-info">
+                            <a href="#" class="v3-cart-product-favorite"></a>
+                            <div class="cart-product-img">
+                                <a href="#"><img src="upload/images/cart1.jpg" alt=""></a>
                             </div>
-                            <!-- /.cart-product -->
+                            <div class="cart-product-number">
+                                <a href="#" class="cart-product-number-minus"></a>
+                                <input type="text" class="cart-product-number-text" value="1">
+                                <a href="#" class="cart-product-number-plus"></a>
+                            </div>
                         </div>
-                        <!-- /.swiper-slide -->
-                        <div class="swiper-slide">
-                            <a href="#" class="cart-product-delete"></a>
+                        <!-- /.cart-product-info -->
+                        <div class="cart-product-content">
+                            <a href="#" class="v3-cart-product-delete"></a>
+                            <div class="cart-product-title"><a href="#">Афродита 120х200 серая рогожка jute ash текст на три строки текст на три строки текст на три строки</a></div>
+                            <div class="cart-product-articul">Артикул: 248622</div>
+                            <div class="cart-product-price">
+                                <span class="cart-product-price-new">24 000 ₽&nbsp;</span>
+                                <span class="cart-product-price-old">32 000 ₽</span>
+                            </div>
+                            <div class="cart-product-assembly">
+                                <input type="checkbox" id="cart-product-assembly-1" name="cart-product-assembly-1" checked>
+                                <label for="cart-product-assembly-1">Сборка — <span class="nowrap">2 400 ₽/шт</span></label>
+                            </div>
                         </div>
-                        <!-- /.swiper-slide -->
+                        <!-- /.cart-product-content -->
+                        <div class="v3-cart-product-custom"><img src="upload/v3-cart-custom.svg" alt="">На заказ: 6 дней</div>
+                        <div class="v3-cart-product-specs">
+                            <p><strong>Ткань:</strong> <a href="#" class="v3-cart-product-color" data-fancymodal data-type="ajax" data-src="modal-cart-textile.html"><img src="upload/images/v3-cart-color.jpg" alt="">искусственная кожа серый marvel ash<svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.373342 6.62334L1.5 7.75L5.25 4L1.5 0.25L0.373342 1.37666L2.99668 4L0.373342 6.62334Z" fill="#393939"/></svg></a></p>
+                        </div>
                     </div>
-                    <!-- /.swiper-wrapper -->
+                    <!-- /.cart-product -->
                 </div>
-                <!-- /.cart-product-wrapper -->
+                <!-- /.v3-cart-product-wrapper -->
+                <div class="v3-cart-product-wrapper">
+                    <div class="cart-product v3-cart-product">
+                        <div class="cart-product-info">
+                            <a href="#" class="v3-cart-product-favorite active"></a>
+                            <div class="cart-product-img">
+                                <a href="#"><img src="upload/images/cart2.jpg" alt=""></a>
+                            </div>
+                            <div class="cart-product-number">
+                                <a href="#" class="cart-product-number-minus"></a>
+                                <input type="text" class="cart-product-number-text" value="1">
+                                <a href="#" class="cart-product-number-plus"></a>
+                            </div>
+                        </div>
+                        <!-- /.cart-product-info -->
+                        <div class="cart-product-content">
+                            <a href="#" class="v3-cart-product-delete"></a>
+                            <div class="cart-product-title"><a href="#">Стул Чилли</a></div>
+                            <div class="cart-product-articul">Артикул: 248622</div>
+                            <div class="cart-product-price">
+                                <span class="nowrap">8 000 ₽</span>
+                            </div>
+                            <div class="cart-product-assembly">
+                                <input type="checkbox" id="cart-product-assembly-2" name="cart-product-assembly-2" checked>
+                                <label for="cart-product-assembly-2">Сборка — <span class="nowrap">300 ₽/шт</span></label>
+                            </div>
+                        </div>
+                        <!-- /.cart-product-content -->
+                        <div class="v3-cart-product-specs">
+                            <p><strong>Размеры:</strong> 40 см x 68 см x 96 см</p>
+                            <p><strong>Цвет ножек:</strong> белый</p>
+                        </div>
+                    </div>
+                    <!-- /.cart-product -->
+                </div>
+                <!-- /.v3-cart-product-wrapper -->
+                <div class="v3-cart-product-wrapper">
+                    <div class="cart-product v3-cart-product">
+                        <div class="cart-product-info">
+                            <a href="#" class="v3-cart-product-favorite active"></a>
+                            <div class="cart-product-img">
+                                <a href="#"><img src="upload/images/cart3.jpg" alt=""></a>
+                            </div>
+                            <div class="cart-product-number">
+                                <a href="#" class="cart-product-number-minus"></a>
+                                <input type="text" class="cart-product-number-text" value="1">
+                                <a href="#" class="cart-product-number-plus"></a>
+                            </div>
+                        </div>
+                        <!-- /.cart-product-info -->
+                        <div class="cart-product-content">
+                            <a href="#" class="v3-cart-product-delete"></a>
+                            <div class="cart-product-title"><a href="#">Модульная гостиная Афта</a></div>
+                            <div class="cart-product-articul">Артикул: 248622</div>
+                            <div class="cart-product-price">
+                                <span class="nowrap">40 000 ₽</span>
+                            </div>
+                            <div class="cart-product-assembly">
+                                <input type="checkbox" id="cart-product-assembly-3" name="cart-product-assembly-3" checked>
+                                <label for="cart-product-assembly-3">Сборка — <span class="nowrap">4 000 ₽/шт</span></label>
+                            </div>
+                        </div>
+                        <!-- /.cart-product-content -->
+                        <div class="v3-cart-product-set active">
+                            <a href="#" class="v3-cart-product-set-title">Состав комплекта</a>
+                            <div class="v3-cart-product-set-list">
+                                <div class="cart-product v3-cart-product">
+                                    <div class="cart-product-info">
+                                        <a href="#" class="v3-cart-product-favorite"></a>
+                                        <div class="cart-product-img">
+                                            <a href="#"><img src="upload/images/cart1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="cart-product-number">
+                                            <a href="#" class="cart-product-number-minus"></a>
+                                            <input type="text" class="cart-product-number-text" value="1">
+                                            <a href="#" class="cart-product-number-plus"></a>
+                                        </div>
+                                    </div>
+                                    <!-- /.cart-product-info -->
+                                    <div class="cart-product-content">
+                                        <div class="cart-product-title"><a href="#">Комод комбинирован Афта 15 лиственница сибио</a></div>
+                                        <div class="cart-product-articul">Артикул: 244884</div>
+                                        <div class="cart-product-price">
+                                            <span class="nowrap">8 000 ₽</span>
+                                        </div>
+                                        <div class="cart-product-assembly">
+                                            <input type="checkbox" id="cart-product-assembly-3-1" name="cart-product-assembly-3-1" checked>
+                                            <label for="cart-product-assembly-3-1">Сборка — <span class="nowrap">2 000 ₽/шт</span></label>
+                                        </div>
+                                    </div>
+                                    <!-- /.cart-product-content -->
+                                </div>
+                                <!-- /.cart-product -->
+                                <div class="cart-product v3-cart-product">
+                                    <div class="cart-product-info">
+                                        <a href="#" class="v3-cart-product-favorite"></a>
+                                        <div class="cart-product-img">
+                                            <a href="#"><img src="upload/images/cart2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="cart-product-number">
+                                            <a href="#" class="cart-product-number-minus"></a>
+                                            <input type="text" class="cart-product-number-text" value="1">
+                                            <a href="#" class="cart-product-number-plus"></a>
+                                        </div>
+                                    </div>
+                                    <!-- /.cart-product-info -->
+                                    <div class="cart-product-content">
+                                        <div class="cart-product-title"><a href="#">Комод комбинирован Афта 16</a></div>
+                                        <div class="cart-product-articul">Артикул: 244884</div>
+                                        <div class="cart-product-price">
+                                            <span class="cart-product-price-new">24 000 ₽&nbsp;</span>
+                                            <span class="cart-product-price-old">32 000 ₽</span>
+                                        </div>
+                                        <div class="cart-product-assembly">
+                                            <input type="checkbox" id="cart-product-assembly-3-2" name="cart-product-assembly-3-2" checked>
+                                            <label for="cart-product-assembly-3-2">Сборка — <span class="nowrap">2 000 ₽/шт</span></label>
+                                        </div>
+                                    </div>
+                                    <!-- /.cart-product-content -->
+                                </div>
+                                <!-- /.cart-product -->
+                            </div>
+                            <!-- /.v3-cart-product-set-list -->
+                        </div>
+                        <!-- /.v3-cart-product-set -->
+                    </div>
+                    <!-- /.cart-product -->
+                </div>
+                <!-- /.v3-cart-product-wrapper -->
+                <div class="v3-cart-product-wrapper">
+                    <div class="cart-product v3-cart-product">
+                        <div class="cart-product-info">
+                            <a href="#" class="v3-cart-product-favorite"></a>
+                            <div class="cart-product-img">
+                                <a href="#"><img src="upload/images/cart1.jpg" alt=""></a>
+                            </div>
+                            <div class="cart-product-number">
+                                <a href="#" class="cart-product-number-minus"></a>
+                                <input type="text" class="cart-product-number-text" value="8">
+                                <a href="#" class="cart-product-number-plus"></a>
+                            </div>
+                        </div>
+                        <!-- /.cart-product-info -->
+                        <div class="cart-product-content">
+                            <a href="#" class="v3-cart-product-delete"></a>
+                            <div class="cart-product-title"><a href="#">Двуспальная кровать Леруа</a></div>
+                            <div class="cart-product-articul">Артикул: 248622</div>
+                            <div class="cart-product-price">
+                                <span class="nowrap">8 000 ₽</span>
+                            </div>
+                            <div class="cart-product-assembly">
+                                <input type="checkbox" id="cart-product-assembly-4" name="cart-product-assembly-4">
+                                <label for="cart-product-assembly-4">Сборка — <span class="nowrap">2 400 ₽/шт</span></label>
+                            </div>
+                        </div>
+                        <!-- /.cart-product-content -->
+                        <div class="v3-cart-product-custom"><img src="upload/v3-cart-custom.svg" alt="">На заказ: 4 дня</div>
+                        <div class="v3-cart-product-specs">
+                            <p><strong>Ткань:</strong> <a href="#" class="v3-cart-product-color" data-fancymodal data-type="ajax" data-src="modal-cart-textile.html"><img src="upload/images/v3-cart-color.jpg" alt="">серая рогожка jute ash<svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.373342 6.62334L1.5 7.75L5.25 4L1.5 0.25L0.373342 1.37666L2.99668 4L0.373342 6.62334Z" fill="#393939"/></svg></a></p>
+                            <p><strong>Размеры спального места:</strong> 120 см x 200 см</p>
+                        </div>
+                    </div>
+                    <!-- /.cart-product -->
+                </div>
+                <!-- /.v3-cart-product-wrapper -->
             </div>
             <!-- /.cart-products -->
             <div class="cart-total">
@@ -633,7 +752,7 @@
             </div>
             <!-- /.cart-total -->
             <div class="cart-button">
-                <a href="#" class="button">Оформить заказ</a>
+                <a href="#" class="button">Перейти к оформлению</a>
             </div>
         </div>
         <!-- /.cart -->
@@ -642,6 +761,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/migrate.js"></script>
     <script src="js/swiper.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/core.min.js"></script>
 </body>
 </html>
