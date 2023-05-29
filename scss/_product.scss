@@ -3605,6 +3605,34 @@
             }
         }
     }
+    &-discount-request {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        margin: 6px 0 20px;
+        background: $w;
+        border-radius: 8px;
+        &-img {
+            flex: 0 0 28px;
+            max-width: 28px;
+            padding-right: 7px;
+            img {
+                width: 100%;
+            }
+        }
+        &-text {
+            flex-grow: 1;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $dark-gray;
+            strong {
+                color: $p;
+                font-weight: 500;
+                line-height: normal;
+                text-decoration: underline;
+            }
+        }
+    }
 }
 
 @media (min-width: $screen) {
