@@ -1627,4 +1627,21 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product filter message
+    $(document).on('click', '.v3-product-filter-item-inactive', function (event) {
+        event.preventDefault();
+        $('.v3-product-filter-message').removeClass('hidden');
+        setTimeout(function () {
+            $('.v3-product-filter-message').addClass('hidden');
+        }, 5000);
+    });
+
+    $(document).on('click', '.v3-product-filter-message-close', function (event) {
+        event.preventDefault();
+        $('.v3-product-filter-message').addClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
+
 });//document ready
