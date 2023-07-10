@@ -3358,12 +3358,13 @@
         &-info {
             padding: 8px 0 24px;
             &-content {
-                padding: 24px 16px;
+                padding: 28px 16px;
                 color: $b;
                 background: $s;
                 border-radius: 5px;
             }
             &-title {
+                text-align: center;
                 font-size: 13px;
                 line-height: 1.54;
                 font-weight: 500;
@@ -3371,6 +3372,7 @@
             }
             &-map {
                 display: block;
+                text-align: center;
                 font-size: 13px;
                 line-height: 1.54;
                 font-weight: 500;
@@ -3421,6 +3423,26 @@
                 font-size: 13px;
                 line-height: 1.54;
                 padding: 2px 0 4px;
+            }
+            &-video {
+                &-call {
+                    margin-top: 24px;
+                    padding-top: 20px;
+                    border-top: 1px solid #E1E1E1;
+                    font-size: 13px;
+                    line-height: 1.54;
+                    color: $b;
+                    text-align: center;
+                    p {
+                        margin: 0;
+                    }
+                }
+                &-link {
+                    display: block;
+                    font-weight: 500;
+                    text-decoration: underline;
+                    margin-bottom: 8px;
+                }
             }
         }
         &-map {
