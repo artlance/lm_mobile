@@ -3446,6 +3446,40 @@
                     margin-bottom: 8px;
                 }
             }
+            &-cta {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                &-icon {
+                    flex: 0 0 58px;
+                    max-width: 58px;
+                    height: 58px;
+                    background: $w;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate3d(-50%, -50%, 0);
+                    }
+                }
+                &-text {
+                    flex-grow: 1;
+                    padding-left: 12px;
+                    .v3-product-showroom-info-title,
+                    .v3-product-showroom-info-map {
+                        text-align: left;
+                        margin-bottom: 2px;
+                    }
+                }
+                &-note {
+                    font-size: 13px;
+                    line-height: 1.54;
+                    margin-bottom: 4px;
+                }
+            }
         }
         &-map {
             width: 100%;
