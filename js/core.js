@@ -1643,5 +1643,23 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 payment process slider
+    var v3PaymentProcessSlider,
+        v3PaymentProcessSliderLength = $('.v3-payment-process-slider').length;
+    if (v3PaymentProcessSliderLength) {
+        v3PaymentProcessSlider = new Swiper('.v3-payment-process-slider', {
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            speed: 500,
+            spaceBetween: 20,
+            slidesPerView: 1,
+            watchOverflow: true,
+            autoHeight: true,
+        });
+    }
+
+    //------------------------------------------------------------------------//
 
 });//document ready

@@ -7,7 +7,6 @@
             padding-bottom: 8px;
         }
         &-item {
-            min-height: 297px;
             margin-bottom: 16px;
             padding: 32px 28px 24px;
             text-align: center;
@@ -211,7 +210,8 @@
                 height: 100%;
                 object-fit: cover;
             }
-            & + .v3-payment-process-info {
+            & + .v3-payment-process-info,
+            & + .v3-payment-process-text {
                 margin-top: -12px;
             }
         }
@@ -237,6 +237,15 @@
             font-size: 13px;
             line-height: 1.54;
             margin-bottom: 8px;
+        }
+        &-slider {
+            &.swiper-container {
+                padding-bottom: 6px;
+                margin-bottom: 24px;
+                .swiper-pagination-bullet-active {
+                    width: 6px;
+                }
+            }
         }
     }
     &-intro {
@@ -352,7 +361,8 @@
 
 @media (min-width: $screen) {
     .v3-payment {
-        &-advantages {
+        &-advantages,
+        &-process {
             &-slider {
                 &.swiper-container {
                     .swiper-pagination-bullet-active {
