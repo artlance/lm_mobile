@@ -1662,4 +1662,22 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //catalog product equal height
+    if ($('.catalog-product-text').length) {
+        $('.catalog-product-text').matchHeight();
+    }
+
+    //------------------------------------------------------------------------//
+
 });//document ready
+
+$(window).load(function () {
+
+    //catalog product equal height
+    if ($('.catalog-product-text').length) {
+        $('.catalog-product-text').matchHeight();
+    }
+
+    //------------------------------------------------------------------------//
+
+});//window load
