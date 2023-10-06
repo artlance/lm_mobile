@@ -1,7 +1,8 @@
 .cabinet {
     &-caption {
-        padding: 22px 20px 18px;
+        padding: 19px 16px 21px;
         &-name {
+            margin-bottom: 3px;
             font-size: 15px;
             line-height: 1.3334;
             font-weight: 900;
@@ -12,13 +13,12 @@
             line-height: 1.455;
             color: $gray;
             strong {
-                font-weight: 500;
-                color: $b;
+                font-weight: normal;
+                color: $dgr;
             }
         }
     }
     &-navigation {
-        box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
         border-top: 1px solid #e1e1e1;
         border-bottom: 1px solid #e1e1e1;
         &.swiper-container {
@@ -49,11 +49,15 @@
                 background-color: $s;
                 .cabinet-navigation-icon {
                     svg path {
-                        fill: $black;
+                        fill: $dgr;
+                    }
+                    .svg-stroke {
+                        fill: none;
+                        stroke: $dgr;
                     }
                 }
                 .cabinet-navigation-title {
-                    color: $black;
+                    color: $dgr;
                 }
             }
         }
@@ -71,12 +75,16 @@
                     will-change: fill;
                 }
             }
+            .svg-stroke {
+                transition: stroke $d $f;
+                will-change: stroke;
+            }
         }
         &-title {
             display: block;
             text-align: center;
-            font-size: 12px;
-            line-height: 1.5;
+            font-size: 11px;
+            line-height: 1.82;
             font-weight: 500;
             color: $t;
             transition: color $d $f;
@@ -87,7 +95,7 @@
         display: flex;
         border-bottom: 1px solid #e1e1e1;
         margin: 0;
-        padding: 35px 1px 16px;
+        padding: 35px 1px 15px;
         list-style: none;
         overflow: auto;
         -webkit-overflow-scrolling: touch;
@@ -116,13 +124,13 @@
             padding: 0 15px;
             a {
                 display: block;
-                padding: 11px 0 3px;
+                padding: 11px 0 5px;
                 font-size: 15px;
                 line-height: 1.6;
                 font-weight: 500;
                 color: $t;
                 white-space: nowrap;
-                border-bottom: 2px solid $tr;
+                border-bottom: 3px solid $tr;
                 transition: color $d $f, border-color $d $f;
                 will-change: color, border-color;
                 strong {
@@ -1282,6 +1290,9 @@
 @media (min-width: $screen) {
     .cabinet {
         &-navigation {
+            .swiper-pagination {
+                bottom: -34px;
+            }
             .swiper-pagination-bullet-active {
                 width: 8px;
             }
@@ -1640,7 +1651,8 @@
                 border-radius: 5px;
                 &-green {
                     color: $p;
-                    background: rgba(131, 193, 80, 0.2);;
+                    background: rgba(131, 193, 80, 0.2);
+                    ;
                 }
                 &-yellow {
                     color: #f3b800;
@@ -1670,7 +1682,155 @@
             }
         }
     }
+    &-profile {
+        .cabinet-tabs {
+            border-bottom: 0;
+        }
+        &-block {
+            padding: 36px 0 16px;
+            background: $s;
+            border-top: 1px solid #e1e1e1;
+        }
+        &-title {
+            margin-bottom: 21px;
+            font-size: 15px;
+            line-height: 1.334;
+            font-weight: 900;
+        }
+        &-cta {
+            padding-top: 5px;
+            margin-bottom: 19px;
+            .button {
+                width: 100%;
+                &:disabled,
+                &.disabled {
+                    cursor: default;
+                    pointer-events: none;
+                    color: $w !important;
+                    background: #CDE6B9;
+                }
+            }
+        }
+    }
+    &-input {
+        &-wrapper {
+            margin-bottom: 20px;
+            &.success {
+                .new-cabinet-input-block {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 13px;
+                        right: 13px;
+                        width: 14px;
+                        height: 14px;
+                        background: $tr url('../upload/new-cabinet-success.svg') 50% 50% no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            &.error {
+                .new-cabinet-input-note {
+                    color: $red;
+                }
+                .new-cabinet-input-text {
+                    border-color: $red;
+                }
+            }
+            &.warning {
+                .new-cabinet-input-text {
+                    border-color: #FFA22A;
+                }
+                .new-cabinet-input-block {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 13px;
+                        right: 13px;
+                        width: 14px;
+                        height: 14px;
+                        background: $tr url('../upload/new-cabinet-warning.svg') 50% 50% no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+        }
+        &-date {
+            width: 50%;
+        }
+        &-caption {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            & > label {
+                display: block;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $b;
+                margin: 0;
+            }
+        }
+        &-block {
+            margin-bottom: 7px;
+            position: relative;
+        }
+        &-text {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 0 39px 2px 15px;
+            font-size: 13px;
+            line-height: normal;
+            color: $b;
+            background: $w;
+            border: 1px solid $t;
+            border-radius: 2px;
+            transition: color $d $f, border-color $d $f;
+            &::placeholder {
+                color: $t;
+            }
+            &:hover,
+            &:focus {
+                border-color: $p;
+            }
+            &:read-only {
+                color: $t;
+                border-color: $t;
+            }
+        }
+        &-note {
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gray;
+        }
+    }
+    &-datepicker {
+        cursor: pointer;
+        background: $w url('../upload/new-cabinet-datepicker.svg') 100% 50% no-repeat;
+        background-size: 28px 17px;
+    }
 }
+.success-message {
+    position: fixed;
+    z-index: 3000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 23px 0 25px;
+    background: $p;
+    font-size: 13px;
+    line-height: 1.54;
+    color: $w;
+    font-weight: 500;
+    text-align: center;
+    p {
+        margin: 0;
+        & + p {
+            margin-top: 10px;
+        }
+    }
+}
+
 @media (min-width: $screen) {
     .new-cabinet-status-promocode-list {
         .swiper-pagination-bullet-active {

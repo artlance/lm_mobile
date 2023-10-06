@@ -9,6 +9,9 @@
             width: calc(100% + 32px);
             max-width: calc(100% + 32px);
         }
+        &-top {
+            vertical-align: top;
+        }
     }
     &-title {
         font-size: 15px;
@@ -21,6 +24,10 @@
         strong {
             color: $p;
             font-weight: 900;
+        }
+        &-center {
+            text-align: center;
+            padding-left: 50px;
         }
     }
     &-credit {
@@ -686,6 +693,159 @@
             padding-top: 18px;
             .button {
                 width: 100%;
+            }
+        }
+    }
+    &-cabinet-confirm-phone {
+        padding: 15px 4px 16px;
+        &-info {
+            margin-bottom: 24px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.54;
+            strong {
+                font-weight: 500;
+            }
+            p {
+                margin: 0;
+            }
+        }
+        &-button {
+            margin-bottom: 8px;
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &-cabinet-confirm-email {
+        padding: 16px 4px;
+        &-icon {
+            width: 124px;
+            height: 124px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $s;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        &-info {
+            margin-bottom: 24px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $b;
+            strong {
+                font-weight: 500;
+            }
+            p {
+                margin: 0;
+            }
+        }
+        &-button {
+            margin-bottom: 8px;
+            .button {
+                width: 100%;
+            }
+        }
+    }
+    &-cabinet-change-phone {
+        padding: 16px 4px;
+        &-button {
+            padding-top: 4px;
+            margin-bottom: 8px;
+            .button {
+                width: 100%;
+                &:disabled,
+                &.disabled {
+                    cursor: default;
+                    pointer-events: none;
+                    color: $w !important;
+                    background: #CDE6B9;
+                }
+            }
+        }
+        &-terms {
+            padding-top: 8px;
+            margin-bottom: 8px;
+            font-size: 11px;
+            line-height: 1.455;
+            color: $gray;
+            text-align: center;
+        }
+    }
+    &-cabinet-verify-phone {
+        padding: 15px 4px 16px;
+        &-info {
+            margin-bottom: 3px;
+            font-size: 13px;
+            line-height: 1.54;
+            strong {
+                font-weight: 500;
+            }
+            p {
+                margin: 0;
+            }
+        }
+        &-change {
+            margin-bottom: 17px;
+            font-size: 13px;
+            line-height: 1.54;
+            font-weight: 500;
+        }
+        &-resend {
+            margin-top: -11px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            line-height: 1.54;
+            font-weight: 500;
+        }
+        &-button {
+            padding-top: 5px;
+            margin-bottom: 8px;
+            .button {
+                width: 100%;
+                &:disabled,
+                &.disabled {
+                    cursor: default;
+                    pointer-events: none;
+                    color: $w !important;
+                    background: #CDE6B9;
+                }
+                &.disabled {
+                    pointer-events: auto;
+                }
+            }
+        }
+        &-success {
+            padding: 24px 4px 16px;
+            &-icon {
+                width: 124px;
+                height: 124px;
+                margin: 0 auto 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $s;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            &-text {
+                margin-bottom: 24px;
+                text-align: center;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $b;
+                strong {
+                    font-weight: 500;
+                }
+            }
+            &-button {
+                margin-bottom: 8px;
+                .button {
+                    width: 100%;
+                }
             }
         }
     }
