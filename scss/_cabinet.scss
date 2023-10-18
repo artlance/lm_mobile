@@ -1733,12 +1733,14 @@
                 .new-cabinet-input-note {
                     color: $red;
                 }
-                .new-cabinet-input-text {
+                .new-cabinet-input-text,
+                .new-cabinet-input-textarea {
                     border-color: $red;
                 }
             }
             &.warning {
-                .new-cabinet-input-text {
+                .new-cabinet-input-text,
+                .new-cabinet-input-textarea {
                     border-color: #FFA22A;
                 }
                 .new-cabinet-input-block {
@@ -1751,6 +1753,24 @@
                         height: 14px;
                         background: $tr url('../upload/new-cabinet-warning.svg') 50% 50% no-repeat;
                         background-size: 100% 100%;
+                    }
+                }
+            }
+            .new-cabinet-enable-toggle {
+                margin-top: 12px;
+            }
+            .radio {
+                margin-bottom: 4px;
+                label {
+                    font-size: 13px;
+                    line-height: 1.54;
+                    color: $b;
+                    padding: 17px 18px 17px 42px;
+                    &:before {
+                        left: 18px;
+                    }
+                    &:after {
+                        left: 23px;
                     }
                 }
             }
@@ -1774,7 +1794,8 @@
             margin-bottom: 7px;
             position: relative;
         }
-        &-text {
+        &-text,
+        &-textarea {
             display: block;
             width: 100%;
             height: 40px;
@@ -1798,6 +1819,15 @@
                 border-color: $t;
             }
         }
+        &-textarea {
+            height: 60px;
+            line-height: 1.54;
+            padding-top: 9px;
+            padding-bottom: 9px;
+            font-family: $fontFamily;
+            overflow: auto;
+            resize: none;
+        }
         &-note {
             font-size: 11px;
             line-height: 1.455;
@@ -1808,6 +1838,242 @@
         cursor: pointer;
         background: $w url('../upload/new-cabinet-datepicker.svg') 100% 50% no-repeat;
         background-size: 28px 17px;
+    }
+    &-address {
+        &-empty {
+            padding: 72px 0;
+            text-align: center;
+            &-icon {
+                width: 124px;
+                height: 124px;
+                margin: 0 auto 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $s;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            &-title {
+                margin-bottom: 12px;
+                font-size: 15px;
+                line-height: 1.4;
+                font-weight: 500;
+                color: $gray;
+            }
+            &-info {
+                margin-bottom: 12px;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $gray;
+                p {
+                    margin: 0;
+                }
+            }
+            &-cta {
+                padding-top: 20px;
+                .button {
+                    width: 100%;
+                }
+            }
+        }
+        &-list {
+            padding: 24px 0 32px;
+        }
+        &-item {
+            margin-bottom: 16px;
+            background: $s;
+            border-radius: 5px;
+            padding: 24px 16px 12px;
+            &-title {
+                margin-bottom: 4px;
+                font-size: 15px;
+                line-height: 1.4;
+                font-weight: 900;
+                padding: 9px 40px 10px 0;
+                position: relative;
+            }
+            &-delete {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 40px;
+                height: 40px;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 13px;
+                    right: 13px;
+                    height: 2px;
+                    margin-top: -1px;
+                    background: $t;
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    transform: rotate(-45deg);
+                }
+            }
+            &-detail {
+                display: block;
+                margin-bottom: 20px;
+                padding-right: 40px;
+                position: relative;
+                font-size: 13px;
+                line-height: 1.54;
+                color: $b;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -20px;
+                    width: 40px;
+                    height: 40px;
+                    background: $tr url('../upload/new-cabinet-address-arrow.svg') 50% 50% no-repeat;
+                    background-size: 100% 100%;
+                }
+            }
+            &-edit {
+                display: block;
+                position: relative;
+                margin-bottom: 20px;
+                height: 140px;
+                border: 1px solid #E1E1E1;
+                border-radius: 4px;
+                overflow: hidden;
+                &-img {
+                    position: absolute;
+                    inset: 0;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &-pin {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate3d(-50%, -50%, 0);
+                    margin-top: 4px;
+                }
+            }
+        }
+        &-item-add {
+            display: block;
+            text-align: center;
+            padding: 39px;
+            margin: 32px 0;
+            border-radius: 5px;
+            border: 1px dashed $p;
+            &-title {
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                padding: 9px 0 11px 54px;
+                font-size: 13px;
+                line-height: 1.54;
+                font-weight: 500;
+            }
+            &-icon {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 40px;
+                height: 40px;
+                background: #CDE6B9;
+                border-radius: 4px;
+                &::before,
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 10px;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate3d(-50%, -50%, 0);
+                    background: $p;
+                }
+                &::after {
+                    width: 10px;
+                    height: 2px;
+                }
+            }
+        }
+    }
+    &-enable-toggle {
+        display: block;
+        margin-bottom: 20px;
+        input {
+            appearance: none;
+            position: absolute;
+            left: -9999px;
+            &:checked + label {
+                &::before {
+                    background-color: $p;
+                }
+                &::after {
+                    border-color: $p;
+                    transform: translateX(14px);
+                }
+            }
+            &:disabled + label {
+                cursor: default;
+                &::before {
+                    background-color: rgba(161, 161, 161, 0.3);
+                }
+                &::after {
+                    border-color: rgba(161, 161, 161, 0.3);
+                }
+            }
+            &:checked:disabled + label {
+                &::before {
+                    background-color: #CDE6B9;
+                }
+                &::after {
+                    border-color: #CDE6B9;
+                }
+            }
+        }
+        label {
+            cursor: pointer;
+            user-select: none;
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0 0 0 40px;
+            font-size: 13px;
+            line-height: 1.54;
+            color: $text;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 3px;
+                width: 32px;
+                height: 14px;
+                border-radius: 10px;
+                background: $t;
+                transition: background-color $d $f;
+                will-change: background-color;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 1px;
+                width: 18px;
+                height: 18px;
+                border: 4px solid $t;
+                background: $w;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+                border-radius: 50%;
+                transition: border-color $d $f, transform $d $f;
+                will-change: border-color, transform;
+            }
+        }
     }
 }
 .success-message {

@@ -1784,6 +1784,44 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //modal cabinet add address city
+    $(document).on('click', '.modal-cabinet-add-address-city-link', function (event) {
+        event.preventDefault();
+        $.fancybox.close();
+        $('html').addClass('city-panel-show');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //modal cabinet add address - private house
+    $(document).on('change', '#add-address-private-house', function (event) {
+        if ($(this).is(':checked')) {
+            $('.modal-cabinet-add-address-detail').addClass('hidden');
+        } else {
+            $('.modal-cabinet-add-address-detail').removeClass('hidden');
+        }
+    });
+
+    //------------------------------------------------------------------------//
+
+    //пример переключения блоков для дизайнера
+    $(document).on('click', '.modal-cabinet-add-address-cta .button', function (event) {
+        event.preventDefault();
+        $(this).parents('.modal-cabinet-add-address').addClass('hidden');
+        $('.modal-cabinet-add-address-success').removeClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
+    //modal cabinet add address delete success
+    $(document).on('click', '.modal-cabinet-add-address-delete-cta', function (event) {
+        event.preventDefault();
+        $(this).parents('.modal-cabinet-add-address-delete').addClass('hidden');
+        $('.modal-cabinet-add-address-delete-success').removeClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
 
 $(window).load(function () {
