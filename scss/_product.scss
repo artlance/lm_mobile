@@ -1793,7 +1793,7 @@
             position: relative;
             margin-top: 6px;
             margin-bottom: 20px;
-            padding: 10px 40px 10px 10px;
+            padding: 10px 30px 10px 10px;
             background: $w;
             border-radius: 8px;
             &::after {
@@ -1823,8 +1823,8 @@
             }
             &-text {
                 flex-grow: 1;
-                font-size: 13px;
-                line-height: 1.54;
+                font-size: 12px;
+                line-height: 1.6667;
                 color: $b;
                 strong {
                     font-weight: 500;
