@@ -1834,6 +1834,15 @@ $(document).ready(function () {
 
     //------------------------------------------------------------------------//
 
+    //v3 product gallery images more
+    $(document).on('click', '.v3-product-gallery-images-more', function (event) {
+        event.preventDefault();
+        $(this).toggleClass('active');
+        $('.v3-product-gallery-images').find('[data-hidden]').toggleClass('hidden');
+    });
+
+    //------------------------------------------------------------------------//
+
 });//document ready
 
 $(window).load(function () {
